@@ -5,8 +5,7 @@ namespace App\RepositoryInterfaces;
 
 interface UsersRepositoryInterface
 {
-    public function CostumerRegister(array $data);
-    public function findUserById($id);
+
     public function updateUser($id, array $data);
     public function deleteUser($id);
     public function getAllUsers();

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class BookController extends Controller
 {
     protected $bookRepository;
-
+              
     public function __construct(BookRepositoryInterface $bookRepository)
     {
         $this->bookRepository = $bookRepository;

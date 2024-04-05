@@ -650,18 +650,17 @@
             </div>
         </a>
     </div>
-
 </section>
-
         <div class="flex flex-col justify-center items-center ">
             <div class="relative flex flex-col items-center  mx-auto p-4  bg-clip-border   dark:!bg-navy-800 dark:text-white dark:shadow-none">
-               
+                <div class="flex h-full w-full items-start justify-between    px-3 py-[20px] transition-all duration-150 hover:border-gray-200 dark:!bg-navy-800 dark:hover:!bg-navy-700">best vendors stores</div>
+
                 <div class="flex h-full w-full items-start justify-between    px-3 py-[20px] transition-all duration-150 hover:border-gray-200 dark:!bg-navy-800 dark:hover:!bg-navy-700">
                     <div class="flex items-center gap-3">
                         <div class="flex h-16 w-16 items-center justify-center">
                         <img
                             class="h-full w-full rounded-xl"
-                            src="https://horizon-tailwind-react-corporate-7s21b54hb-horizon-ui.vercel.app/static/media/Nft1.0fea34cca5aed6cad72b.png"
+                            src="img/9780399185793.jpg"
                             alt=""
                         />
                         </div>
@@ -706,12 +705,14 @@
                     </div> 
                    
                 </div>
+
+
                 <div class="flex h-full w-full items-start justify-between rounded-md border-[1px] border-[transparent] dark:hover:border-white/20 bg-white px-3 py-[20px] transition-all duration-150 hover:border-gray-200 dark:!bg-navy-800 dark:hover:!bg-navy-700">
                     <div class="flex items-center gap-3">
                         <div class="flex h-16 w-16 items-center justify-center">
                         <img
                             class="h-full w-full rounded-xl"
-                            src="https://horizon-tailwind-react-corporate-7s21b54hb-horizon-ui.vercel.app/static/media/Nft6.9ff5403226e81a6fd390.png"
+                            src="img/9780316435093.jpg"
                             alt=""
                         />
                         </div>
@@ -761,7 +762,7 @@
                         <div class="flex h-16 w-16 items-center justify-center">
                         <img
                             class="h-full w-full rounded-xl"
-                            src="https://horizon-tailwind-react-corporate-7s21b54hb-horizon-ui.vercel.app/static/media/Nft4.5fc37877b25c9fb9a52d.png"
+                            src="img/9780316435093.jpg"
                             alt=""
                         />
                         </div>
@@ -811,7 +812,7 @@
                         <div class="flex h-16 w-16 items-center justify-center">
                         <img
                             class="h-full w-full rounded-xl"
-                            src="https://horizon-tailwind-react-corporate-7s21b54hb-horizon-ui.vercel.app/static/media/Nft4.5fc37877b25c9fb9a52d.png"
+                            src="img/9780316435093.jpg"
                             alt=""
                         />
                         </div>
@@ -861,7 +862,7 @@
                         <div class="flex h-16 w-16 items-center justify-center">
                         <img
                             class="h-full w-full rounded-xl"
-                            src="https://horizon-tailwind-react-corporate-7s21b54hb-horizon-ui.vercel.app/static/media/Nft4.5fc37877b25c9fb9a52d.png"
+                            src="img/9780316435093.jpg"
                             alt=""
                         />
                         </div>
@@ -911,7 +912,7 @@
                         <div class="flex h-16 w-16 items-center justify-center">
                         <img
                             class="h-full w-full rounded-xl"
-                            src="https://horizon-tailwind-react-corporate-7s21b54hb-horizon-ui.vercel.app/static/media/Nft5.62dbaf7dd91b4180035c.png"
+                            src="img/9780316435093.jpg"
                             alt=""
                         />
                         </div>
