@@ -15,24 +15,26 @@ class UserController extends Controller
    
     
 
-    public function showUsers(){
-        $users = User::all();
-        return view('admin.users', ['users' => $users]);
-    }
+    public function authenticate(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
 
-    public function updateuserstatus(Request $request , $id){
-        
-        $request->validate([
-            'status' => 'required',
-        ]);
-       
-    
-        $user = User::findOrFail($id);
-     
-    
-        $user->update(['status' => $request->input('status')]);
-   
-        return redirect()->back()->with('success', 'status updated successfully');
+        if (Auth::attempt($credentials)) {
+           
+            $user = Auth::user();
+
+            if ($user->isAdmin()) {
+                return redirect()->route('admin.dashboard');
+            }
+        elseif ($user->isStore()) {
+                return redirect()->route('admin.dashboard');
+            }
+             else {
+                return redirect()->route('Costumer.dashboard');
+            }
+        }
+
+        return redirect()->back()->withInput()->withErrors(['email' => 'Invalid infos']);
     }
 
 
