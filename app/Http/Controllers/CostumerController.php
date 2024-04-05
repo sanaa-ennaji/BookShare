@@ -29,11 +29,10 @@ class CostumerController extends Controller
             'user_id' => ['required'],
             'phone'=>['required']
          ]);
+         
         $datad['password'] = bcrypt($datad['password']);
        $user= $this->costumerRepository->CostumerRegister($datad);
        auth()->login($user);
-       $costumer = Costumer::create([$data]);
-
           return redirect('/');
       
     }
@@ -43,6 +42,5 @@ class CostumerController extends Controller
         return redirect('/') ;
     }
 
-    
-    
+  
 }
