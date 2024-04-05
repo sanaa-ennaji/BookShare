@@ -30,7 +30,7 @@ class CostumerController extends Controller
             'phone'=>['required']
          ]);
         $datad['password'] = bcrypt($datad['password']);
-       $user= User::create($datad);
+       $user= $this->costumerRepository->CostumerRegister($datad);
        auth()->login($user);
        $costumer = Costumer::create([$data]);
 

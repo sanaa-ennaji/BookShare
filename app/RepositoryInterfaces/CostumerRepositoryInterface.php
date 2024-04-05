@@ -3,12 +3,8 @@
 
 namespace App\RepositoryInterfaces;
 
-interface UsersRepositoryInterface
+interface CostumerRepositoryInterface
 {
-    public function CostumerRegister(array $data);
-    public function findUserById($id);
-    public function updateUser($id, array $data);
-    public function deleteUser($id);
-    public function getAllUsers();
-    public function getArchivedUsers();
+    public function CostumerRegister(array $data, array $costumerData);
+  
 }
