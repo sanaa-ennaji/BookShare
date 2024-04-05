@@ -20,3 +20,19 @@ Route::get('/', function () {
 Route::get('/app', function () {
     return view('app');
 });
+
+Route::get('/cart', function () {
+    return view('cart');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/payment', function () {
+    return view('payment');
+});
+Route::get('/register', function () {
+    return view('register');
+});
+
