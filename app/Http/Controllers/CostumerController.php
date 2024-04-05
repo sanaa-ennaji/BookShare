@@ -31,7 +31,8 @@ class CostumerController extends Controller
          ]);
          
         $datad['password'] = bcrypt($datad['password']);
-       $user= $this->costumerRepository->CostumerRegister($datad);
+       $user= $this->costumerRepository->CostumerRegister($datad , $data);
+   
        auth()->login($user);
           return redirect('/');
       

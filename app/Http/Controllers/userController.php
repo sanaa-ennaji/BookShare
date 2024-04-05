@@ -12,9 +12,6 @@ use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
     
-   
-    
-
     public function authenticate(Request $request)
     {
         $credentials = $request->only('email', 'password');
@@ -27,10 +24,10 @@ class UserController extends Controller
                 return redirect()->route('admin.dashboard');
             }
         elseif ($user->isStore()) {
-                return redirect()->route('admin.dashboard');
+                return redirect()->route('store.dashboard');
             }
              else {
-                return redirect()->route('Costumer.dashboard');
+                return redirect()->route('cart');
             }
         }
 
