@@ -19,12 +19,12 @@
       data-twe-collapse-item>
  
       <a
-        class="mb-4 me-5 ms-2 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
-        href="#">
+        class=" me-5 ms-5 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
+        href="/">
         <img
-          src="img/15744737.548a00c0e09dc-removebg-preview.png"
-          style="height: 60px"
-          alt="TE Logo"
+          src="../img/15744737.548a00c0e09dc-removebg-preview.png"
+          style="height: 45px"
+          alt="Logo"
           loading="lazy" />
       </a>
     </div> 
