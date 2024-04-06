@@ -18,5 +18,5 @@
             </div>
             </div>
             <div class="border-1 sm:h-[45vh] sm:w-[80%] mx-auto">
-            
+              <h2 class="font-semibold relative">book storte</h2>
               </div>
