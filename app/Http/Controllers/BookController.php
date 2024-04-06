@@ -28,7 +28,7 @@ class BookController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-        
+         
         ]);
 
         $this->bookRepository->create($validatedData);
