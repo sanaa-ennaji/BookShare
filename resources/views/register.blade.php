@@ -7,15 +7,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </head>
     <body >
-       
-   <div class="min-h-screen  text-gray-900 flex justify-center">
-       <div class="flex bg-indigo-100 text-center hidden lg:flex lg:ml-10  ">
-           <div class="w-full ">
-               <img src="img/téléchargement.jpg" alt="" class="h-[100vh] lg:w-[100%]  mx-auto pb-3">
-           </div>
-       </div>
-       <div class="flex-1 items-center justify-center p-12 ml-40">
-           <div class="mx-auto w-full max-w-[550px] bg-white">
+<div class="bg-red-50 flex justify-center items-center h-screen">
+ 
+<div class="w-1/2 h-screen hidden lg:block">
+  <img src="img/téléchargement.jpg" alt="Placeholder Image" class="object-cover w-full h-full">
+</div>
+
+<div class="lg:p-36 md:p-52 sm:40  p-8 w-full lg:w-1/2">
                <div class="text-slate-100 items-center">
                    <img src="img/15744737.548a00c0e09dc-removebg-preview.png" alt="" class="h-20 w-20  mx-auto pb-3">
                   
@@ -58,9 +56,9 @@
                     <div class="w-full px-3 sm:w-1/2">
                         <div class="mb-5">
                             <label for="email" class="mb-3 block text-base font-medium text-[#07074D]">
-                               city
+                               phone
                             </label>
-                            <input type="city" name="city" id="city" placeholder="your city"
+                            <input type="city" name="city" id="city" placeholder="+121 000000"
                                 class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
                         </div>
                     </div>
