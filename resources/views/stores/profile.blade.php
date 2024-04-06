@@ -8,13 +8,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </head>
     <body >
-
-      <div class="bg-gray-100 p-4">
-
-        <div class="border-1 shadow-lg shadow-gray-700 rounded-lg">
+      @include('components/navbar')
+        @include('components/navbar2')
+        <div class="border-1 shadow-lg shadow-gray-700 rounded-lg sm:h-[20vh] sm:w-[80%] mx-auto" style="background-image: url(../img/Thunder.png)">
             <div class="flex rounded-t-lg bg-top-color sm:px-2 w-full">
-                <div class="h-40 w-40 overflow-hidden sm:rounded-full sm:relative sm:p-0 top-10 left-5 p-3">
-                    <img src="https://media.licdn.com/dms/image/C4D03AQH8qidO0nb_Ng/profile-displayphoto-shrink_800_800/0/1615696897070?e=2147483647&v=beta&t=ia3wfE2J7kVLdBy9ttkgUDAA_ul29fymykhQo0lABDo"/>
+                <div class="h-40 w-40 overflow-hidden rounded-full sm:relative sm:p-0 sm:top-20 top-40 left-5 p-3">
+                    <img src="../img/bookstore.jpg"/>
                 </div>
     
                 <div class="w-2/3 sm:text-center pl-5 mt-10 text-start">
