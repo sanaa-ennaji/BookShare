@@ -251,7 +251,7 @@
     </div>
     <div class="text-center mt-2">
         <h2 class="font-semibold">Sarah Smith</h2>
-        <div class="flex">
+        <div class="flex  justify-center">
                   
             <div class="flex items-center mt-2.5 mb-2.5">
                 <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"
