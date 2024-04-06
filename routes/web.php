@@ -43,3 +43,7 @@ Route::get('/stores/store', function () {
 Route::get('/stores/profile', function () {
     return view('stores.profile');
 });
+
+Route::get('/StoreRegister', function () {
+    return view('stores.StoreRegister');
+});
