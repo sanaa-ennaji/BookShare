@@ -290,8 +290,8 @@
       </svg>
       </span>
     <div>
-        <h3 class="font-semibold text-xl">Shipping</h3>
-        <p class="mt-1 text-gray-500"> free Shipping.</p>
+        <h3 class="font-semibold text-xl">easy return</h3>
+        <p class="mt-1 text-gray-500">within 30 day</p>
     </div>
 </div>
 </div>
