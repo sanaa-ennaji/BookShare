@@ -12,8 +12,8 @@ class CostumerRepository implements CostumerRepositoryInterface
     {
         $user = User::create($data);
         $costumerData['user_id'] = $user->id;
-        $costumer = Costumer::create($costumerData);
-        return ['user' => $user, 'costumer' => $costumer];
+       Costumer::create($costumerData);
+        return $user ;
     }
 
     }
