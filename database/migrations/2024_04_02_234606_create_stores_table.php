@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('phone')->nullable();
             $table->string('status' ,45)->nullable();
+            $table->enum('is_validated',['pending','accepted'])->default('pending');
             $table->string('image')->nullable();
             $table->string('cover')->nullable();
             $table->longText('description')->nullable();

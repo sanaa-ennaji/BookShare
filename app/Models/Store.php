@@ -10,7 +10,7 @@ class Store extends Model
     use HasFactory;
 
     protected $fillable = [
-        'phone', 'status', 'image', 'cover', 'description', 'city', 'address', 'user_id'
+        'phone', 'status','is_validated', 'image', 'cover', 'description', 'city', 'address', 'user_id'
     ];
 
     public function user()

@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('quantity')->nullable();
             $table->string('status' ,45)->nullable();
             $table->longText('description')->nullable();
+            $table->json('lang')->nullable();
             $table->decimal('price');
             $table->foreignId('store_id')
             ->constrained('stores')
