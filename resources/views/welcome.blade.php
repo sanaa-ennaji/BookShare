@@ -49,7 +49,7 @@
   
 </div>
 
-<div class="grid grid-cols-2 sm:grid-cols-5 gap-2 mt-10 px-5 mx-auto md:w-[90%]">
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-10  mx-auto md:w-[70%]">
 
     <div class="flex gap-2">
         <span class="text-red-600 bg-red-500/10 p-3 rounded-full h-11">
@@ -100,7 +100,7 @@
         </div>
     </div>
 
-<div class="flex gap-2">
+{{-- <div class="flex gap-2">
     <span class="text-red-600 bg-red-500/10 p-3 rounded-full h-11"><svg class="w-6 h-6 text-red-500 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 13h3.439a.991.991 0 0 1 .908.6 3.978 3.978 0 0 0 7.306 0 .99.99 0 0 1 .908-.6H20M4 13v6a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-6M4 13l2-9h12l2 9M9 7h6m-7 3h8"/>
       </svg>
@@ -109,7 +109,7 @@
         <h3 class="font-semibold text-xl">easy return</h3>
         <p class="mt-1 text-gray-500">within 30 day</p>
     </div>
-</div>
+</div> --}}
 </div>
      
 
