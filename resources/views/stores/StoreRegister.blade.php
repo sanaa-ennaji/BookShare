@@ -14,18 +14,18 @@
         @include('components/navbar2')
 
 
-        <div class="max-w-screen-lg sm:w-[80%] mx-auto p-5">
+        <div class=" w-[100%] sm:w-[90%] mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-12 border">
                 <div class="bg-red-500 md:col-span-4 p-10 text-white">
                     <p class="mt-4 text-sm leading-7 font-regular uppercase">
-                        Contact
+                       join Us
                     </p>
                     <h3 class="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight">
-                        join<span class="text-red-900"> Us</span>
+                            Book Stores <span class="text-red-900">Registeration</span>
                     </h3>
                     <p class="mt-4 leading-7 text-gray-200">
                         your fisrt step to make your Business  online 
-                        fill the form and wait for acception we will send you an email.
+                        fill the form and wait for acception .
                     </p>
         
                     <div class="flex items-center mt-5">
