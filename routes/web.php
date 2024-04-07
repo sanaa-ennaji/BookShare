@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CostumerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,3 +48,6 @@ Route::get('/stores/profile', function () {
 Route::get('/StoreRegister', function () {
     return view('stores.StoreRegister');
 });
+
+Route::post('/CostumerRegister', [CostumerController::class, 'CostumerRegister']);
+// Route::post('/login', [UserController::class, 'login']);

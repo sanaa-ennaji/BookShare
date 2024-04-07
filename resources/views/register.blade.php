@@ -6,20 +6,23 @@
   @vite('resources/css/app.css')
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </head>
-    <body >
-<div class="bg-red-50 flex justify-center items-center h-screen">
+    <body>
+        {{-- @include('components/navbar')
+
+        @include('components/navbar2') --}}
+<div class="bg-red-50 h-[100vh] flex">
  
-<div class="w-1/2 h-screen hidden lg:block">
+<div class="w-1/2 h-[100%] hidden lg:block">
   <img src="img/téléchargement.jpg" alt="Placeholder Image" class="object-cover w-full h-full">
 </div>
 
-<div class="lg:p-36 md:p-52 sm:40  p-8 w-full lg:w-1/2">
+<div class="lg:px-36 lg:py-10  md:p-52 sm:40  p-8 w-full lg:w-1/2">
                <div class="text-slate-100 items-center">
-                   <img src="img/15744737.548a00c0e09dc-removebg-preview.png" alt="" class="h-20 w-20  mx-auto pb-3">
+                  <a href="/"> <img src="img/15744737.548a00c0e09dc-removebg-preview.png" alt="" class="h-20 w-20  mx-auto pb-3"></a>
                   
                </div>
            
-               <form method="POST" action="/Register">
+               <form method="POST" action="/CostumerRegister">
                  @csrf
                    <div class="mb-5">
                        <label for="name" class="mb-3 block text-base font-medium text-[#07074D]">
@@ -28,13 +31,21 @@
                        <input type="text" name="name" id="name" placeholder="Full Name"
                            class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
                    </div>
+
+                   <div class="mb-5">
+                    <label for="name" class="mb-3 block text-base font-medium text-[#07074D]">
+                       Phone 
+                    </label>
+                    <input type="text" name="name" id="name" placeholder="+121 00000 0000"
+                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                </div>
    
                    <div class="-mx-3 flex flex-wrap">
                       
                        <div class="w-full px-3 sm:w-1/2">
                            <div class="mb-5">
                                <label for="email" class="mb-3 block text-base font-medium text-[#07074D]">
-                                   email
+                                   Email
                                </label>
                                <input type="email" name="email" id="email" placeholder="name00@gmail.com"
                                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
@@ -44,48 +55,27 @@
                        <div class="w-full px-3 sm:w-1/2">
                            <div class="mb-5">
                                <label for="password" class="mb-3 block text-base font-medium text-[#07074D]">
-                                 password
+                                 Password
                                </label>
                                <input type="text" name="password" id="password" placeholder="********"
                                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
                            </div>
                        </div>
                    </div>
-                   <div class="-mx-3 flex flex-wrap">
-
-                    <div class="w-full px-3 sm:w-1/2">
-                        <div class="mb-5">
-                            <label for="email" class="mb-3 block text-base font-medium text-[#07074D]">
-                               phone
-                            </label>
-                            <input type="city" name="city" id="city" placeholder="+121 000000"
-                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
-                        </div>
-                    </div>
-                       <div class="w-full px-3 sm:w-1/2">
-                           <div class="mb-5">
-                               <label for="address" class="mb-3 block text-base font-medium text-[#07074D]">
-                                address
-                               </label>
-                               <input type="text" name="address" id="address" placeholder="your adress"
-                                   class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
-                           </div>
-                       </div>
-                   </div>
-           
+                 
                    <div>
                        <button type="submit"
                            class="hover:shadow-form w-full rounded-md bg-red-600 py-3 px-8 text-center text-base font-semibold text-white outline-none">
                           Resgister
                        </button>
                    </div>
-                   <p class="text-sm text-center text-gray-400  mt-8">
+                   <p class="text-sm text-center text-gray-400  mt-4 mb-4">
                        alreaday have an acount ? 
-                       <a href="/login" class="font-semibold text-indigo-500 focus:text-indigo-600 focus:outline-none focus:underline">LOG IN</a>.
+                       <a href="/login" class="font-semibold text-indigo-500 focus:text-red-600 focus:outline-none focus:underline"> Log in</a>.
                      </p>
                </form>
                <div class="flex flex-row justify-center mb-8">
-                   <span class="absolute bg-white px-4 text-gray-500">or sign-in with</span>
+                   <span class="absolute bg-red-50 px-4 text-gray-500">or sign-in with</span>
                    <div class="w-full bg-gray-200 mt-3 h-px"></div>
                  </div>
              
