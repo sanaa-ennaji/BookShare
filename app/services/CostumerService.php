@@ -4,7 +4,7 @@ namespace App\Services;
 
 use App\RepositoryInterfaces\CostumerRepositoryInterface;
 
-class CostumerService
+class UserService
 {
     public function __construct( protected CostumerRepositoryInterface  $costumerRepository ) {
 

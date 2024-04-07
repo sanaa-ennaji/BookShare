@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Services\CostumerService;
 use App\Repositories\BookRepository;
 use Illuminate\Support\ServiceProvider;
 use App\Repositories\CategoryRepository;
@@ -18,9 +19,14 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->bind(CostumerRepositoryInterface::class, CostumerRepository::class);
+        $this->app->bind(CostumerService::class , function ($app) {
+            return new CostumerService($app->make(CostumerRepositoryInterface::class));
+        });
         $this->app->bind(BookRepositoryInterface::class, BookRepository::class);
         $this->app->bind(CategoryRepositoryInterface::class, CategoryRepository::class);
     }
+  
+
 
     /**
      * Bootstrap any application services.
