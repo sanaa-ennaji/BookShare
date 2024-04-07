@@ -25,7 +25,7 @@
                     </h3>
                     <p class="mt-4 leading-7 text-gray-200">
                         your fisrt step to make your Business  online 
-                        fill the form and wait for acception we will send you an email .
+                        fill the form and wait for acception we will send you an email.
                     </p>
         
                     <div class="flex items-center mt-5">
