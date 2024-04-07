@@ -25,13 +25,12 @@ class CostumerController extends Controller
             'password'=>['required'],
         ]);
        
-        $data = $request->validate([
-            'user_id' => ['required'],
+        $costumerData = $request->validate([
             'phone'=>['required']
          ]);
          
         $datad['password'] = bcrypt($datad['password']);
-       $user= $this->costumerRepository->CostumerRegister($datad , $data);
+       $user= $this->costumerRepository->CostumerRegister($datad ,$costumerData);
    
        auth()->login($user);
           return redirect('/');
