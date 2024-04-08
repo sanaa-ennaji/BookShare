@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
 class StoreController extends Controller
 {
-    private $storeRepository;
+    private $storeService;
 
-    public function __construct(StoreRepositoryInterface $storeRepository)
+    public function __construct( StoreService  $storeService)
     {
-        $this->storeRepository = $storeRepository;
+        $this->storeService = $storeService;
     }
     public function CostumerRegister (Request $request){
        
@@ -28,7 +29,7 @@ class StoreController extends Controller
          ]);
          
         $data['password'] = bcrypt($datad['password']);
-       $user= $this->storeRepository->StoreRegister($data ,$StoreData);
+       $user= $this->storeService->StoreRegister($data ,$StoreData);
    
        auth()->login($user);
           return redirect('/');

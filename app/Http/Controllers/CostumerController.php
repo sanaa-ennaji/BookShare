@@ -12,15 +12,9 @@ use Illuminate\Support\Facades\Validator;
 class CostumerController extends Controller
 {
 
-    // private $costumerRepository;
-
-    // public function __construct(CostumerRepositoryInterface $costumerRepository)
-    // {
-    //     $this->costumerRepository = $costumerRepository;
-    // }
-    public function __construct(
-        protected CostumerService $costumerService
-      ) {
+   
+    public function __construct( protected CostumerService $costumerService ) {
+        
       }
     public function CostumerRegister (Request $request){
        
