@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
     <body >
-
+        @include('components/navbar')
+        @include('components/navbar2')
 <div class="min-w-screen min-h-screen bg-gray-200 flex items-center justify-center px-5 pb-10 pt-16">
     <div class="w-full mx-auto rounded-lg bg-white shadow-lg p-5 text-gray-700" style="max-width: 600px">
         <div class="w-full pt-1 pb-5">
@@ -34,7 +35,7 @@
             </div>
         </div>
         <div class="mb-3 -mx-2 flex items-end">
-            <div class="px-2 w-1/2">
+            {{-- <div class="px-2 w-1/2">
                 <label class="font-bold text-sm mb-2 ml-1">Expiration date</label>
                 <div>
                     <select class="form-select w-full px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors cursor-pointer">
@@ -52,7 +53,7 @@
                         <option value="12">12 - December</option>
                     </select>
                 </div>
-            </div>
+            </div> --}}
             <div class="px-2 w-1/2">
                 <select class="form-select w-full px-3 py-2 mb-1 border-2 border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors cursor-pointer">
                     <option value="2024">2024</option>
