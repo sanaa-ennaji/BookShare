@@ -21,12 +21,12 @@
                        send a damande 
                     </p>
                     <h3 class="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight">
-                            Book Stores <span class="text-red-900">Registeration</span>
+                            Book Stores <span class="text-red-900">Register</span>
                     </h3>
                     <p class="mt-4 leading-7 text-gray-200">
-                        your fisrt step to make your Business online 
+                        Your fisrt step to make your Business online 
                        join us by filling this  form and wait for acception our team will verify your Book store
-                        informations and then you can start  puplishing your books on our platform .
+                        informations and then you can start  publishing  your books on our platform .
                     </p>
         
                     <div class="flex items-center mt-5">
