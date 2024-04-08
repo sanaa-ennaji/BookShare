@@ -37,6 +37,9 @@ class BookController extends Controller
         return response()->json($book, 201);
     }
 
+
+    
+
     // public function index()
     // {
     //     $books = $this->bookService->getAll();
