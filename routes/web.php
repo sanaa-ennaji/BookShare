@@ -51,7 +51,10 @@ Route::get('/StoreRegister', function () {
 });
 Route::get('/waiting', function () {
     return view('stores.waiting');
-});  resources/views/admin/statistique.blade.php
+}); 
+Route::get('/admin', function () {
+    return view('admin.statistique');
+}); 
 
 Route::post('/CostumerRegister', [CostumerController::class, 'CostumerRegister']);
 Route::post('/StoreRegister', [StoreController::class, 'StoreRegister']);
