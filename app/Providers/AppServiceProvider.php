@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use CostumerServiceInterface;
 use App\Services\StoreService;
 use App\Services\CostumerService;
 use App\Repositories\BookRepository;
@@ -22,9 +23,16 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->bind(CostumerRepositoryInterface::class, CostumerRepository::class);
-        $this->app->bind(CostumerService::class , function ($app) {
+        $this->app->bind(CostumerServiceInterface::class , function ($app) {
             return new CostumerService($app->make(CostumerRepositoryInterface::class));
         });
+
+
+// $this->app->bind(CostumerRepositoryInterface::class, CostumerRepository::class);
+// $this->app->bind(CostumerServiceInterface::class, function ($app) {
+//     return new CostumerService($app->make(CostumerRepositoryInterface::class));
+// });
+
         $this->app->bind(StoreRepositoryInterface::class, StoreRepository::class);
         $this->app->bind(StoreService::class , function ($app) {
             return new CostumerService($app->make(StoreRepositoryInterface::class));

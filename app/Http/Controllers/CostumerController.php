@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use CostumerServiceInterface;
 use App\Services\CostumerService;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
@@ -13,8 +14,8 @@ class CostumerController extends Controller
 {
 
    
-    public function __construct( protected CostumerService $costumerService ) {
-        
+    public function __construct( protected CostumerServiceInterface $costumerService ) {
+
       }
     public function CostumerRegister (Request $request){
        
