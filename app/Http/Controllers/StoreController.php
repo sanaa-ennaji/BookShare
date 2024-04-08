@@ -21,18 +21,18 @@ class StoreController extends Controller
             'password'=>['required'],
         ]);
        
-        $StoreData = $request->validate([
+        $storeData = $request->validate([
             'phone'=>['required'],
             'address'=>['required'],
             'city'=>['required'],
             'description'=>['required'],
          ]);
          
-        $data['password'] = bcrypt($datad['password']);
-       $user= $this->storeService->StoreRegister($data ,$StoreData);
+        $data['password'] = bcrypt($data['password']);
+       $this->storeService->StoreRegister($data ,$storeData);
    
-       auth()->login($user);
-          return redirect('/');
+    //auth()->login($user);
+          return redirect('/waiting');
       
     }
 }

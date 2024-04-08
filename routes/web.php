@@ -49,6 +49,9 @@ Route::get('/stores/profile', function () {
 Route::get('/StoreRegister', function () {
     return view('stores.StoreRegister');
 });
+Route::get('/waiting', function () {
+    return view('stores.waiting');
+});
 
 Route::post('/CostumerRegister', [CostumerController::class, 'CostumerRegister']);
 Route::post('/StoreRegister', [StoreController::class, 'StoreRegister']);
