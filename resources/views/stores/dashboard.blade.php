@@ -137,7 +137,7 @@
                 </div>
             </button>
               
-               
+
                   
                   <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="user-dropdown">
                     <div class="px-4 py-3">
@@ -215,31 +215,31 @@
 
 
                         <div class="col-span-2 sm:col-span-1">
-                            <label for="places"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">places</label>
-                        <input type="number" id="places" name="places"
+                            <label for="author"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">author</label>
+                        <input type="text" id="author" name="author"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
 
                         </div>
                       
                         <div class="col-span-2 sm:col-span-1">
-                            <label for="date"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">date</label>
-                            <input type="date" id="date" name="date"
+                            <label for="ISBN"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ISBN</label>
+                            <input type="number" id="ISBN" name="ISBN"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                          
                         </div>
                         <div class="col-span-2 sm:col-span-1">
                             <label for="time"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">time</label>
-                            <input type="time" id="time" name="event_time"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">quantity</label>
+                            <input type="number" id="quantity                                                                                                       h" name="quantity"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                          
                         </div>
 
                         <div class="col-span-2 sm:col-span-1">
                             <label for="normal_price"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Normal price</label>
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">price</label>
                             <input type="number" name="normal_price" id="normal_price"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                 placeholder="$2999" required="">
