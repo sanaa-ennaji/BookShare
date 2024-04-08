@@ -18,14 +18,15 @@
             <div class="grid grid-cols-1 md:grid-cols-12 border">
                 <div class="bg-red-500 md:col-span-4 p-10 text-white">
                     <p class="mt-4 text-sm leading-7 font-regular uppercase">
-                       join Us
+                       send a damande 
                     </p>
                     <h3 class="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight">
                             Book Stores <span class="text-red-900">Registeration</span>
                     </h3>
                     <p class="mt-4 leading-7 text-gray-200">
-                        your fisrt step to make your Business  online 
-                        fill the form and wait for acception .
+                        your fisrt step to make your Business online 
+                       join us by filling this  form and wait for acception our team will verify your Book store
+                        informations and then you can start  puplishing your books on our platform .
                     </p>
         
                     <div class="flex items-center mt-5">
@@ -131,17 +132,12 @@
                         </div>
                         <div class="flex justify-between w-full px-3">
                             <div class="md:flex md:items-center">
-                                <label class="block text-gray-500 font-bold">
-                                    <input class="mr-2 leading-tight" type="checkbox">
-                                    <span class="text-sm">
-                                        Send me your newsletter!
-                                    </span>
-                                </label>
+                              
                             </div>
                             <button
-                                class="shadow bg-indigo-600 hover:bg-indigo-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-6 rounded"
+                                class="shadow bg-red-600 hover:bg-red-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-6 rounded"
                                 type="submit">
-                                Send Message
+                              Register
                             </button>
                         </div>
         
