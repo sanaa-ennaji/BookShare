@@ -10,7 +10,7 @@
 <body>
 
 <div class="min-h-screen bg-red-100">
-    <aside class="bg-red-800 -translate-x-80 fixed inset-0 z-50   h-[100vh] w-72  transition-transform duration-300 xl:translate-x-0">
+    <aside class="bg-red-500 -translate-x-80 fixed inset-0 z-50   h-[100vh] w-72  transition-transform duration-300 xl:translate-x-0">
       <div class="relative border-b border-white/20">
         <a class="flex items-center gap-4 py-6 px-8" href="#/">
           <h6 class="block antialiased tracking-normal font-sans text-base font-semibold leading-relaxed text-white">BookShare</h6>
@@ -35,11 +35,11 @@
             </a>
           </li>
           <li>
-             <a aria-current="page" class="active" href="creator/event">
+             <a aria-current="page" class="active" href="/store">
                 <button class="middle none font-sans font-bold center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg text-white hover:bg-white/10 active:bg-white/30 w-full flex items-center gap-4 px-4 capitalize" type="button">  
-                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="w-5 h-5 text-inherit">
-                    <path fill-rule="evenodd" d="M1.5 5.625c0-1.036.84-1.875 1.875-1.875h17.25c1.035 0 1.875.84 1.875 1.875v12.75c0 1.035-.84 1.875-1.875 1.875H3.375A1.875 1.875 0 011.5 18.375V5.625zM21 9.375A.375.375 0 0020.625 9h-7.5a.375.375 0 00-.375.375v1.5c0 .207.168.375.375.375h7.5a.375.375 0 00.375-.375v-1.5zm0 3.75a.375.375 0 00-.375-.375h-7.5a.375.375 0 00-.375.375v1.5c0 .207.168.375.375.375h7.5a.375.375 0 00.375-.375v-1.5zm0 3.75a.375.375 0 00-.375-.375h-7.5a.375.375 0 00-.375.375v1.5c0 .207.168.375.375.375h7.5a.375.375 0 00.375-.375v-1.5zM10.875 18.75a.375.375 0 00.375-.375v-1.5a.375.375 0 00-.375-.375h-7.5a.375.375 0 00-.375.375v1.5c0 .207.168.375.375.375h7.5zM3.375 15h7.5a.375.375 0 00.375-.375v-1.5a.375.375 0 00-.375-.375h-7.5a.375.375 0 00-.375.375v1.5c0 .207.168.375.375.375zm0-3.75h7.5a.375.375 0 00.375-.375v-1.5A.375.375 0 0010.875 9h-7.5A.375.375 0 003 9.375v1.5c0 .207.168.375.375.375z" clip-rule="evenodd"></path>
-                  </svg>
+                    <svg class="w-6 h-6 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v13H7a2 2 0 0 0-2 2Zm0 0a2 2 0 0 0 2 2h12M9 3v14m7 0v4"/>
+                      </svg>
                 <p class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize">Books</p>
               </button>
             </a>
@@ -52,7 +52,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="w-5 h-5 text-inherit">
                     <path fill-rule="evenodd" d="M5.25 9a6.75 6.75 0 0113.5 0v.75c0 2.123.8 4.057 2.118 5.52a.75.75 0 01-.297 1.206c-1.544.57-3.16.99-4.831 1.243a3.75 3.75 0 11-7.48 0 24.585 24.585 0 01-4.831-1.244.75.75 0 01-.298-1.205A8.217 8.217 0 005.25 9.75V9zm4.502 8.9a2.25 2.25 0 104.496 0 25.057 25.057 0 01-4.496 0z" clip-rule="evenodd"></path>
                   </svg>
-                <p class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize"></p>
+                <p class="block antialiased font-sans text-base leading-relaxed text-inherit font-medium capitalize"> orders</p>
               </button>
             </a>
           </li>
@@ -71,7 +71,7 @@
         </ul>
         <ul class="mb-4 flex flex-col gap-1">
           <li class="mx-3.5 mt-4 mb-2">
-            <p class="block antialiased font-sans text-sm leading-normal text-white font-black uppercase opacity-75">auth pages</p>
+            <p class="block antialiased font-sans text-sm leading-normal text-white font-black uppercase opacity-75">auth</p>
           </li>
           <li>
             <a class="" href="#">
@@ -173,9 +173,9 @@
       </nav>
       <div class="mt-12">
         <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" id="btn"
-        class="relative block text-white bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        class="relative block text-white bg-red-500 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
         type="button">
-        add new Event
+        add new book
     </button>
 
 
