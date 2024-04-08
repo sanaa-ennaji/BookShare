@@ -152,9 +152,6 @@
                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">profile</a>
                       </li>
                       <li>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">reservation</a>
-                      </li>
-                      <li>
                         <a href="#" class="block px-4 pt-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
                              <form action="/logout" method="POST">
                             @csrf
@@ -188,7 +185,7 @@
 
                 <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                     <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                        Create Event
+                        Create Book
                     </h3>
                     <button type="button"
                         class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
@@ -245,11 +242,14 @@
                                 placeholder="$2999" required="">
                         </div>
                         <div class="col-span-2 sm:col-span-1">
-                            <label for="VIP_price"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">VIP price</label>
-                            <input type="number" name="VIP_price" id="VIP_price"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                                placeholder="$2999" required="">
+                            <label for="Category"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
+                        <select id="Category" name="Category"
+                            class="citySelect bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                            <option selected value="">Category</option>
+                            <option value=""></option>
+                            
+                        </select>
                         </div>
 
 
@@ -264,16 +264,7 @@
                             </select>
                         </div> --}}
                          
-                        <div class="col-span-2 sm:col-span-1">
-                            <label for="city"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">city</label>
-                            <select id="city" name="lieu"
-                                class="citySelect bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                                <option selected value="">city</option>
-                                <option value="paris">paris</option>
-                                
-                            </select>
-                        </div>
+                      
 
                         <div class="col-span-2">
                             <label for="description"
