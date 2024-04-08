@@ -50,7 +50,7 @@
                  
         
                 </div>
-                <form class="md:col-span-8 p-10">
+                <form class="md:col-span-8 p-10" method="POST" action="/StoreRegister">
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -59,7 +59,7 @@
                             </label>
                             <input
                                 class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                                id="grid-first-name" type="text" placeholder="Jane">
+                                id="grid-first-name" type="text" name="name" placeholder="book shop">
                             {{-- <p class="text-red-500 text-xs italic">Please fill out this field.</p> --}}
                         </div>
                         <div class="w-full md:w-1/2 px-3">
@@ -69,19 +69,19 @@
                             </label>
                             <input
                                 class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                id="grid-last-name" type="text" placeholder="Doe">
+                                id="grid-last-name" type="text" name="phone" placeholder="+121 0000 0000 ">
                         </div>
                     </div>
 
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                                for="grid-first-name">
-                               adress
+                                for="grid-first-name" >
+                               address
                             </label>
                             <input
                                 class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                                id="grid-first-name" type="text" placeholder="Jane">
+                                id="grid-first-name" type="text" name="address" placeholder="Store address">
                             {{-- <p class="text-red-500 text-xs italic">Please fill out this field.</p> --}}
                         </div>
                         <div class="w-full md:w-1/2 px-3">
@@ -91,7 +91,7 @@
                             </label>
                             <input
                                 class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                id="grid-last-name" type="text" placeholder="Doe">
+                                id="grid-last-name" type="text" placeholder="store city" name="city">
                         </div>
                     </div>
 
@@ -101,11 +101,11 @@
                         <div class="w-full px-3">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                                 for="grid-password">
-                                Email Address
+                                Email 
                             </label>
                             <input
                                 class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                id="grid-email" type="email" placeholder="********@*****.**">
+                                id="grid-email" type="email" name="email" placeholder="********@*****.**">
                         </div>
                     </div>
 
@@ -117,7 +117,7 @@
                             </label>
                             <input
                                 class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                id="grid-email" type="password" placeholder="********">
+                                id="grid-email" type="password" name="password" placeholder="********">
                         </div>
                     </div>
         
@@ -127,8 +127,9 @@
                                 for="grid-password">
                               description 
                             </label>
-                            <textarea rows="10"
-                                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"></textarea>
+                            <textarea rows="10" name="description"
+                                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                            </textarea>
                         </div>
                         <div class="flex justify-between w-full px-3">
                             <div class="md:flex md:items-center">
