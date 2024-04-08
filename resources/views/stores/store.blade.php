@@ -23,7 +23,7 @@
             <img class="object-cover object-center h-32" src='../img/pexels-tuur-tisseghem-626986.jpg'>
         </div>
         <div class="text-center ">
-            <h2 class="font-semibold">Sarah Smith</h2>
+            <h2 class="font-semibold">store name</h2>
             <div class="flex  justify-center">
                       
                 <div class="flex items-center mt-2.5 mb-2.5">
@@ -94,7 +94,7 @@
         <img class="object-cover object-center h-32" src='../img/pexels-tuur-tisseghem-626986.jpg'>
     </div>
     <div class="text-center mt-2">
-        <h2 class="font-semibold">Sarah Smith</h2>
+        <h2 class="font-semibold">store name</h2>
         <div class="flex  justify-center">
                   
             <div class="flex items-center mt-2.5 mb-2.5">
@@ -165,7 +165,7 @@
         <img class="object-cover object-center h-32" src='../img/pexels-tuur-tisseghem-626986.jpg'>
     </div>
     <div class="text-center mt-2">
-        <h2 class="font-semibold">Sarah Smith</h2>
+        <h2 class="font-semibold">store name</h2>
         <div class="flex  justify-center">
                   
             <div class="flex items-center mt-2.5 mb-2.5">
@@ -236,7 +236,7 @@
         <img class="object-cover object-center h-32" src='../img/pexels-tuur-tisseghem-626986.jpg'>
     </div>
     <div class="text-center mt-2">
-        <h2 class="font-semibold">Sarah Smith</h2>
+        <h2 class="font-semibold">store name</h2>
         <div class="flex  justify-center">
                   
             <div class="flex items-center mt-2.5 mb-2.5">
@@ -307,7 +307,7 @@
         <img class="object-cover object-center h-32" src='../img/pexels-tuur-tisseghem-626986.jpg'>
     </div>
     <div class="text-center mt-2">
-        <h2 class="font-semibold">Sarah Smith</h2>
+        <h2 class="font-semibold">store name</h2>
         <div class="flex  justify-center">
                   
             <div class="flex items-center mt-2.5 mb-2.5">

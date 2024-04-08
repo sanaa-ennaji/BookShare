@@ -30,7 +30,7 @@
                     </p>
         
                     <div class="flex items-center mt-5">
-                        <svg class="h-6 mr-2 text-indigo-600" fill="currentColor" version="1.1"
+                        <svg class="h-6 mr-2 text-white" fill="currentColor" version="1.1"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 489.536 489.536"
                             xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 489.536 489.536">
                             <g>
@@ -45,7 +45,7 @@
                                 </g>
                             </g>
                         </svg>
-                        <span class="text-sm">House #14, Street #12, Darulaman Road, Kabul, Afghanistan.</span>
+                        <span class="text-sm">YouCode safi, Simplone</span>
                     </div>
                  
         
@@ -90,9 +90,13 @@
                                 for="grid-last-name">
                                 city
                             </label>
-                            <input
-                                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                id="grid-last-name" type="text" placeholder="store city" name="city">
+                            <select id="city" name="city"
+                            class="citySelect appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                            &>
+                            <option selected value="">city</option>
+                            <option value=""></option>
+                            
+                        </select>
                         </div>
                     </div>
 
