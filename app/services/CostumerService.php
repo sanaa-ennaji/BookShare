@@ -4,13 +4,13 @@ namespace App\Services;
 
 use App\RepositoryInterfaces\CostumerRepositoryInterface;
 
-class UserService
+class CostumerService
 {
     public function __construct( protected CostumerRepositoryInterface  $costumerRepository ) {
 
     }
 
-    public function create(array $data, array $costumerData)
+    public function CostumerRegister (array $data, array $costumerData)
     {
         return $this->costumerRepository->CostumerRegister($data,$costumerData);
     }

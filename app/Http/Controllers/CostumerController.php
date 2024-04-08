@@ -3,20 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Services\CostumerService;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
-use App\RepositoryInterfaces\CostumerRepositoryInterface;
+
 
 
 class CostumerController extends Controller
 {
 
-    private $costumerRepository;
+    // private $costumerRepository;
 
-    public function __construct(CostumerRepositoryInterface $costumerRepository)
-    {
-        $this->costumerRepository = $costumerRepository;
-    }
+    // public function __construct(CostumerRepositoryInterface $costumerRepository)
+    // {
+    //     $this->costumerRepository = $costumerRepository;
+    // }
+    public function __construct(
+        protected CostumerService $costumerService
+      ) {
+      }
     public function CostumerRegister (Request $request){
        
         $datad = $request->validate([
@@ -30,7 +35,7 @@ class CostumerController extends Controller
          ]);
          
         $datad['password'] = bcrypt($datad['password']);
-       $user= $this->costumerRepository->CostumerRegister($datad ,$costumerData);
+       $user= $this->costumerService->CostumerRegister($datad ,$costumerData);
    
        auth()->login($user);
           return redirect('/');
