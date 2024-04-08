@@ -55,7 +55,9 @@ Route::get('/waiting', function () {
 Route::get('/admin', function () {
     return view('admin.statistique');
 }); 
-
+Route::get('/dashboard', function () {
+    return view('stores.dashboard');
+}); 
 Route::post('/CostumerRegister', [CostumerController::class, 'CostumerRegister']);
 Route::post('/StoreRegister', [StoreController::class, 'StoreRegister']);
 // Route::post('/login', [UserController::class, 'login']);
