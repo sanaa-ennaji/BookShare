@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use CostumerServiceInterface;
-use App\Services\CostumerService;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use App\ServiceInterfaces\CostumerServiceInterface;
 
 
 

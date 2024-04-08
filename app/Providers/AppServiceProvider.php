@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use CostumerServiceInterface;
 use App\Services\StoreService;
 use App\Services\CostumerService;
 use App\Repositories\BookRepository;
@@ -12,6 +11,7 @@ use App\Repositories\CategoryRepository;
 use App\Repositories\CostumerRepository;
 use App\Repositories\BookRepositoryInterface;
 use App\Repositories\CategoryRepositoryInterface;
+use App\ServiceInterfaces\CostumerServiceInterface;
 use App\RepositoryInterfaces\StoreRepositoryInterface;
 use App\RepositoryInterfaces\CostumerRepositoryInterface;
 
