@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Services\StoreService;
 
 
 class StoreController extends Controller
 {
     private $storeService;
 
-    public function __construct( StoreService  $storeService)
+    public function __construct(StoreService  $storeService)
     {
         $this->storeService = $storeService;
     }
@@ -29,7 +30,7 @@ class StoreController extends Controller
          ]);
          
         $data['password'] = bcrypt($data['password']);
-       $this->storeService->StoreRegister($data ,$storeData);
+       $this->storeService->createStore($data ,$storeData);
    
     //auth()->login($user);
           return redirect('/waiting');
