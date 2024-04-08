@@ -13,12 +13,26 @@
         @include('components/navbar2') --}}
 <div class="bg-red-100 dark:bg-gray-800">
     <div class="min-h-screen flex flex-col justify-center items-center">
-      <img src="../img/astro.png" alt="Logo" class="mb-4 h-50">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-gray-700 dark:text-white mb-4">your damande sent succesfully</h1>
-      <p class="text-center text-gray-500 dark:text-gray-300 text-lg md:text-xl lg:text-2xl mb-8">we will sent you a respose as soon as possible</p>
+      {{-- <img src="../img/astro.png" alt="Logo" class="mb-4 h-50"> --}}
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+        <circle fill="#FF156D" stroke="#FF156D" stroke-width="20" r="25" cx="60" cy="100">
+            <animate attributeName="cy" calcMode="spline" dur="2" values="100;175;100;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4"></animate>
+        </circle>
+        <circle fill="#FF156D" stroke="#FF156D" stroke-width="20" r="25" cx="150" cy="100">
+            <animate attributeName="cy" calcMode="spline" dur="2" values="100;175;100;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2"></animate>
+        </circle>
+        <circle fill="#FF156D" stroke="#FF156D" stroke-width="20" r="25" cx="240" cy="100">
+            <animate attributeName="cy" calcMode="spline" dur="2" values="100;175;100;" keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0"></animate>
+        </circle>
+    </svg>
+    
+      <h1 class="text-xl md:text-xl lg:text-4xl font-bold text-center mt-8 text-gray-700 dark:text-white mb-4">registration request has been submitted</h1>
+      <p class="text-center text-gray-500 dark:text-gray-300 text-lg md:text-xl lg:text-2xl mb-8">Please allow a few days .our team carefully reviews each application
+        <br>  to ensure alignment with our platform's standards and values. </p>
       <div class="flex space-x-4">
         <a href="/" class="bg-red-800 hover:bg-red-700 text-white font-bold py-3 px-6 rounded dark:bg-gray-700 dark:hover:bg-gray-600">Go back</a>
-        <a href=""  class="shadow border-red-500 shadow-outline outline-none text-white font-bold py-3 px-6 rounded">login</a>
+        <a href=""  class="shadow border-red-500 shadow-outline outline-none text-white font-bold py-3 px-6 rounded">get started</a>
       </div>
     </div>
 </div>
