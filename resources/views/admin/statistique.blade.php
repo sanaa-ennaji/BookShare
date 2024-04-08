@@ -63,7 +63,7 @@
             <li class="mb-1 group">
                 <a href="" class="flex font-semibold items-center py-2 px-4 text-gray-900 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
                     <i class='bx bxl-blogger mr-3 text-lg' ></i>                 
-                    <span class="text-sm">Books and cartegories</span>
+                    <span class="text-sm">All</span>
                     <i class="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
                 </a>
                 <ul class="pl-7 mt-2 hidden group-[.selected]:block">
@@ -92,7 +92,7 @@
             <li class="mb-1 group">
                 <a href="" class="flex font-semibold items-center py-2 px-4 text-gray-900 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                     <i class='bx bx-envelope mr-3 text-lg' ></i>                
-                    <span class="text-sm">StoreRegister</span>
+                    <span class="text-sm">Stores Damande</span>
                     <span class=" md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-green-600 bg-green-200 rounded-full">2 </span>
                 </a>
             </li>
@@ -128,7 +128,7 @@
                     </button>
                     <div class="dropdown-menu shadow-md shadow-black/5 z-30 hidden max-w-xs w-full bg-white rounded-md border border-gray-100">
                         <div class="flex items-center px-4 pt-4 border-b border-b-gray-100 notification-tab">
-                            <button type="button" data-tab="notification" data-tab-page="notifications" class="text-gray-400 font-medium text-[13px] hover:text-gray-600 border-b-2 border-b-transparent mr-4 pb-1 active">Notifications</button>
+                            <button type="button" data-tab="notification" data-tab-page="notifications" class="text-gray-400 font-medium text-[13px] hover:text-gray-600 border-b-2 border-b-transparent mr-4 pb-1 active">orders</button>
                             <button type="button" data-tab="notification" data-tab-page="messages" class="text-gray-400 font-medium text-[13px] hover:text-gray-600 border-b-2 border-b-transparent mr-4 pb-1">damandes</button>
                         </div>
                         <div class="my-2">
@@ -296,14 +296,13 @@
                        
                     </div>
 
-                    <a href="/gebruikers" class="text-[#f84525] font-medium text-sm hover:text-red-800">View</a>
+                    <a href="/costumers" class="text-[#f84525] font-medium text-sm hover:text-red-800">View</a>
                 </div>
                 <div class="bg-white rounded-md border border-gray-100 p-6 shadow-md shadow-black/5">
                     <div class="flex justify-between mb-4">
                         <div>
                             <div class="flex items-center mb-1">
                                 <div class="text-2xl font-semibold">100</div>
-                                <div class="p-1 rounded bg-emerald-500/10 text-emerald-500 text-[12px] font-semibold leading-none ml-2">+30%</div>
                             </div>
                             <div class="text-sm font-medium text-gray-400">Stores</div>
                         </div>
@@ -314,7 +313,7 @@
                 <div class="bg-white rounded-md border border-gray-100 p-6 shadow-md shadow-black/5">
                     <div class="flex justify-between mb-6">
                         <div>
-                            <div class="text-2xl font-semibold mb-1">100</div>
+                            <div class="text-2xl font-semibold mb-1">10</div>
                             <div class="text-sm font-medium text-gray-400">categories</div>
                         </div>
                          {{-- <div class="dropdown">
@@ -332,7 +331,7 @@
                             </ul>
                         </div>  --}}
                     </div>
-                    <a href="" class="text-[#f84525] font-medium text-sm hover:text-red-800">View</a>
+                    <a href="/categories" class="text-[#f84525] font-medium text-sm hover:text-red-800">View</a>
                 </div>
             </div>
            
