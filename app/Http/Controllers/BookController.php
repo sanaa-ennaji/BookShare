@@ -7,7 +7,7 @@ class BookController extends Controller
 {
     protected $bookService;
               
-    public function __construct( BookService $bookService)
+    public function __construct( BookServiceInterface $bookService)
     {
         $this->bookService = $bookService;
     }
@@ -38,7 +38,7 @@ class BookController extends Controller
     }
 
 
-    
+
 
     // public function index()
     // {

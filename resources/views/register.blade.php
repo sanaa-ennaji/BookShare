@@ -10,7 +10,7 @@
         {{-- @include('components/navbar')
 
         @include('components/navbar2') --}}
-<div class="bg-red-50 h-[100vh] flex">
+<div class="bg-purple-50 h-[100vh] flex">
  
 <div class="w-1/2 h-[100%] hidden lg:block">
   <img src="img/téléchargement.jpg" alt="Placeholder Image" class="object-cover w-full h-full">
@@ -67,22 +67,22 @@
    
                 
                        <button type="submit"
-                           class="hover:shadow-form w-full rounded-md bg-red-600 py-3 px-8 text-center text-base font-semibold text-white outline-none">
+                           class="hover:shadow-form w-full rounded-md bg-purple-600 py-3 px-8 text-center text-base font-semibold text-white outline-none">
                           Resgister
                        </button>
                    </div>
                    <p class="text-sm text-center text-gray-400  mt-4 mb-4">
                        alreaday have an acount ? 
-                       <a href="/login" class="font-semibold text-indigo-500 focus:text-red-600 focus:outline-none focus:underline"> Log in</a>.
+                       <a href="/login" class="font-semibold text-indigo-500 focus:text-purple-600 focus:outline-none focus:underline"> Log in</a>.
                      </p>
                </form>
                <div class="flex flex-row justify-center mb-8">
-                   <span class="absolute bg-red-50 px-4 text-gray-500">or sign-in with</span>
+                   <span class="absolute bg-purple-50 px-4 text-gray-500">or sign-in with</span>
                    <div class="w-full bg-gray-200 mt-3 h-px"></div>
                  </div>
              
                  <div class="flex flex-row gap-2">
-                   <button class="bg-red-500 text-white w-full p-2 flex flex-row justify-center gap-2 items-center rounded-sm hover:bg-red-600 duration-100 ease-in-out">
+                   <button class="bg-purple-500 text-white w-full p-2 flex flex-row justify-center gap-2 items-center rounded-sm hover:bg-purple-600 duration-100 ease-in-out">
                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="w-5" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12c6.627 0 12-5.373 12-12S18.627 0 12 0zm.14 19.018c-3.868 0-7-3.14-7-7.018c0-3.878 3.132-7.018 7-7.018c1.89 0 3.47.697 4.682 1.829l-1.974 1.978v-.004c-.735-.702-1.667-1.062-2.708-1.062c-2.31 0-4.187 1.956-4.187 4.273c0 2.315 1.877 4.277 4.187 4.277c2.096 0 3.522-1.202 3.816-2.852H12.14v-2.737h6.585c.088.47.135.96.135 1.474c0 4.01-2.677 6.86-6.72 6.86z" fill="currentColor"/></g></svg>
                      Google
                    </button>

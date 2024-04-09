@@ -34,14 +34,14 @@
       <label for="remember" class="text-gray-600 ml-2">Remember Me</label>
     </div>
   
-    <div class="mb-6 text-red-500">
+    <div class="mb-6 text-purple-500">
       <a href="#" class="hover:underline">Forgot Password?</a>
     </div>
 </div>
-    <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-semibold rounded-md py-2 px-4 w-full">Login</button>
+    <button type="submit" class="bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-md py-2 px-4 w-full">Login</button>
   </form>
   <!-- Sign up  Link -->
-  <div class="mt-6 text-red-500 text-center">
+  <div class="mt-6 text-purple-500 text-center">
     <a href="/register" class="hover:underline">Sign up Here</a>
   </div>
 </div>

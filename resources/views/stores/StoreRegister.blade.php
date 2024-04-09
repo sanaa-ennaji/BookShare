@@ -16,12 +16,12 @@
 
         <div class=" w-[100%] sm:w-[90%] mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-12 border">
-                <div class="bg-red-500 md:col-span-4 p-10 text-white">
+                <div class="bg-purple-500 md:col-span-4 p-10 text-white">
                     <p class="mt-4 text-sm leading-7 font-regular uppercase">
                        send a damande 
                     </p>
                     <h3 class="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight">
-                            Book Stores <span class="text-red-900">Register</span>
+                            Book Stores <span class="text-purple-900">Register</span>
                     </h3>
                     <p class="mt-4 leading-7 text-gray-200">
                         Your fisrt step to make your Business online 
@@ -61,7 +61,7 @@
                             <input
                                 class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                                 id="grid-first-name" type="text" name="name" placeholder="book shop">
-                            {{-- <p class="text-red-500 text-xs italic">Please fill out this field.</p> --}}
+                            {{-- <p class="text-purple-500 text-xs italic">Please fill out this field.</p> --}}
                         </div>
                         <div class="w-full md:w-1/2 px-3">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -83,7 +83,7 @@
                             <input
                                 class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                                 id="grid-first-name" type="text" name="address" placeholder="Store address">
-                            {{-- <p class="text-red-500 text-xs italic">Please fill out this field.</p> --}}
+                            {{-- <p class="text-purple-500 text-xs italic">Please fill out this field.</p> --}}
                         </div>
                         <div class="w-full md:w-1/2 px-3">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -141,7 +141,7 @@
                               
                             </div>
                             <button
-                                class="shadow bg-red-600 hover:bg-red-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-6 rounded"
+                                class="shadow bg-purple-600 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-6 rounded"
                                 type="submit">
                               Register
                             </button>
