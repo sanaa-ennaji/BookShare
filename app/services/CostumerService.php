@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\ServiceInterfaces\CostumerServiceInterface;
+use App\ServiceInterface\CostumerServiceInterface;
 use App\RepositoryInterfaces\CostumerRepositoryInterface;
 
 class CostumerService implements CostumerServiceInterface

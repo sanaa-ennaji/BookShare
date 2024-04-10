@@ -11,7 +11,7 @@ use App\Repositories\CategoryRepository;
 use App\Repositories\CostumerRepository;
 use App\Repositories\BookRepositoryInterface;
 use App\Repositories\CategoryRepositoryInterface;
-use App\ServiceInterfaces\CostumerServiceInterface;
+use App\ServiceInterface\CostumerServiceInterface;
 use App\RepositoryInterfaces\StoreRepositoryInterface;
 use App\RepositoryInterfaces\CostumerRepositoryInterface;
 
@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
     {
       
             $this->app->bind(CostumerRepositoryInterface::class, CostumerRepository::class);
-    
+            // $this->app->bind(CostumerServiceInterface::class, CostumerService::class);
             $this->app->bind(CostumerServiceInterface::class, function ($app) {
                 return new CostumerService($app->make(CostumerRepositoryInterface::class));
             });
