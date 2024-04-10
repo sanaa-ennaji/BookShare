@@ -7,6 +7,7 @@ class BookRepository implements BookRepositoryInterface
 {
     public function create(array $data)
     {
+        $data['store_id'] = Book::store()->id();
         return Book::create($data);
     }
 

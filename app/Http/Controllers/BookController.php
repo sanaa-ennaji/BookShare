@@ -37,7 +37,6 @@ class BookController extends Controller
             $file->storeAs('public/img', $imageName);
             $data['image'] = $imageName;
         }
-        $data['user_id'] = auth()->id();
 
  
         $book = $this->bookService->create($data);

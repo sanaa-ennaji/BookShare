@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\CostumerController;
@@ -60,4 +61,5 @@ Route::get('/dashboard', function () {
 }); 
 Route::post('/CostumerRegister', [CostumerController::class, 'CostumerRegister']);
 Route::post('/StoreRegister', [StoreController::class, 'StoreRegister']);
+Route::post('/', [BookController::class, 'StoreRegister']);
 // Route::post('/login', [UserController::class, 'login']);
