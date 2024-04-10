@@ -18,9 +18,10 @@ class BookController extends Controller
     {
        
         $data = $request->validated();
-       $file = $request->file('image'); 
         if ($request->hasFile('image')) {
-            $imageName = $this->bookService->storeImage($file);
+            $file = $request->file('image');
+            $imageName = time() . '.' . $file->extension();
+            $file->storeAs('public/img', $imageName);
             $data['image'] = $imageName;
         }
 
