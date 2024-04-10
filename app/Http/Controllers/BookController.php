@@ -18,29 +18,27 @@ class BookController extends Controller
     {
        
         $data = $request->validated();
+       $file = $request->file('image'); 
         if ($request->hasFile('image')) {
-            $file = $request->file('image'); 
-        
-            if ($file instanceof UploadedFile) { 
-                $imageName = $this->bookService->storeImage($file);
-                $data['image'] = $imageName;
-            } else {
-              dd('failed');
-            }
+            $imageName = $this->bookService->storeImage($file);
+            $data['image'] = $imageName;
         }
-        
+
+ 
         $book = $this->bookService->create($data);
+
+
         return response()->json($book, 201);
     }
 
 
 
 
-    // public function index()
-    // {
-    //     $books = $this->bookService->getAll();
-    //     return view('books.index', compact('books'));
-    // }
+    public function index()
+    {
+        // $books = $this->bookService->getAll();
+        // return view('books.index', compact('books'));
+    }
 
 
 
