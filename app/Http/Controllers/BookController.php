@@ -73,6 +73,16 @@ class BookController extends Controller
         // return redirect()->route('books.index')->with('success', 'Book deleted successfully');
     }
 
+    public function searchBook () {
+
+    }
+
+    public function filterByCategory () {
+
+    }
+
+    
+
     public function addCart () {
 
     }
