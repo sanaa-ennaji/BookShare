@@ -9,6 +9,8 @@ class CategoryController extends Controller
   
     public function  createCategory (){
 
+
+        
     }
     
     public function updateCategory () {
@@ -19,6 +21,6 @@ class CategoryController extends Controller
 
     }
 
-    
+
 
 }
