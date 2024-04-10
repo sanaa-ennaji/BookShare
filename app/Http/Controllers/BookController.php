@@ -1,13 +1,14 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Repositories\BookRepositoryInterface;
+
+use App\ServiceInterface\BookServiceInterface;
 
 class BookController extends Controller
 {
     protected $bookService;
               
-    public function __construct(BookRepositoryInterface $bookService)
+    public function __construct(BookServiceInterface $bookService)
     {
         $this->bookService = $bookService;
     }

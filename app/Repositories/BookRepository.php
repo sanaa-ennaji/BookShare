@@ -12,9 +12,8 @@ class BookRepository implements BookRepositoryInterface
 
     public function update(array $data, int $id)
     {
-        $book = Book::findOrFail($id);
-        $book->update($data);
-        return $book;
+      
+        return Book::findOrFail($id)->update($data);
     }
 
     public function delete(int $id)
