@@ -12,9 +12,10 @@ use App\ServiceInterfaces\CostumerServiceInterface;
 class CostumerController extends Controller
 {
 
-   
-    public function __construct( protected CostumerServiceInterface $costumerService ) {
+    protected $costumerService ;
 
+    public function __construct(CostumerServiceInterface $costumerService ) {
+        $this->costumerService  =  $costumerService;
       }
     public function CostumerRegister (Request $request){
        

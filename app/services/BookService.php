@@ -11,7 +11,7 @@ class BookService {
         $this->bookRepository = $bookRepository;
     }
 
-    public function create(array $data) {
+    public function create (array $data) {
         
         return $this->bookRepository->create($data);
     }

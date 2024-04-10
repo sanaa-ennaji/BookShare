@@ -6,8 +6,10 @@ use App\RepositoryInterfaces\CostumerRepositoryInterface;
 
 class CostumerService
 {
-    public function __construct( protected CostumerRepositoryInterface  $costumerRepository ) {
+    protected $costumerRepository ;
 
+    public function __construct( CostumerRepositoryInterface  $costumerRepository ) {
+         $this->costumerRepository = $costumerRepository ;
     }
 
     public function CostumerRegister (array $data, array $costumerData)
