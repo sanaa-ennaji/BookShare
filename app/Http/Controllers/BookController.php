@@ -18,7 +18,6 @@ class BookController extends Controller
     {
        
         $data = $request->validated();
-
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $imageName = time() . '.' . $file->extension();
