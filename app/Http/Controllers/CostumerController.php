@@ -3,44 +3,37 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Validator;
 use App\ServiceInterfaces\CostumerServiceInterface;
-
-
 
 class CostumerController extends Controller
 {
+    protected $costumerServiceInterface;
 
-    protected $costumerService ;
+    public function __construct(CostumerServiceInterface $costumerServiceInterface)
+    {
+        $this->costumerServiceInterface = $costumerServiceInterface;
+    }
 
-    public function __construct(CostumerServiceInterface $costumerService ) {
-        $this->costumerService  =  $costumerService;
-      }
-    public function CostumerRegister (Request $request){
-       
-        $datad = $request->validate([
+    public function costumerRegister(Request $request)
+    {
+        $data = $request->validate([
             'name' => ['required'],
             'email' => ['required'],
-            'password'=>['required'],
+            'password' => ['required'],
         ]);
-       
+
         $costumerData = $request->validate([
-            'phone'=>['required']
-         ]);
-         
-        $datad['password'] = bcrypt($datad['password']);
-       $user= $this->costumerService->CostumerRegister($datad ,$costumerData);
-   
-       auth()->login($user);
-          return redirect('/');
-      
+            'phone' => ['required']
+        ]);
+
+        $data['password'] = bcrypt($data['password']);
+        $user = $this->costumerServiceInterface->create($data, $costumerData);
+
+        auth()->login($user);
+        return redirect('/');
     }
 
-    public function logout (){
-        auth()->logout();
-        return redirect('/') ;
-    }
 
+ 
   
 }

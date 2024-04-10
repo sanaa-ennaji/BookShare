@@ -1,10 +1,8 @@
 <?php
 
-
 namespace App\ServiceInterfaces;
 
 interface CostumerServiceInterface
 {
-    public function CostumerRegister(array $data, array $costumerData);
-  
+    public function create(array $data, array $costumerData);
 }

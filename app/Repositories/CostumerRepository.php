@@ -8,12 +8,11 @@ use App\RepositoryInterfaces\CostumerRepositoryInterface;
 
 class CostumerRepository implements CostumerRepositoryInterface
 {
-    public function CostumerRegister(array $data, array $costumerData)
+    public function costumerRegister(array $data, array $costumerData)
     {
         $user = User::create($data);
         $costumerData['user_id'] = $user->id;
-       Costumer::create($costumerData);
-        return $user ;
+        Costumer::create($costumerData);
+        return $user;
     }
-
-    }
+}

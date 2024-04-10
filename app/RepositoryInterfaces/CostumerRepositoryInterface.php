@@ -1,10 +1,8 @@
 <?php
 
-
 namespace App\RepositoryInterfaces;
 
 interface CostumerRepositoryInterface
 {
-    public function CostumerRegister(array $data, array $costumerData);
-  
+    public function costumerRegister(array $data, array $costumerData);
 }

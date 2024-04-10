@@ -2,19 +2,20 @@
 
 namespace App\Services;
 
+use App\ServiceInterfaces\CostumerServiceInterface;
 use App\RepositoryInterfaces\CostumerRepositoryInterface;
 
-class CostumerService
+class CostumerService implements CostumerServiceInterface
 {
-    protected $costumerRepository ;
+    protected $costumerRepository;
 
-    public function __construct( CostumerRepositoryInterface  $costumerRepository ) {
-         $this->costumerRepository = $costumerRepository ;
-    }
-
-    public function CostumerRegister (array $data, array $costumerData)
+    public function __construct(CostumerRepositoryInterface $costumerRepository)
     {
-        return $this->costumerRepository->CostumerRegister($data,$costumerData);
+        $this->costumerRepository = $costumerRepository;
     }
 
+    public function create(array $data, array $costumerData)
+    {
+        return $this->costumerRepository->costumerRegister($data, $costumerData);
+    } 
 }

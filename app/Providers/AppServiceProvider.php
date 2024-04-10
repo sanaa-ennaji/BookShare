@@ -22,10 +22,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->bind(CostumerRepositoryInterface::class, CostumerRepository::class);
-        $this->app->bind(CostumerServiceInterface::class , function ($app) {
-            return new CostumerService($app->make(CostumerRepositoryInterface::class));
-        });
+      
+            $this->app->bind(CostumerRepositoryInterface::class, CostumerRepository::class);
+    
+            $this->app->bind(CostumerServiceInterface::class, function ($app) {
+                return new CostumerService($app->make(CostumerRepositoryInterface::class));
+            });
+        
 
 
 // $this->app->bind(CostumerRepositoryInterface::class, CostumerRepository::class);
