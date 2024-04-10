@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('ISBN')->nullable();
             $table->integer('quantity')->nullable();
             $table->string('status' ,45)->nullable();
-            $table->longText('description')->nullable();
+            $table->longText('description')->nullable();<
             $table->json('lang')->nullable();
             $table->decimal('price');
             $table->foreignId('store_id')

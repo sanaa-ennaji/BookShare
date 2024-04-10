@@ -1,6 +1,6 @@
 <nav
-  class="flex-no-wrap relative bg-blue-100 flex w-full items-center justify-between bg-zinc-50 py-2 shadow-dark-mild dark:bg-neutral-700 lg:flex-wrap lg:justify-start lg:py-4">
-  <div class="flex w-full flex-wrap items-center justify-between px-3">
+  class="flex-no-wrap  relative bg-blue-100 flex w-full items-center  bg-zinc-50 py-2 shadow-dark-mild dark:bg-neutral-700 lg:flex-wrap lg:justify-start ">
+  <div class="flex w-full flex-wrap items-center justify-between w-[80%] mx-auto">
    
     <div
       class="!visible  items-center lg:!flex lg:basis-auto"
@@ -19,14 +19,31 @@
     </div> 
 
     
-<form class="mx-auto w-[50%] rounded-2xl">
+<form class="mx-auto w-[40vw]  rounded-2xl">
       <div class="flex">
-        <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"></label>
-        <button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-full hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">All categories <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+          <select class="flex-shrink-0 z-10 inline-flex items-center py-2.5  text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-full hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600">
+            <option value="01">01 - January</option>
+            <option value="02">02 - February</option>
+            <option value="03">03 - March</option>
+            <option value="04">04 - April</option>
+            <option value="05">05 - May</option>
+            <option value="06">06 - June</option>
+            <option value="07">07 - July</option>
+            <option value="08">08 - August</option>
+            <option value="09">09 - September</option>
+            <option value="10">10 - October</option>
+            <option value="11">11 - November</option>
+            <option value="12">12 - December</option>
+        </select>
+        {{-- <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"></label>
+        <button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-full hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">
+            All categories 
+            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-  </svg></button>
+  </svg></button> --}}
       
-  <div id="dropdown" class="absolute hidden z-50 top-full left-0 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+
+  {{-- <div id="dropdown" class="absolute hidden z-50 top-full left-0 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
 
             <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
             <li>
@@ -43,7 +60,7 @@
             </li>
             </ul>
 
-        </div>
+        </div> --}}
         <div class="relative w-full"> 
             <input type="search" id="search-dropdown" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-full border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" placeholder="Search ..." required />
             <button type="submit" class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-blue-700 rounded-r-full border border-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -62,7 +79,7 @@
       class="ps-2 text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80"
       href="/cart">
       <span class="[&>svg]:w-5">
-        <svg
+        <svg class="text-blue-500"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor">
@@ -76,7 +93,7 @@
       class="ps-2 text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80"
       href="/wishlist">
       <span class="[&>svg]:w-5">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+        <svg  class="text-blue-500" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
           </svg>
           
@@ -90,7 +107,7 @@
     data-twe-dropdown-toggle-ref
     aria-expanded="false">
     <span class="[&>svg]:h-5 [&>svg]:w-5">
-      <svg
+      <svg  class="text-blue-500"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
@@ -102,7 +119,7 @@
       </svg>
     </span>
     <span class="[&>svg]:w-5">
-      <svg
+      <svg  class="text-blue-500"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor">
