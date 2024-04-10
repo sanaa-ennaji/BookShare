@@ -1,10 +1,10 @@
 <?php
 
 
-namespace App\ServiceInterfaces;
+namespace App\ServiceInterface;
 
 interface StoreServiceInterface
 {
-    public function StoreRegister(array $data, array $StoreData);
+    public function createStore(array $data, array $StoreData);
   
 }

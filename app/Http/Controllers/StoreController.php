@@ -3,18 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Services\StoreService;
+use App\ServiceInterface\StoreServiceInterface;
 
 
 class StoreController extends Controller
 {
     private $storeService;
 
-    public function __construct(StoreService  $storeService)
+    public function __construct(StoreServiceInterface  $storeService)
     {
         $this->storeService = $storeService;
     }
-    public function CostumerRegister (Request $request){
+    public function Storegister (Request $request){
        
         $data = $request->validate([
             'name' => ['required'],

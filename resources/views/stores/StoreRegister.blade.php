@@ -94,7 +94,7 @@
                             class="citySelect appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                             &>
                             <option selected value="">city</option>
-                            <option value=""></option>
+                            <option value="paris">paris</option>
                             
                         </select>
                         </div>

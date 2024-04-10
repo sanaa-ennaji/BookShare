@@ -2,9 +2,11 @@
 
 namespace App\Services;
 
+
+use App\ServiceInterface\StoreServiceInterface;
 use App\RepositoryInterfaces\StoreRepositoryInterface;
 
-class StoreService
+class StoreService implements StoreServiceInterface
 {
     public function __construct( protected StoreRepositoryInterface $storeRepository ) {
 

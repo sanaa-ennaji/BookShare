@@ -1,10 +1,10 @@
 <?php
 
 
-namespace App\ServiceInterfaces;
+namespace App\ServiceInterface;
 
-interface CostumerServiceInterface
+interface BookServiceInterface
 {
-    public function create(array $data, array $costumerData);
+    public function create(array $data);
   
 }
