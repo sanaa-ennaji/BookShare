@@ -9,8 +9,8 @@
 </head>
 <body>
 
-<div class="min-h-screen bg-purple-100">
-    <aside class="bg-purple-500 -translate-x-80 fixed inset-0 z-50   h-[100vh] w-72  transition-transform duration-300 xl:translate-x-0">
+<div class="min-h-screen bg-blue-100">
+    <aside class="bg-blue-500 -translate-x-80 fixed inset-0 z-50   h-[100vh] w-72  transition-transform duration-300 xl:translate-x-0">
       <div class="relative border-b border-white/20">
         <a class="flex items-center gap-4 py-6 px-8" href="#/">
           <h6 class="block antialiased tracking-normal font-sans text-base font-semibold leading-relaxed text-white">BookShare</h6>
@@ -170,7 +170,7 @@
       </nav>
       <div class="mt-12">
         <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" id="btn"
-        class="relative block text-white bg-purple-500 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800"
+        class="relative block text-white bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         type="button">
         add new book
     </button>
@@ -279,15 +279,15 @@
                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                                 for="file_input">Upload file</label>
                             <input
-                                class="block w-full text-sm text-purple-900 border border-purple-300 rounded-lg cursor-pointer bg-purple-50 dark:text-purple-400 focus:outline-none dark:bg-purple-700 dark:border-purple-600 dark:placeholder-purple-400"
+                                class="block w-full text-sm text-blue-900 border border-blue-300 rounded-lg cursor-pointer bg-blue-50 dark:text-blue-400 focus:outline-none dark:bg-blue-700 dark:border-blue-600 dark:placeholder-blue-400"
                                 aria-describedby="file_input_help" name="image" id="images" 
                                  type="file">
-                            <p class="mt-1 text-sm text-purple-500 dark:text-gray-300" id="file_input_help">SVG, PNG,
+                            <p class="mt-1 text-sm text-blue-500 dark:text-gray-300" id="file_input_help">SVG, PNG,
                                 JPG or GIF (MAX. 800x400px).</p>
                         </div>
                     </div>
                     <button type="submit" 
-                        class="left-0 text-white inline-flex items-center bg-purple-600  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        class="left-0 text-white inline-flex items-center bg-blue-600  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -309,7 +309,7 @@
           <h2 class="mb-4 text-xl font-bold text-gray-700">Admin & User</h2>
           <div>
             <div>
-              <div class="flex justify-between bg-gradient-to-tr from-indigo-600 to-purple-600 rounded-md py-2 px-4 text-white font-bold text-md">
+              <div class="flex justify-between bg-gradient-to-tr from-indigo-600 to-blue-600 rounded-md py-2 px-4 text-white font-bold text-md">
                 <div>
                   <span>date</span>
                 </div>
@@ -364,11 +364,11 @@
                     @csrf
                     @method('DELETE')
                       <button  type="submit"
-                      class="mb-2 md:mb-0 bg-purple-500 border border-purple-500 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-purple-600">delete</button> 
+                      class="mb-2 md:mb-0 bg-blue-500 border border-blue-500 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-blue-600">delete</button> 
                   </form>
                   <div class="px-2">
                     <button id="button{{ $event->id }}" onclick="toggleModal('progress-modal{{ $event->id }}', 'button{{ $event->id }}')"
-                      class="mb-2 md:mb-0 bg-purple-500 border border-purple-500 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-purple-600">update</button> 
+                      class="mb-2 md:mb-0 bg-blue-500 border border-blue-500 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-blue-600">update</button> 
                 </div>
               </div>
 
@@ -390,7 +390,7 @@
                         </div>
                         <div class="flex items-center mt-6 space-x-4 rtl:space-x-reverse">
                             <button type="submit"
-                                class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">confirm</button>
+                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">confirm</button>
                             <button onclick="closeModal('progress-modal{{ $event->id }}')" type="button"
                                 class="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Cancel</button>
                         </div>

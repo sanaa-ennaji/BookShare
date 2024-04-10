@@ -86,7 +86,7 @@
                 <a href="" class="flex font-semibold items-center py-2 px-4 text-gray-900 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                     <i class='bx bx-bell mr-3 text-lg' ></i>                
                     <span class="text-sm">Notifications</span>
-                    <span class=" md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-purple-600 bg-purple-200 rounded-full">5</span>
+                    <span class=" md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-blue-600 bg-blue-200 rounded-full">5</span>
                 </a>
             </li>
             <li class="mb-1 group">
@@ -311,7 +311,7 @@
                         </div> 
                     </div>
 
-                    <a href="/gebruikers" class="text-[#f84525] font-medium text-sm hover:text-purple-800">View</a>
+                    <a href="/gebruikers" class="text-[#f84525] font-medium text-sm hover:text-blue-800">View</a>
                 </div>
                 <div class="bg-white rounded-md border border-gray-100 p-6 shadow-md shadow-black/5">
                     <div class="flex justify-between mb-4">
@@ -337,7 +337,7 @@
                             </ul>
                         </div> 
                     </div>
-                    <a href="/dierenartsen" class="text-[#f84525] font-medium text-sm hover:text-purple-800">View</a>
+                    <a href="/dierenartsen" class="text-[#f84525] font-medium text-sm hover:text-blue-800">View</a>
                 </div>
                 <div class="bg-white rounded-md border border-gray-100 p-6 shadow-md shadow-black/5">
                     <div class="flex justify-between mb-6">
@@ -360,7 +360,7 @@
                             </ul>
                         </div> 
                     </div>
-                    <a href="" class="text-[#f84525] font-medium text-sm hover:text-purple-800">View</a>
+                    <a href="" class="text-[#f84525] font-medium text-sm hover:text-blue-800">View</a>
                 </div>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
@@ -430,8 +430,8 @@
                                 <div class="flex items-center">
                                   <span class="mr-2">60%</span>
                                   <div class="relative w-full">
-                                    <div class="overflow-hidden h-2 text-xs flex rounded bg-purple-200">
-                                      <div style="width: 60%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-500"></div>
+                                    <div class="overflow-hidden h-2 text-xs flex rounded bg-blue-200">
+                                      <div style="width: 60%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"></div>
                                     </div>
                                   </div>
                                 </div>

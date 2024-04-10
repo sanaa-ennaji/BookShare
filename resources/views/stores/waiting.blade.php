@@ -11,7 +11,7 @@
     <body >
         {{-- @include('components/navbar')
         @include('components/navbar2') --}}
-<div class="bg-purple-100 dark:bg-gray-800">
+<div class="bg-blue-100 dark:bg-gray-800">
     <div class="min-h-screen flex flex-col justify-center items-center">
       {{-- <img src="../img/astro.png" alt="Logo" class="mb-4 h-50"> --}}
       
@@ -31,8 +31,8 @@
       <p class="text-center text-gray-500 dark:text-gray-300 text-lg md:text-xl lg:text-2xl mb-8">Please allow a few days .our team carefully reviews each application
         <br>  to ensure alignment with our platform's standards and values. </p>
       <div class="flex space-x-4">
-        <a href="/" class="bg-purple-800 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded dark:bg-gray-700 dark:hover:bg-gray-600">Go back</a>
-        <a href=""  class="shadow border-purple-500 shadow-outline outline-none text-white font-bold py-3 px-6 rounded">get started</a>
+        <a href="/" class="bg-blue-800 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded dark:bg-gray-700 dark:hover:bg-gray-600">Go back</a>
+        <a href=""  class="shadow border-blue-500 shadow-outline outline-none text-white font-bold py-3 px-6 rounded">get started</a>
       </div>
     </div>
 </div>
