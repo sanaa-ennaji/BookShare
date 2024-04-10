@@ -14,7 +14,7 @@ class StoreController extends Controller
     {
         $this->storeService = $storeService;
     }
-    public function Storegister (Request $request){
+    public function StoreRegister (Request $request){
        
         $data = $request->validate([
             'name' => ['required'],
@@ -32,8 +32,19 @@ class StoreController extends Controller
         $data['password'] = bcrypt($data['password']);
        $this->storeService->createStore($data ,$storeData);
    
-    //auth()->login($user);
+         //auth()->login($user);
           return redirect('/waiting');
       
     }
+
+  
+
+    public function updateStoreProfile () {
+
+
+    }
+
+    
+
+
 }

@@ -30,6 +30,14 @@ class BookController extends Controller
             'rating' => ['nullable', 'string'],
         ]);
 
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $imageName = time() . '.' . $file->extension();
+            $file->storeAs('public/img', $imageName);
+            $data['image'] = $imageName;
+        }
+        $data['user_id'] = auth()->id();
+
  
         $book = $this->bookService->create($data);
 
@@ -40,34 +48,37 @@ class BookController extends Controller
 
 
 
-    // public function index()
-    // {
-    //     $books = $this->bookService->getAll();
-    //     return view('books.index', compact('books'));
-    // }
+    public function index()
+    {
+        // $books = $this->bookService->getAll();
+        // return view('books.index', compact('books'));
+    }
 
 
 
-    // public function edit($id)
-    // {
-    //     $book = $this->bookService->getById($id);
-    //     return view('books.edit', compact('book'));
-    // }
-
-    // public function update(Request $request, $id)
-    // {
-    //     $validatedData = $request->validate([
+    public function update(Request $request, $id)
+    {
+        // $validatedData = $request->validate([
         
-    //     ]);
+        // ]);
 
-    //     $this->bookService->update($validatedData, $id);
+        // $this->bookService->update($validatedData, $id);
 
-    //     return redirect()->route('books.index')->with('success', 'Book updated successfully');
-    // }
+        return redirect()->route('books.index')->with('success', 'Book updated successfully');
+    }
 
-    // public function destroy($id)
-    // {
-    //     $this->bookService->delete($id);
-    //     return redirect()->route('books.index')->with('success', 'Book deleted successfully');
-    // }
+    public function destroy($id)
+    {
+        // $this->bookService->delete($id);
+        // return redirect()->route('books.index')->with('success', 'Book deleted successfully');
+    }
+
+    public function addCart () {
+
+    }
+
+    public function deleteCartItem () {
+
+    }
 }
+
