@@ -11,7 +11,7 @@ class BookRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return true;
+        return false;
     }
 
     /**
@@ -22,7 +22,18 @@ class BookRequest extends FormRequest
     public function rules(): array
     {
         return [
-           
+            'title' => ['required', 'string', 'max:200'],
+            'image' => ['nullable', 'string'],
+            'author' => ['nullable', 'string'],
+            'ISBN' => ['nullable', 'integer'],
+            'quantity' => ['nullable', 'integer'],
+            'status' => ['nullable', 'string', 'max:45'],
+            'description' => ['nullable', 'string'],
+            'lang' => ['nullable', 'json'],
+            'price' => ['required', 'numeric'],
+            'store_id' => ['required', 'exists:stores,id'],
+            'categorie_id' => ['required'],
+            'rating' => ['nullable', 'string'],
         ];
     }
 }
