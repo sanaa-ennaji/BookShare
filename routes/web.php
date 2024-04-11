@@ -53,12 +53,18 @@ Route::get('/StoreRegister', function () {
 Route::get('/waiting', function () {
     return view('stores.waiting');
 }); 
-Route::get('/admin', function () {
+Route::get('/admin/statistic', function () {
     return view('admin.statistique');
 }); 
+
+Route::get('/admin/category', function () {
+    return view('admin.category');
+}); 
+
 Route::get('/dashboard', function () {
     return view('stores.dashboard');
 }); 
+
 Route::post('/CostumerRegister', [CostumerController::class, 'CostumerRegister']);
 Route::post('/StoreRegister', [StoreController::class, 'StoreRegister']);
 Route::post('/', [BookController::class, 'StoreRegister']);
