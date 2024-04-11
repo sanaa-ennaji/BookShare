@@ -5,7 +5,7 @@ namespace App\Repositories;
 
 interface CategoryRepositoryInterface
 {
-    public function create(array $data);
+    public function createCategory(array $data);
 
     public function update(array $data, int $id);
 

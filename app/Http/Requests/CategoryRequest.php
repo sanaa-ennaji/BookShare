@@ -26,5 +26,6 @@ class CategoryRequest extends FormRequest
          'title' => ['required'],
             
         ];
+
     }
 }

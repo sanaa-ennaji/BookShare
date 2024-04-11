@@ -7,7 +7,7 @@ use App\Models\Category;
 
 class CategoryRepository implements CategoryRepositoryInterface
 {
-    public function create(array $data)
+    public function createCategory(array $data)
     {
         return Category::create($data);
     }
