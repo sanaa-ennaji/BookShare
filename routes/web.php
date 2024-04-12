@@ -74,3 +74,4 @@ Route::post('/createBook', [BookController::class, 'createBook']);
 // Route::post('/login', [UserController::class, 'login']);
 Route::get('/admin/category', [CategoryController::class, 'showCategories']);
 Route::get('/dashboard', [BookController::class, 'showCategoryAndBooks']);
+Route::get('/', [BookController::class, 'index']);

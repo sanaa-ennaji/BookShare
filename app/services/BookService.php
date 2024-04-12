@@ -17,5 +17,11 @@ class BookService implements BookServiceInterface {
         
         return $this->bookRepository->create($data);
     }
+
+
+    public function getAll()
+    {
+        return $this->bookRepository->getAll();
+    }
     
 }
