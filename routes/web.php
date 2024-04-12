@@ -72,3 +72,4 @@ Route::post('/StoreRegister', [StoreController::class, 'StoreRegister']);
 Route::post('/createCategory', [CategoryController::class, 'createCategory']);
 Route::post('/createBook', [BookController::class, 'createBook']);
 // Route::post('/login', [UserController::class, 'login']);
+Route::get('/admin/category', [CategoryController::class, 'showCategories']);

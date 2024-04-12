@@ -35,4 +35,10 @@ class CategoryController extends Controller
         return redirect('/admin/category')->with('success', 'Category deleted successfully');
     }
  
+    public function showCategories()
+    {
+        $categories = $this->categoryService->getCategories();
+        return view('admin.categories', ['categories' => $categories]);
+        
+    }
 }

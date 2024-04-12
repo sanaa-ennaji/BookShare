@@ -9,5 +9,6 @@ interface CategoryServiceInterface
     public function updateCategory(array $data, $id);
 
     public function deleteCategory($id);
+    public function getCategories();
 }
 

@@ -13,4 +13,5 @@ interface CategoryRepositoryInterface
 
     public function delete(Category $category);
     public function find(int $id);
+    public function all();
 }

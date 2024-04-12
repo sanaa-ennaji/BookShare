@@ -28,4 +28,8 @@ class CategoryRepository implements CategoryRepositoryInterface
         return Category::findOrFail($id);
     }
 
+    public function all()
+    {
+        return Category::all();
+    }
 }

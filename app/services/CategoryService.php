@@ -53,7 +53,10 @@ class CategoryService implements CategoryServiceInterface
         return $categoryData;
     }
     
-
+    public function getCategories()
+    {
+        return $this->categoryRepository->all();
+    }
 
 
 }
