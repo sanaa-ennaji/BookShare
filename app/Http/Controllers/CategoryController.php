@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CategoryRequest;
-use App\Services\CategoryService;
+use App\ServiceInterface\CategoryServiceInterface;
+
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
     private $categoryService;
 
-    public function __construct(CategoryService $categoryService)
+    public function __construct(CategoryServiceInterface $categoryService)
     {
         $this->categoryService = $categoryService;
     }

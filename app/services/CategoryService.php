@@ -1,14 +1,16 @@
 <?php
 
+  
 namespace App\Services;
 
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
-use App\Repositories\CategoryRepositoryInterface;
+use App\ServiceInterface\CategoryServiceInterface;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use App\RepositoryInterfaces\CategoryRepositoryInterface;
 
-class CategoryService
+class CategoryService  implements CategoryServiceInterface
 {
     private $categoryRepository;
 

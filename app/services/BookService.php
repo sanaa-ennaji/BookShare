@@ -2,8 +2,8 @@
 
 namespace App\Services;
 
-use App\Repositories\BookRepositoryInterface;
 use App\ServiceInterface\BookServiceInterface;
+use App\RepositoryInterfaces\BookRepositoryInterface;
 
 class BookService implements BookServiceInterface {
     protected $bookRepository;
