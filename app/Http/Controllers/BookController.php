@@ -43,11 +43,13 @@ class BookController extends Controller
         if (!$store) {
             return redirect()->back()->with('error', 'Store not found');
         }
+    
         $categories = Category::all();
-        $books = Book::where('store_id',  $store)->get();
+        $books = Book::where('store_id', $store->id)->get();
     
         return view('stores.dashboard', compact('categories', 'books'));
     }
+    
 
     public function index()
     {
