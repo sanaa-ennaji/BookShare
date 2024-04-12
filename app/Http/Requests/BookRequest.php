@@ -32,7 +32,7 @@ class BookRequest extends FormRequest
                 'description' => ['required'],
                 'lang' => ['nullable'],
                 'price' => ['required'],
-                'Categorie_id' => ['required'], 
+                'categorie_id' => ['required'], 
                 // 'store_id' => ['required'], 
            
             

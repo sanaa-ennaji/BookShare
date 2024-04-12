@@ -8,10 +8,16 @@ class BookRepository implements BookRepositoryInterface
 {
     public function create(array $data)
     {
-        
-        $data['store_id'] = auth()->user()->store()->first();
+        $store = auth()->user()->store()->first();
+    
+        if (!$store) {
+            return null;
+        }
+        $data['store_id'] = $store->id;
+
         return Book::create($data);
     }
+    
 
     public function update(array $data, int $id)
     {
