@@ -37,21 +37,25 @@ class CategoryService implements CategoryServiceInterface
         $this->categoryRepository->delete($category);
     }
 
+
     protected function prepareCategoryData(array $data)
     {
         $categoryData = [
             'title' => $data['title'],
         ];
-           
-        if (isset($data['image'])) {
-            $image = $data['image'];
     
-            $imagePath = $image->store('public/images'); 
+        if (isset($data['image']) && $data['image'] instanceof \Illuminate\Http\UploadedFile) {
+            $image = $data['image'];
+            $imageName = time() . '.' . $image->getClientOriginalExtension(); 
+            $imagePath = $image->storeAs('public/img', $imageName); 
             $categoryData['image'] = $imagePath;
+            dd();
         }
     
         return $categoryData;
     }
+    
+    
     
     public function getCategories()
     {

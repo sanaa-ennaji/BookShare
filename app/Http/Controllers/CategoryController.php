@@ -38,7 +38,7 @@ class CategoryController extends Controller
     public function showCategories()
     {
         $categories = $this->categoryService->getCategories();
-        return view('admin.categories', ['categories' => $categories]);
-        
+        return view('admin/category', ['categories' => $categories]);
+
     }
 }
