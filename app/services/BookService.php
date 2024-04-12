@@ -13,6 +13,7 @@ class BookService implements BookServiceInterface {
     }
 
     public function create (array $data) {
+       
         
         return $this->bookRepository->create($data);
     }

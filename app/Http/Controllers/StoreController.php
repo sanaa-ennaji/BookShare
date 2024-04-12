@@ -30,9 +30,9 @@ class StoreController extends Controller
          ]);
          
         $data['password'] = bcrypt($data['password']);
-       $this->storeService->createStore($data ,$storeData);
+    $user =   $this->storeService->createStore($data ,$storeData);
    
-         //auth()->login($user);
+         auth()->login($user);
           return redirect('/waiting');
       
     }
