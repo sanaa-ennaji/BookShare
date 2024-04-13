@@ -8,5 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class OrderItem extends Model
 {
     use HasFactory;
-    
+    protected  $fillable = [
+        'order_id',
+        'book_id',
+        'quantity',
+        'uniprice',
+    ];
+    public function book(){
+        return $this->blengsTo(Book::class);
+    }
+
+
 }
+
+
+   
