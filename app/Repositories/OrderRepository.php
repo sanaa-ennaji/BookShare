@@ -11,13 +11,13 @@ class OrderRepository
     {
         return Cart::where('user_id', $userId)->sum('total_price');
     }
-    
+
 
     public function createOrder($userId, $totalPrice)
     {
         $order = new Order();
         $order->total_price = $totalPrice;
-        $order->status = 'Pending'; // or 'Processing' depending on your requirements
+        $order->status = 'Pending'; 
         $order->user_id = $userId;
         $order->save();
         return $order;

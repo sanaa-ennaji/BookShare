@@ -2,7 +2,7 @@
 
 namespace App\ServiceInterface;
 
-interface CartServiceInterface
+interface OrderServiceInterface
 {
     public function createOrder($userId);
 }

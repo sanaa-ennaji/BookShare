@@ -4,22 +4,26 @@ namespace App\Providers;
 
 use App\Services\BookService;
 use App\Services\CartService;
+use App\Services\OrderService;
 use App\Services\StoreService;
 use App\Services\CategoryService;
 use App\Services\CostumerService;
 use App\Repositories\BookRepository;
 use App\Repositories\CartRepository;
+use App\Repositories\OrderRepository;
 use App\Repositories\StoreRepository;
 use Illuminate\Support\ServiceProvider;
 use App\Repositories\CategoryRepository;
 use App\Repositories\CostumerRepository;
 use App\ServiceInterface\BookServiceInterface;
 use App\ServiceInterface\CartServiceInterface;
+use App\ServiceInterface\OrderServiceInterface;
 use App\ServiceInterface\StoreServiceInterface;
 use App\ServiceInterface\CategoryServiceInterface;
 use App\ServiceInterface\CostumerServiceInterface;
 use App\RepositoryInterfaces\BookRepositoryInterface;
 use App\RepositoryInterfaces\CartRepositoryInterface;
+use App\RepositoryInterfaces\OrderRepositoryInterface;
 use App\RepositoryInterfaces\StoreRepositoryInterface;
 use App\RepositoryInterfaces\CategoryRepositoryInterface;
 use App\RepositoryInterfaces\CostumerRepositoryInterface;
@@ -54,6 +58,11 @@ class AppServiceProvider extends ServiceProvider
             return new CategoryService($app->make(CategoryRepositoryInterface::class));
         });
 
+            
+        $this->app->bind(OrderRepositoryInterface::class, OrderRepository::class);
+        $this->app->bind(OrderServiceInterface::class , function ($app) {
+            return new OrderService($app->make(OrderRepositoryInterface::class));
+        });
         $this->app->bind(CartServiceInterface::class, CartService::class);
         $this->app->bind(CartRepositoryInterface::class, CartRepository::class);
       
