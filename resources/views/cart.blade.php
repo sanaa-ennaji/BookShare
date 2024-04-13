@@ -109,7 +109,7 @@
           <div class="flex justify-between">
             <p class="text-lg font-bold">Total</p>
             <div class="">
-              <p class="mb-1 text-lg font-bold">$134.98 USD</p>
+              <p class="mb-1 text-lg font-bold">${{ $totalPrice }} MAD</p>
               {{-- <p class="text-sm text-gray-700">including </p> --}}
             </div>
           </div>
