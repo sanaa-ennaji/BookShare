@@ -75,3 +75,10 @@ Route::post('/createBook', [BookController::class, 'createBook']);
 Route::get('/admin/category', [CategoryController::class, 'showCategories']);
 Route::get('/dashboard', [BookController::class, 'showCategoryAndBooks']);
 Route::get('/', [BookController::class, 'index']);
+
+Route::get('/details/{id}', [BookController::class, 'showDetails'])->name('book.details');
+
+// Route::get('/details', [BookController::class, 'showDetails']);
+// Route::get('/details', function () {
+//     return view('public.BookDetails');
+// }); 

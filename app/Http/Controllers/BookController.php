@@ -31,10 +31,18 @@ class BookController extends Controller
  
         $book = $this->bookService->create($data);
 
-        return response()->json($book, 201);
-        // return redirect()->back()->with('success', 'Category created successfully');
+        // return response()->json($book, 201);
+        return redirect()->back()->with('success', 'Category created successfully');
     }
 
+    public function showDetails($id)
+    {
+        $book = Book::findOrFail($id);
+        if (!$book) {
+            return abort(404); 
+        }
+        return view('public.BookDetails', compact('book')); 
+    }
 
 
     public function showCategoryAndBooks()
@@ -51,10 +59,11 @@ class BookController extends Controller
     }
     
 
+
     public function index()
     {
         $books = $this->bookService->getAll();
-        return view('books.index', compact('books'));
+        return view('welcome', compact('books'));
     }
 
 
@@ -84,14 +93,5 @@ class BookController extends Controller
 
     }
 
-
-
-    public function addCart () {
-
-    }
-
-    public function deleteCartItem () {
-
-    }
 }
 
