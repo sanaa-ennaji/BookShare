@@ -80,6 +80,7 @@ Route::get('/', [BookController::class, 'index']);
 Route::get('/details/{id}', [BookController::class, 'showDetails'])->name('book.details');
 Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
 Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
+
 // Route::get('/details', [BookController::class, 'showDetails']);
 // Route::get('/details', function () {
 //     return view('public.BookDetails');

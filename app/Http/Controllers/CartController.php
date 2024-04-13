@@ -36,11 +36,13 @@ class CartController extends Controller
     {
         $userId = Auth::id();
         $cartItems = $this->cartService->getUserCart($userId);
+        
 
-        return view('cart', ['cartItems' => $cartItems]);
-    }
-
+        $totalPrice = $this->cartService->calculateTotalPrice($cartItems);
     
+        return view('cart', ['cartItems' => $cartItems, 'totalPrice' => $totalPrice]);
+    }
+ 
     // public function removeFromCart(Request $request)
     // {
     //     $this->cartService->removeFromCart($request->all());

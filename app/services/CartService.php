@@ -33,5 +33,18 @@ class CartService implements CartServiceInterface
     {
         return $this->cartRepository->getUserCart($userId);
     }
+
+    
+    public function calculateTotalPrice($cartItems)
+    {
+        $totalPrice = 0;
+    
+        foreach ($cartItems as $item) {
+            $totalPrice += $item->quantity * $item->book->price; // Assuming each cart item has a 'book' relation
+        }
+    
+        return $totalPrice;
+    }
+    
     
 }
