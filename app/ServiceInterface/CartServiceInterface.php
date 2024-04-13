@@ -1,8 +1,9 @@
 <?php
-// CartServiceInterface.php
+
 namespace App\ServiceInterface;
 
 interface CartServiceInterface
 {
-    public function addToCart($bookId, $quantity);
+    public function addToCart($userId, $bookId, $quantity);
+    public function getUserCart($userId);
 }

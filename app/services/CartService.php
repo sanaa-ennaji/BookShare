@@ -4,7 +4,7 @@ namespace App\Services;
 
 use App\Models\Book;
 use App\ServiceInterface\CartServiceInterface;
-use App\RepositoryInterface\CartRepositoryInterface;
+use App\RepositoryInterfaces\CartRepositoryInterface;
 
 class CartService implements CartServiceInterface
 {
@@ -15,7 +15,7 @@ class CartService implements CartServiceInterface
         $this->cartRepository = $cartRepository;
     }
 
-    public function addToCart($bookId, $quantity)
+    public function addToCart($userId, $bookId, $quantity)
     {
         $book = Book::find($bookId);
         if (!$book) {
@@ -26,7 +26,12 @@ class CartService implements CartServiceInterface
         if (!is_numeric($quantity) || $quantity <= 0) {
             throw new \InvalidArgumentException('Quantity must be a positive number.');
         }
-        $this->cartRepository->addItemToCart($bookId, $quantity);
+        $this->cartRepository->addItemToCart($userId, $bookId, $quantity);
+    }
+
+    public function getUserCart($userId)
+    {
+        return $this->cartRepository->getUserCart($userId);
     }
     
 }

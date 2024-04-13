@@ -3,17 +3,21 @@
 namespace App\Repositories;
 
 use App\Models\Cart;
-use App\RepositoryInterface\CartRepositoryInterface;
+use App\RepositoryInterfaces\CartRepositoryInterface;
 
 class CartRepository implements CartRepositoryInterface
 {
-    public function addItemToCart($bookId, $quantity)
+    public function addItemToCart($userId, $bookId, $quantity)
     {
-        // Add the item to the cart in the database
+       
         Cart::create([
+            'user_id' => $userId, 
             'book_id' => $bookId,
             'quantity' => $quantity,
-            // You may need to associate the cart with a user or session here
         ]);
+    }
+    public function getUserCart($userId)
+    {
+        return Cart::where('user_id', $userId)->with('book')->get();
     }
 }
