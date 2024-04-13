@@ -24,16 +24,21 @@
             </div>
         
             <div class="xl:w-2/5 md:w-1/2 lg:ml-8 md:ml-6 md:mt-0 mt-6">
-              <form action="/addtocart" method="POST">
+              <form action="{{ route('cart.add') }}" method="POST">
                 @csrf
                 <input type="hidden" name="book_id" value="{{ $book->id }}">
               <div class="border-b border-gray-200 pb-6">
                 <h1 class="lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 dark:text-white mt-2">{{$book->title}}</h1>
-              </div>
+              </div> 
+              <div class="col-span-6 sm:col-span-3">
+                <label for="quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+                <input type="number" name="quantity" id="quantity" autocomplete="quantity" required
+                    class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+            </div>
               {{-- <div class="py-4 border-b border-gray-200 flex items-center justify-between">
                 <input type="checkbox" name="type" id="normal_price" value=" {{$book->id}}">
                 <p class="text-base leading-4 text-gray-800 dark:text-gray-300"> Normal -  {{$book->price}}$</p>
-              </div> --}}
+              </div>
               {{-- @if ($book->reservations->count() >= $book->)
               <p class="flex text-base leading-4 text-red-800 dark:text-red-300 mt-6">
                 <svg class="mx-3 text-gray-400 w-6 h-5 dark:text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -43,6 +48,32 @@
               </p>
             
           @else --}}
+          {{-- <form action="{{ route('cart.add') }}" method="POST">
+            @csrf
+            <div class="px-4 py-5 sm:p-6">
+                <div class="grid grid-cols-6 gap-6">
+                    <div class="col-span-6 sm:col-span-3">
+                        <label for="book_id" class="block text-sm font-medium text-gray-700">Book ID</label>
+                        <input type="text" name="book_id" id="book_id" autocomplete="book_id" required
+                            class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    </div>
+
+                    <div class="col-span-6 sm:col-span-3">
+                        <label for="quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+                        <input type="number" name="quantity" id="quantity" autocomplete="quantity" required
+                            class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    </div>
+                </div>
+            </div>
+            <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+                <button type="submit"
+                    class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Add to Cart
+                </button>
+            </div>
+        </form> --}}
+
+
           @auth
               <button type="submit" class="bg-purple-600 dark:text-gray-900 hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-base flex items-center justify-center leading-none text-white bg-gray-800 w-full py-4 hover:bg-gray-700 focus:outline-none">
               add  to cart
@@ -56,10 +87,10 @@
               <div>
               </form>
                 <p class="xl:pr-48 text-base lg:leading-tight leading-normal text-gray-600 dark:text-gray-300 mt-7"> {{$book->description}}</p>
-                <p class="text-base leading-4 mt-7 text-gray-600 dark:text-gray-300">date:  {{$book->ISBN}}</p>
-                <p class="text-base leading-4 mt-4 text-gray-600 dark:text-gray-300">time:  {{$book->author}}</p>
-                <p class="text-base leading-4 mt-4 text-gray-600 dark:text-gray-300">lieu: {{$book->price}}</p>
-                <p class="text-base leading-4 mt-4 text-gray-600 dark:text-gray-300">organisated by:  {{$book->price}}</p>
+                <p class="text-base leading-4 mt-7 text-gray-600 dark:text-gray-300">-webkit-inner-spin-button:  {{$book->ISBN}}</p>
+                <p class="text-base leading-4 mt-4 text-gray-600 dark:text-gray-300">author:  {{$book->author}}</p>
+                <p class="text-base leading-4 mt-4 text-gray-600 dark:text-gray-300">price: {{$book->price}}</p>
+                <p class="text-base leading-4 mt-4 text-gray-600 dark:text-gray-300">en stock:  {{$book->price}}</p>
                 <p class="md:w-96 text-base leading-normal text-gray-600 dark:text-gray-300 mt-4"> category :{{$book->category->title}}</p>
               </div>
              

@@ -2,6 +2,7 @@
 
 namespace App\ServiceInterface;
 
+use App\Models\Book;
 use App\RepositoryInterface\CartRepositoryInterface;
 
 class CartService implements CartServiceInterface
@@ -15,9 +16,16 @@ class CartService implements CartServiceInterface
 
     public function addToCart($bookId, $quantity)
     {
-        // You can add validation logic here if needed
-        
-        // Call the repository to add the item to the cart
+        $book = Book::find($bookId);
+        if (!$book) {
+            throw new \InvalidArgumentException('Invalid book ID.');
+        }
+    
+        // Validate quantity
+        if (!is_numeric($quantity) || $quantity <= 0) {
+            throw new \InvalidArgumentException('Quantity must be a positive number.');
+        }
         $this->cartRepository->addItemToCart($bookId, $quantity);
     }
+    
 }
