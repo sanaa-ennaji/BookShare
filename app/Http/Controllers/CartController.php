@@ -27,6 +27,7 @@ class CartController extends Controller
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 400);
         }
+        
     }
 
     // public function removeFromCart(Request $request)

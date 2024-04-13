@@ -1,8 +1,9 @@
 <?php
 
-namespace App\ServiceInterface;
+namespace App\Services;
 
 use App\Models\Book;
+use App\ServiceInterface\CartServiceInterface;
 use App\RepositoryInterface\CartRepositoryInterface;
 
 class CartService implements CartServiceInterface

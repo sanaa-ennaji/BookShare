@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Services\CartService;
 use App\Services\BookService;
 use App\Services\StoreService;
 use App\Services\CategoryService;
@@ -9,7 +10,6 @@ use App\Services\CostumerService;
 use App\Repositories\BookRepository;
 use App\Repositories\CartRepository;
 use App\Repositories\StoreRepository;
-use App\ServiceInterface\CartService;
 use Illuminate\Support\ServiceProvider;
 use App\Repositories\CategoryRepository;
 use App\Repositories\CostumerRepository;

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CostumerController;
@@ -77,7 +78,7 @@ Route::get('/dashboard', [BookController::class, 'showCategoryAndBooks']);
 Route::get('/', [BookController::class, 'index']);
 
 Route::get('/details/{id}', [BookController::class, 'showDetails'])->name('book.details');
-
+Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
 // Route::get('/details', [BookController::class, 'showDetails']);
 // Route::get('/details', function () {
 //     return view('public.BookDetails');
