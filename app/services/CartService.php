@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\Book;
+use App\Models\Order;
 use App\ServiceInterface\CartServiceInterface;
 use App\RepositoryInterfaces\CartRepositoryInterface;
 
@@ -45,6 +46,13 @@ class CartService implements CartServiceInterface
     
         return $totalPrice;
     }
-    
+
+    public function createOrder($userId)
+    {
+        $totalPrice = $this->cartRepository->getTotalPrice($userId);
+        return $this->cartRepository->createOrder($userId, $totalPrice);
+    }
+
+   
     
 }
