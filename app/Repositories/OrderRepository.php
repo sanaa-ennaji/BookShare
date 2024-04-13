@@ -11,6 +11,7 @@ class OrderRepository
     {
         return Cart::where('user_id', $userId)->sum('total_price');
     }
+    
 
     public function createOrder($userId, $totalPrice)
     {
