@@ -9,7 +9,7 @@ class CartController extends Controller
    
     protected $cartService;
 
-    public function __construct(CartService $cartService)
+    public function __construct(CartServiceInterface $cartService)
     {
         $this->cartService = $cartService;
     }

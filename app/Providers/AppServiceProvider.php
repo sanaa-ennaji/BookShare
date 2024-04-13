@@ -7,14 +7,18 @@ use App\Services\StoreService;
 use App\Services\CategoryService;
 use App\Services\CostumerService;
 use App\Repositories\BookRepository;
+use App\Repositories\CartRepository;
 use App\Repositories\StoreRepository;
+use App\ServiceInterface\CartService;
 use Illuminate\Support\ServiceProvider;
 use App\Repositories\CategoryRepository;
 use App\Repositories\CostumerRepository;
 use App\ServiceInterface\BookServiceInterface;
+use App\ServiceInterface\CartServiceInterface;
 use App\ServiceInterface\StoreServiceInterface;
 use App\ServiceInterface\CategoryServiceInterface;
 use App\ServiceInterface\CostumerServiceInterface;
+use App\RepositoryInterface\CartRepositoryInterface;
 use App\RepositoryInterfaces\BookRepositoryInterface;
 use App\RepositoryInterfaces\StoreRepositoryInterface;
 use App\RepositoryInterfaces\CategoryRepositoryInterface;
@@ -50,8 +54,10 @@ class AppServiceProvider extends ServiceProvider
             return new CategoryService($app->make(CategoryRepositoryInterface::class));
         });
 
+        $this->app->bind(CartServiceInterface::class, CartService::class);
+        $this->app->bind(CartRepositoryInterface::class, CartRepository::class);
       
-        $this->app->bind(CategoryRepositoryInterface::class, CategoryRepository::class);
+      
     }
   
 

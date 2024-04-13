@@ -49,7 +49,7 @@
               </button>
               @else
               <a  href="/register" class="bg-purple-600 dark:text-gray-900 hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-base flex items-center justify-center leading-none text-white bg-gray-800 w-full py-4 hover:bg-gray-700 focus:outline-none">
-                add to cart!
+             register to cart!
               </a>
                @endauth
               {{-- @endif --}}
