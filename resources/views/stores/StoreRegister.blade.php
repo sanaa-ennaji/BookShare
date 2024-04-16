@@ -50,7 +50,7 @@
                  
         
                 </div>
-                <form class="md:col-span-8 p-10" method="POST" action="/StoreRegister">
+                <form class="md:col-span-8 p-10" method="POST" action="/StoreRegister" enctype="multipart/form-data">
                     @csrf
                     <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">

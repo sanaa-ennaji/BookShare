@@ -37,7 +37,7 @@
                 </div>
 
 
-                <form class="p-4 md:p-5" method="POST" action="/createCategory" >
+                <form class="p-4 md:p-5" method="POST" action="/createCategory"  enctype="multipart/form-data">
                     @csrf
                     <div class="grid gap-4 mb-4 grid-cols-1">
                         <div class="col-span-2 sm:col-span-1">
