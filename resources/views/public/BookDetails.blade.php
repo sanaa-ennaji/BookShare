@@ -14,13 +14,13 @@
   
           @include('components/navbar2')
 
-
           <div class="md:flex items-start justify-center py-12 2xl:px-20 md:px-6 px-4 mt-20">
             <div class="xl:w-2/6 lg:w-2/5 w-80 md:block hidden">
-              <img class="w-full" alt="image of a girl posing"  src="{{asset('storage/img/' . $book->image)}}" />
+              <img class="w-full" alt="img" src="{{asset('storage/img/' . $book->image)}}" />
+
             </div>
             <div class="md:hidden">
-              <img class="w-full" alt="image of a girl posing"  src="{{asset('storage/img/' . $book->image)}}" />
+              <img class="w-full" alt="image"  src="{{asset('storage/img/' . $book->image)}}" />
             </div>
         
             <div class="xl:w-2/5 md:w-1/2 lg:ml-8 md:ml-6 md:mt-0 mt-6">
