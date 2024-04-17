@@ -75,11 +75,11 @@
 
 
           @auth
-              <button type="submit" class="bg-purple-600 dark:text-gray-900 hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-base flex items-center justify-center leading-none text-white bg-gray-800 w-full py-4 hover:bg-gray-700 focus:outline-none">
+              <button type="submit" class="bg-blue-600 dark:text-gray-900 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-base flex items-center justify-center leading-none text-white  w-full py-4  focus:outline-none">
               add  to cart
               </button>
               @else
-              <a  href="/register" class="bg-purple-600 dark:text-gray-900 hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-base flex items-center justify-center leading-none text-white bg-gray-800 w-full py-4 hover:bg-gray-700 focus:outline-none">
+              <a  href="/register" class="bg-blue-600 dark:text-gray-900 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-base flex items-center justify-center leading-none text-white w-full py-4 focus:outline-none">
              register to cart!
               </a>
                @endauth
@@ -87,7 +87,7 @@
               <div>
               </form>
                 <p class="xl:pr-48 text-base lg:leading-tight leading-normal text-gray-600 dark:text-gray-300 mt-7"> {{$book->description}}</p>
-                <p class="text-base leading-4 mt-7 text-gray-600 dark:text-gray-300">-webkit-inner-spin-button:  {{$book->ISBN}}</p>
+                <p class="text-base leading-4 mt-7 text-gray-600 dark:text-gray-300">ISBN:  {{$book->ISBN}}</p>
                 <p class="text-base leading-4 mt-4 text-gray-600 dark:text-gray-300">author:  {{$book->author}}</p>
                 <p class="text-base leading-4 mt-4 text-gray-600 dark:text-gray-300">price: {{$book->price}}</p>
                 <p class="text-base leading-4 mt-4 text-gray-600 dark:text-gray-300">en stock:  {{$book->price}}</p>

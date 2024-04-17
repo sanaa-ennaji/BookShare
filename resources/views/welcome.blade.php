@@ -225,7 +225,7 @@
                         <p class="text-sm text-gray-600 cursor-auto ml-2 mb-2">$199</p>
                     </del>
                     <a href="{{ route('book.details', ['id' => $book->id]) }}"
-                        class="inline-block py-2 px-7 border border-[#E5E7EB] rounded-full text-base text-body-color font-medium bg-purple-600  text-white transition">
+                        class="inline-block py-2 px-7 border border-[#E5E7EB] rounded-full text-base text-body-color font-medium bg-blue-600  text-white transition">
                         View Details
                     </a>
                 </div>
