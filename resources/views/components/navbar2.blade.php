@@ -1,13 +1,13 @@
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
-    <div class="antialiased bg-white dark-mode:bg-gray-900  w-[80%] mx-auto">
+    <div class="antialiased bg-white dark-mode:bg-gray-900  w-[70%] mx-auto ">
         <div class="w-full text-gray-700 dark-mode:text-gray-200 dark-mode:bg-gray-800">
             <div x-data="{ open: true }"
                 class="flex flex-col  px-4 md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
                
-                <div class="flex flex-row items-center justify-between p-4">
+                <div class="flex flex-row items-center justify-between py-4 px-20">
 
-                    <div class="flex">
+                    <div class="flex ">
                         <svg class="w-6 h-6 text-blue-500 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                             viewBox="0 0 24 24">
@@ -98,9 +98,9 @@
           </div> --}}
                     </div>
                 </nav>
-                <a href="#"
+                {{-- <a href="#"
                 class="ml-2  text-sm font-semibold tracking-widest text-gray-900  rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
-                Register</a>
+                Register</a> --}}
                 
             </div>
         </div>
