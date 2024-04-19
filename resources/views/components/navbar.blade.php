@@ -1,6 +1,6 @@
 <nav
   class="flex-no-wrap  relative bg-blue-100 flex w-full items-center  bg-zinc-50 py-2 shadow-dark-mild dark:bg-neutral-700 lg:flex-wrap lg:justify-start ">
-  <div class="flex w-full flex-wrap items-center justify-between w-[70%] mx-auto">
+  <div class="flex w-full flex-wrap items-center justify-between w-[60%] mx-auto">
    
     <div
       class="!visible  items-center lg:!flex lg:basis-auto"
@@ -22,18 +22,12 @@
 <form class="mx-auto w-[40vw]  rounded-2xl">
       <div class="flex">
           <select class="flex-shrink-0 z-10 inline-flex items-center py-2.5  text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-full hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600">
-            <option value="01">01 - January</option>
-            <option value="02">02 - February</option>
             <option value="03">03 - March</option>
             <option value="04">04 - April</option>
             <option value="05">05 - May</option>
             <option value="06">06 - June</option>
             <option value="07">07 - July</option>
-            <option value="08">08 - August</option>
-            <option value="09">09 - September</option>
-            <option value="10">10 - October</option>
-            <option value="11">11 - November</option>
-            <option value="12">12 - December</option>
+          
         </select>
         {{-- <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"></label>
         <button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-full hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">
