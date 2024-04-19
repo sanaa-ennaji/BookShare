@@ -36,7 +36,7 @@
                     class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
             </div>
 
-            
+
               {{-- <div class="py-4 border-b border-gray-200 flex items-center justify-between">
                 <input type="checkbox" name="type" id="normal_price" value=" {{$book->id}}">
                 <p class="text-base leading-4 text-gray-800 dark:text-gray-300"> Normal -  {{$book->price}}$</p>
@@ -85,7 +85,6 @@
              register to cart!
               </a>
                @endauth
-              {{-- @endif --}}
               <div>
               </form>
                 <p class="xl:pr-48 text-base lg:leading-tight leading-normal text-gray-600 dark:text-gray-300 mt-7"> {{$book->description}}</p>

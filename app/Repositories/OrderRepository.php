@@ -3,7 +3,6 @@ namespace App\Repositories;
 
 use App\Models\Cart;
 use App\Models\Order;
-use App\Models\CartItem;
 use App\Models\OrderItem;
 
 class OrderRepository
@@ -12,7 +11,6 @@ class OrderRepository
     {
         return Cart::where('user_id', $userId)->sum('total_price');
     }
-
 
     public function createOrder($userId)
     {
