@@ -15,7 +15,13 @@ class OrderService
 
     public function createOrder($userId)
     {
-        $totalPrice = $this->orderRepository->getTotalPrice($userId);
+        $totalPrice = $this->orderRepository->calculateTotalPrice($userId);
         return $this->orderRepository->createOrder($userId, $totalPrice);
     }
+
+    public function calculateTotalPrice($userId)
+    {
+        return $this->orderRepository->calculateTotalPrice($userId);
+    }
+
 }

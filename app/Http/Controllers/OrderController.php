@@ -14,16 +14,17 @@ class OrderController extends Controller
         {
             $this->orderService = $orderService;
         }
-    
         public function createOrder(Request $request)
         {
             try {
-                $order = $this->orderService->createOrder(auth()->id());
-                return response()->json(['order' => $order], 201);
+                $userId = auth()->id();
+                $totalPrice = $this->orderService->calculateTotalPrice($userId);
+                $this->orderService->createOrder($userId);
+    
+                return response()->json(['message' => 'Order created successfully'], 200);
             } catch (\Exception $e) {
                 return response()->json(['error' => $e->getMessage()], 400);
             }
-
         }
 
         public function updateorderStatus (){
