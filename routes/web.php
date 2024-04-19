@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CostumerController;
@@ -80,7 +81,7 @@ Route::get('/', [BookController::class, 'index']);
 Route::get('/details/{id}', [BookController::class, 'showDetails'])->name('book.details');
 Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
 Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
-
+Route::post('/orders/create', [OrderController::class, 'createOrder'])->name('orders.create');
 // Route::get('/details', [BookController::class, 'showDetails']);
 // Route::get('/details', function () {
 //     return view('public.BookDetails');
