@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+
 use App\Services\BookService;
 use App\Services\CartService;
 use App\Services\OrderService;
@@ -73,9 +74,9 @@ class AppServiceProvider extends ServiceProvider
 
     /**
      * Bootstrap any application services.
-     */
+     */ 
     public function boot(): void
     {
-        //
+    
     }
 }
