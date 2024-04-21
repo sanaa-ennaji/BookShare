@@ -11,9 +11,9 @@ class Cart extends Model
 
     protected $fillable = ['costumer_id', 'book_id', 'quantity'];
 
-    public function user()
+    public function costumer()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Costumer::class);
     }
 
     public function book()

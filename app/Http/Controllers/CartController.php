@@ -36,14 +36,20 @@ class CartController extends Controller
     
     public function showCart()
     {
-        $costumerId = auth()->user()->costumer()->id();
-        $cartItems = $this->cartService->getUserCart($costumerId);
+        $user = auth()->user();
         
-
+        if (!$user || !$user->costumer) {
+            return redirect()->back()->with('error', 'NOT athorized');
+        }
+    
+        $costumerId = $user->costumer->id;
+        $cartItems = $this->cartService->getUserCart($costumerId);
+    
         $totalPrice = $this->cartService->calculateTotalPrice($cartItems);
     
         return view('cart', ['cartItems' => $cartItems, 'totalPrice' => $totalPrice]);
     }
+    
  
     // public function removeFromCart(Request $request)
     // {

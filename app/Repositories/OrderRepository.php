@@ -27,7 +27,7 @@ class OrderRepository implements OrderRepositoryInterface
         $order = new Order();
         $order->total_price = $totalPrice;
         $order->status = 'Pending'; 
-        $order->user_id = $costumerId;
+        $order->costumer_id = $costumerId;
         $order->save();
  
         foreach ($cartItems as $cartItem) {
