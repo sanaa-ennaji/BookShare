@@ -19,11 +19,12 @@ class Order extends Model
     ];
 
 
-public function costumer()
+    public function costumer()
     {
-        return $this->belongsTo(Costumer::class , 'costumer_id');
+        return $this->belongsTo(Costumer::class, 'costumer_id');
     }
-    public function Orderitem()
+
+    public function orderItems()
     {
         return $this->hasMany(Orderitem::class);
     }

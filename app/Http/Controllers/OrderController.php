@@ -16,6 +16,7 @@ class OrderController extends Controller
         }
         public function createOrder(Request $request)
         {
+
             try {
                 $user = auth()->user();
                 $costumerId = $user->costumer->id;
@@ -30,7 +31,6 @@ class OrderController extends Controller
 
         // public function updateorderStatus (){
 
-      
         // }
     }
     
