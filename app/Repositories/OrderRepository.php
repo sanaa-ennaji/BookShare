@@ -18,7 +18,7 @@ class OrderRepository implements OrderRepositoryInterface
         }
 
         return $totalPrice;
-        
+
     }
     public function createOrder($costumerId , $totalPrice)
     {
@@ -30,14 +30,16 @@ class OrderRepository implements OrderRepositoryInterface
         $order->status = 'Pending'; 
         $order->costumer_id = $costumerId;
         $order->save();
- 
+
         foreach ($cartItems as $cartItem) {
             $orderItem = new Orderitem();
             $orderItem->order_id = $order->id;
             $orderItem->book_id = $cartItem->book_id;
             $orderItem->quantity = $cartItem->quantity;
-            $orderItem->unit_price = $cartItem->book->price;
+            $orderItem->unitprice = $cartItem->book->price;
             $orderItem->save();
+            dd($orderItem);
+            
         }
 
          Cart::where('costumer_id', $costumerId)->delete();
