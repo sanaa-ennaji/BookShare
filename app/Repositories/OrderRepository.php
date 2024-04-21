@@ -4,15 +4,22 @@ namespace App\Repositories;
 use App\Models\Cart;
 use App\Models\Order;
 use App\Models\OrderItem;
+use App\RepositoryInterfaces\OrderRepositoryInterface;
 
-class OrderRepository
+class OrderRepository implements OrderRepositoryInterface
 {
     public function calculateTotalPrice($userId)
     {
-        return Cart::where('user_id', $userId)->sum('total_price');
-    }
+        $cartItems = Cart::where('user_id', $userId)->get();
+        $totalPrice = 0;
 
-    public function createOrder($userId)
+        foreach ($cartItems as $item) {
+            $totalPrice += $item->quantity * $item->book->price;
+        }
+
+        return $totalPrice;
+    }
+    public function createOrder($userId , $totalPrice)
     {
         $cartItems = Cart::where('user_id', $userId)->get();
         $totalPrice = $this->calculateTotalPrice($userId);

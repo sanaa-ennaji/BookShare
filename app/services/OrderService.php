@@ -2,10 +2,11 @@
 namespace App\Services;
 
 use App\RepositoryInterfaces\OrderRepositoryInterface;
+use App\ServiceInterface\OrderServiceInterface;
 
 
-class OrderService
-{
+class OrderService  implements OrderServiceInterface
+{ 
     protected $orderRepository;
 
     public function __construct(OrderRepositoryInterface $orderRepository)
