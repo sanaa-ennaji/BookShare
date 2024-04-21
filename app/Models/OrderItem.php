@@ -15,12 +15,13 @@ class OrderItem extends Model
         'uniprice',
     ];
     public function book(){
-        return $this->blengsTo(Book::class);
+        return $this->belongsTo(Book::class); 
     }
-
+    
     public function order(){
-        return $this->blengsTo(order::class);
+        return $this->belongsTo(Order::class); 
     }
+    
 
 }
 

@@ -18,6 +18,7 @@ class OrderRepository implements OrderRepositoryInterface
         }
 
         return $totalPrice;
+        
     }
     public function createOrder($costumerId , $totalPrice)
     {
@@ -45,15 +46,5 @@ class OrderRepository implements OrderRepositoryInterface
     }
 }
 
-
-    // public function createOrder($costumerId, $totalPrice)
-    // {
-    //     $order = new Order();
-    //     $order->total_price = $totalPrice;
-    //     $order->status = 'Pending'; 
-    //     $order->user_id = $costumerId;
-    //     $order->save();
-    //     return $order;
-    // }
 
 
