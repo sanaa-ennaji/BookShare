@@ -14,8 +14,14 @@ class Order extends Model
         'status',
         'created_by',
         'updated_by',
+        'costumer_id',
     ];
 
+
+public function costumer()
+    {
+        return $this->belongsTo(Costumer::class , 'costumer_id');
+    }
     public function items()
     {
         return $this->hasMany(OrderItem::class);

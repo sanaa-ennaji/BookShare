@@ -110,7 +110,6 @@
                         />
                     </div>
                 
-               
                   <form class="px-2" action="/delete/{{$category->id}}" method="POST">
                     @csrf
                     @method('DELETE')
