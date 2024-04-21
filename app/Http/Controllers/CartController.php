@@ -21,11 +21,12 @@ class CartController extends Controller
     public function addToCart(Request $request)
     {
         try {
-            $userId = auth()->id(); 
+            $costumerId = auth()->user()->costumer()->id();
+    
             $bookId = $request->input('book_id');
             $quantity = $request->input('quantity');
     
-            $this->cartService->addToCart($userId, $bookId, $quantity);
+            $this->cartService->addToCart($costumerId, $bookId, $quantity);
     
             return response()->json(['message' => 'Item added to cart successfully'], 200);
         } catch (\Exception $e) {
@@ -35,8 +36,8 @@ class CartController extends Controller
     
     public function showCart()
     {
-        $userId = Auth::id();
-        $cartItems = $this->cartService->getUserCart($userId);
+        $costumerId = auth()->user()->costumer()->id();
+        $cartItems = $this->cartService->getUserCart($costumerId);
         
 
         $totalPrice = $this->cartService->calculateTotalPrice($cartItems);

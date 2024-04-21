@@ -8,9 +8,9 @@ use App\RepositoryInterfaces\OrderRepositoryInterface;
 
 class OrderRepository implements OrderRepositoryInterface
 {
-    public function calculateTotalPrice($userId)
+    public function calculateTotalPrice($costumerId)
     {
-        $cartItems = Cart::where('user_id', $userId)->get();
+        $cartItems = Cart::where('costumer_id', $costumerId)->get();
         $totalPrice = 0;
 
         foreach ($cartItems as $item) {
@@ -19,15 +19,15 @@ class OrderRepository implements OrderRepositoryInterface
 
         return $totalPrice;
     }
-    public function createOrder($userId , $totalPrice)
+    public function createOrder($costumerId , $totalPrice)
     {
-        $cartItems = Cart::where('user_id', $userId)->get();
-        $totalPrice = $this->calculateTotalPrice($userId);
+        $cartItems = Cart::where('costumer_id', $costumerId)->get();
+        $totalPrice = $this->calculateTotalPrice($costumerId);
 
         $order = new Order();
         $order->total_price = $totalPrice;
         $order->status = 'Pending'; 
-        $order->user_id = $userId;
+        $order->user_id = $costumerId;
         $order->save();
  
         foreach ($cartItems as $cartItem) {
@@ -39,19 +39,19 @@ class OrderRepository implements OrderRepositoryInterface
             $orderItem->save();
         }
 
-         Cart::where('user_id', $userId)->delete();
+         Cart::where('costumer_id', $costumerId)->delete();
 
         return $order;
     }
 }
 
 
-    // public function createOrder($userId, $totalPrice)
+    // public function createOrder($costumerId, $totalPrice)
     // {
     //     $order = new Order();
     //     $order->total_price = $totalPrice;
     //     $order->status = 'Pending'; 
-    //     $order->user_id = $userId;
+    //     $order->user_id = $costumerId;
     //     $order->save();
     //     return $order;
     // }

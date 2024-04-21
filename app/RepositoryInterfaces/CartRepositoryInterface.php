@@ -4,8 +4,8 @@ namespace App\RepositoryInterfaces;
 
 interface CartRepositoryInterface
 {
-    public function addItemToCart($userId, $bookId, $quantity);
-    public function getUserCart($userId);
-    public function getTotalPrice($userId);
-    public function createOrder($userId, $totalPrice);
+    public function addItemToCart($costumerId, $bookId, $quantity);
+    public function getUserCart($costumerId);
+    public function getTotalPrice($costumerId);
+
 }

@@ -17,9 +17,9 @@ class OrderController extends Controller
         public function createOrder(Request $request)
         {
             try {
-                $userId = auth()->id();
-                $this->orderService->calculateTotalPrice($userId);
-                $this->orderService->createOrder($userId);
+                $costumerId = auth()->user()->costumer()->id(); 
+                $this->orderService->calculateTotalPrice($costumerId);
+                $this->orderService->createOrder($costumerId);
     
                 return response()->json(['message' => 'Order created successfully'], 200);
             } catch (\Exception $e) {
@@ -27,10 +27,10 @@ class OrderController extends Controller
             }
         }
 
-        public function updateorderStatus (){
+        // public function updateorderStatus (){
 
       
-        }
+        // }
     }
     
 

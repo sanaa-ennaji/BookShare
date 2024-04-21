@@ -17,7 +17,7 @@ return new class extends Migration
             $table->decimal('total_price' , 20 , 2);
             $table->string('status' , 45);
             $table->foreignId('costumer_id')
-            ->constrained('stores')
+            ->constrained('costumers')
             ->onDelete('cascade')
             ->onUpdate('cascade');
             $table->timestamps();

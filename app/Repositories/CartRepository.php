@@ -8,34 +8,26 @@ use App\RepositoryInterfaces\CartRepositoryInterface;
 
 class CartRepository implements CartRepositoryInterface
 {
-    public function addItemToCart($userId, $bookId, $quantity)
+    public function addItemToCart($costumerId, $bookId, $quantity)
     {
        
         Cart::create([
-            'user_id' => $userId, 
+            'costumer_id' => $costumerId, 
             'book_id' => $bookId,
             'quantity' => $quantity,
         ]);
     }
-    public function getUserCart($userId)
+    public function getUserCart($costumerId)
     {
-        return Cart::where('user_id', $userId)->with('book')->get();
+        return Cart::where('costumer_id', $costumerId)->with('book')->get();
     }
 
-    public function getTotalPrice($userId)
+    public function getTotalPrice($costumerId)
     {
-        return Cart::where('user_id', $userId)->sum('total_price');
+        return Cart::where('costumer_id', $costumerId)->sum('total_price');
     }
 
 
-    public function createOrder($userId, $totalPrice)
-    {
-        $order = new Order();
-        $order->total_price = $totalPrice;
-        $order->status = 'Pending'; 
-        $order->user_id = $userId;
-        $order->save();
-        return $order;
-    }
+ 
     
 }

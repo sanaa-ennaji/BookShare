@@ -16,7 +16,7 @@ class CartService implements CartServiceInterface
         $this->cartRepository = $cartRepository;
     }
 
-    public function addToCart($userId, $bookId, $quantity)
+    public function addToCart($costumerId, $bookId, $quantity)
     {
         $book = Book::find($bookId);
         if (!$book) {
@@ -27,12 +27,12 @@ class CartService implements CartServiceInterface
         if (!is_numeric($quantity) || $quantity <= 0) {
             throw new \InvalidArgumentException('Quantity must be a positive number.');
         }
-        $this->cartRepository->addItemToCart($userId, $bookId, $quantity);
+        $this->cartRepository->addItemToCart($costumerId, $bookId, $quantity);
     }
 
-    public function getUserCart($userId)
+    public function getUserCart($costumerId)
     {
-        return $this->cartRepository->getUserCart($userId);
+        return $this->cartRepository->getUserCart($costumerId);
     }
 
     
@@ -47,10 +47,10 @@ class CartService implements CartServiceInterface
         return $totalPrice;
     }
 
-    public function createOrder($userId)
+    public function createOrder($costumerId)
     {
-        $totalPrice = $this->cartRepository->getTotalPrice($userId);
-        return $this->cartRepository->createOrder($userId, $totalPrice);
+        $totalPrice = $this->cartRepository->getTotalPrice($costumerId);
+        return $this->cartRepository->createOrder($costumerId, $totalPrice);
     }
 
    
