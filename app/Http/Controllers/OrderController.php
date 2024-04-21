@@ -18,7 +18,7 @@ class OrderController extends Controller
         {
             try {
                 $user = auth()->user();
-                $costumerId = $user->customer->id;
+                $costumerId = $user->costumer->id;
                 $this->orderService->calculateTotalPrice($costumerId);
                 $this->orderService->createOrder($costumerId);
     

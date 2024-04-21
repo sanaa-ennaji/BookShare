@@ -23,7 +23,7 @@ public function costumer()
     {
         return $this->belongsTo(Costumer::class , 'costumer_id');
     }
-    public function items()
+    public function Orderitem()
     {
         return $this->hasMany(Orderitem::class);
     }
