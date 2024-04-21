@@ -18,6 +18,9 @@ class OrderItem extends Model
         return $this->blengsTo(Book::class);
     }
 
+    public function order(){
+        return $this->blengsTo(order::class);
+    }
 
 }
 

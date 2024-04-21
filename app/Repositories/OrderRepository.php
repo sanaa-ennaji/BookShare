@@ -3,7 +3,7 @@ namespace App\Repositories;
 
 use App\Models\Cart;
 use App\Models\Order;
-use App\Models\OrderItem;
+use App\Models\Orderitem;
 use App\RepositoryInterfaces\OrderRepositoryInterface;
 
 class OrderRepository implements OrderRepositoryInterface
@@ -31,7 +31,7 @@ class OrderRepository implements OrderRepositoryInterface
         $order->save();
  
         foreach ($cartItems as $cartItem) {
-            $orderItem = new OrderItem();
+            $orderItem = new Orderitem();
             $orderItem->order_id = $order->id;
             $orderItem->book_id = $cartItem->book_id;
             $orderItem->quantity = $cartItem->quantity;

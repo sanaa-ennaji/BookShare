@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Orderitem;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Order extends Model
 {
@@ -24,7 +25,7 @@ public function costumer()
     }
     public function items()
     {
-        return $this->hasMany(OrderItem::class);
+        return $this->hasMany(Orderitem::class);
     }
 
     public function details()

@@ -17,7 +17,8 @@ class OrderController extends Controller
         public function createOrder(Request $request)
         {
             try {
-                $costumerId = auth()->user()->costumer()->id(); 
+                $user = auth()->user();
+                $costumerId = $user->costumer->id;
                 $this->orderService->calculateTotalPrice($costumerId);
                 $this->orderService->createOrder($costumerId);
     

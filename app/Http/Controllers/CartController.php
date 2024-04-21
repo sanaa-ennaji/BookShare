@@ -21,8 +21,8 @@ class CartController extends Controller
     public function addToCart(Request $request)
     {
         try {
-            $costumerId = auth()->user()->costumer()->id();
-    
+            $user = auth()->user();
+            $costumerId = $user->costumer->id;
             $bookId = $request->input('book_id');
             $quantity = $request->input('quantity');
     
