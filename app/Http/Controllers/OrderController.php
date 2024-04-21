@@ -18,7 +18,7 @@ class OrderController extends Controller
         {
             try {
                 $userId = auth()->id();
-                $this->orderService->calculateTotalPrice($userId ,  $totalPrice);
+                $this->orderService->calculateTotalPrice($userId);
                 $this->orderService->createOrder($userId);
     
                 return response()->json(['message' => 'Order created successfully'], 200);

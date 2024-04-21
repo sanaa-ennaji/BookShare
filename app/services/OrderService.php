@@ -1,12 +1,12 @@
 <?php
+
 namespace App\Services;
 
-use App\RepositoryInterfaces\OrderRepositoryInterface;
 use App\ServiceInterface\OrderServiceInterface;
+use App\RepositoryInterfaces\OrderRepositoryInterface;
 
-
-class OrderService  implements OrderServiceInterface
-{ 
+class OrderService implements OrderServiceInterface
+{
     protected $orderRepository;
 
     public function __construct(OrderRepositoryInterface $orderRepository)
@@ -24,5 +24,4 @@ class OrderService  implements OrderServiceInterface
     {
         return $this->orderRepository->calculateTotalPrice($userId);
     }
-
 }

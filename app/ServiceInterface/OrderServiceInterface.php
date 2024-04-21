@@ -5,5 +5,5 @@ namespace App\ServiceInterface;
 interface OrderServiceInterface
 {
     public function createOrder($userId);
-    public function calculateTotalPrice($userId,  $totalPrice);
+    public function calculateTotalPrice($userId);
 }
