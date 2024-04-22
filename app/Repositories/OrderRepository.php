@@ -3,7 +3,7 @@ namespace App\Repositories;
 
 use App\Models\Cart;
 use App\Models\Order;
-use App\Models\Orderitem;
+use App\Models\Orderline;
 use App\RepositoryInterfaces\OrderRepositoryInterface;
 
 class OrderRepository implements OrderRepositoryInterface
@@ -32,13 +32,13 @@ class OrderRepository implements OrderRepositoryInterface
         $order->save();
 
         foreach ($cartItems as $cartItem) {
-            $orderItem = new Orderitem();
-            $orderItem->order_id = $order->id;
-            $orderItem->book_id = $cartItem->book_id;
-            $orderItem->quantity = $cartItem->quantity;
-            $orderItem->unitprice = $cartItem->book->price;
-            $orderItem->save();
-            dd($orderItem);
+            $orderline = new Orderline();
+            $orderline->order_id = $order->id;
+            $orderline->book_id = $cartItem->book_id;
+            $orderline->quantity = $cartItem->quantity;
+            $orderline->unitprice = $cartItem->book->price;
+            $orderline->save();
+         
             
         }
 

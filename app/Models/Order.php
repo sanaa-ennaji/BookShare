@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\Orderitem;
+use App\Models\Orderline;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -26,7 +26,7 @@ class Order extends Model
 
     public function orderItems()
     {
-        return $this->hasMany(Orderitem::class);
+        return $this->hasMany(Orderline::class);
     }
 
     public function details()
