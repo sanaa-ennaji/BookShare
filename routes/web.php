@@ -68,10 +68,10 @@ Route::get('/dashboard', function () {
     return view('stores.dashboard');
 }); 
 
-Route::post('/CostumerRegister', [CostumerController::class, 'CostumerRegister']);
+Route::post('/CostumerRegister', [CostumerController::class, 'CostumerRegister'])->name('payment.success');
 Route::post('/StoreRegister', [StoreController::class, 'StoreRegister']);
 // Route::post('/', [BookController::class, 'StoreRegister']);
-Route::post('/createCategory', [CategoryController::class, 'createCategory']);
+Route::post('/createCategory', [CategoryController::class, 'createCategory'])->name('payment.cancel');
 Route::post('/createBook', [BookController::class, 'createBook']);
 // Route::post('/login', [UserController::class, 'login']);
 Route::get('/admin/category', [CategoryController::class, 'showCategories']);

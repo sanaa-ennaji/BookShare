@@ -31,10 +31,10 @@ class OrderController extends Controller
                 $totalPrice = $this->orderService->calculateTotalPrice($customerId);
                 
                 // Set your Stripe API key
-                Stripe::setApiKey('k_test_51P6xhJEp1ITeo4C2L5SKGC2uHqJrsjUEUbMiKJI5lz0K34ospdtyAhJ6pTY9XGTcbA52FJx2nxLgK6PR1bLXVBKp00xkC1xZdz');
+                Stripe::setApiKey('sk_test_51P6xhJEp1ITeo4C2L5SKGC2uHqJrsjUEUbMiKJI5lz0K34ospdtyAhJ6pTY9XGTcbA52FJx2nxLgK6PR1bLXVBKp00xkC1xZdz');
                
                 
-                // Calculate the unit amount in cents
+                
                 $unitAmount = $totalPrice * 100;
         
                 // Create line items for the session
@@ -52,19 +52,18 @@ class OrderController extends Controller
                     ],
                 ];
         
-                // Create a session for checkout
+              
                 $session = Session::create([
                     'payment_method_types' => ['card'],
                     'line_items' => $lineItems,
                     'mode' => 'payment',
-                    // 'success_url' => route('payment.success'), 
-                    // 'cancel_url' => route('payment.cancel'), 
+                    'success_url' => route('payment.success'), 
+                    'cancel_url' => route('payment.cancel'), 
                 ]);
         
-                // Redirect the user to the session URL
+              
                 return redirect($session->url);
             } catch (\Exception $e) {
-                // Handle any exceptions
                 return response()->json(['error' => $e->getMessage()]);
             }
         }
