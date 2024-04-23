@@ -40,7 +40,7 @@ class OrderController extends Controller
                     'currency' => 'usd', // Change this to your currency
                     'source' => $request->stripeToken,
                     'description' => 'Payment for Order #' . $order->id,
-                    'customer' => $customerId,
+                    'costumer' => $customerId,
                 ]);
         
                 // Check if the charge was successful
