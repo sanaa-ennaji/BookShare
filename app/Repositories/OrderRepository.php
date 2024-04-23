@@ -16,7 +16,7 @@ class OrderRepository implements OrderRepositoryInterface
         foreach ($cartItems as $item) {
             $totalPrice += $item->quantity * $item->book->price;
         }
-
+        
         return $totalPrice;
 
     }
