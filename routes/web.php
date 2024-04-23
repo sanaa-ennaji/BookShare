@@ -73,7 +73,7 @@ Route::get('/dashboard', function () {
 
 Route::post('/CostumerRegister', [CostumerController::class, 'CostumerRegister']);
 Route::post('/StoreRegister', [StoreController::class, 'StoreRegister']);
-// Route::post('/', [BookController::class, 'StoreRegister']);
+// Route::post('/', [BookController::class, 'StoreRegister']); 
 Route::post('/createCategory', [CategoryController::class, 'createCategory'])->name('payment.cancel');
 Route::post('/createBook', [BookController::class, 'createBook']);
 //Route::post('/login', [UserController::class, 'login']);

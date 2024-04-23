@@ -39,7 +39,7 @@ class OrderRepository implements OrderRepositoryInterface
         $orderline->quantity = $cartItem->quantity;
         $orderline->unitprice = $cartItem->book->price;
         $orderline->save();
-    }
+    }                               
 
     Cart::where('costumer_id', $customerId)->delete();
 
