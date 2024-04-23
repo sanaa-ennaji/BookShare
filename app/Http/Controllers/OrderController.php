@@ -29,15 +29,13 @@ class OrderController extends Controller
                 $customerId = $user->costumer->id;
                 $order = $this->orderService->createOrder($customerId);
                 $totalPrice = $this->orderService->calculateTotalPrice($customerId);
-                
-                // Set your Stripe API key
                 Stripe::setApiKey('sk_test_51P6xhJEp1ITeo4C2L5SKGC2uHqJrsjUEUbMiKJI5lz0K34ospdtyAhJ6pTY9XGTcbA52FJx2nxLgK6PR1bLXVBKp00xkC1xZdz');
                
                 
                 
                 $unitAmount = $totalPrice * 100;
         
-                // Create line items for the session
+             
                 $lineItems = [
                     [
                         'price_data' => [
@@ -74,7 +72,6 @@ class OrderController extends Controller
 
         //     try {
         //         $user = auth()->user();
-        //         \Stripe\Stripe::setApiKey(getenv('STRIPE_SECRET_KEY'));
         //         $costumerId = $user->costumer->id;
         //         $this->orderService->calculateTotalPrice($costumerId);
         //         $this->orderService->createOrder($costumerId);
