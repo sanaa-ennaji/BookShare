@@ -5,5 +5,5 @@ namespace App\RepositoryInterfaces;
 interface OrderRepositoryInterface
 {
     public function calculateTotalPrice($costumerId);
-    public function createOrder($costumerId,  $totalPrice);
+    public function createOrder($costumerId);
 }

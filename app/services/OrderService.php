@@ -14,11 +14,17 @@ class OrderService implements OrderServiceInterface
         $this->orderRepository = $orderRepository;
     }
 
+    // public function createOrder($costumerId)
+    // {
+    //     $totalPrice = $this->orderRepository->calculateTotalPrice($costumerId);
+    //     return $this->orderRepository->createOrder($costumerId, $totalPrice);
+    // }
     public function createOrder($costumerId)
     {
-        $totalPrice = $this->orderRepository->calculateTotalPrice($costumerId);
-        return $this->orderRepository->createOrder($costumerId, $totalPrice);
+        $this->orderRepository->calculateTotalPrice($costumerId);
+        return $this->orderRepository->createOrder($costumerId);
     }
+
 
     public function calculateTotalPrice($costumerId)
     {

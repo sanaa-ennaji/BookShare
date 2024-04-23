@@ -20,32 +20,59 @@ class OrderRepository implements OrderRepositoryInterface
         return $totalPrice;
 
     }
-    public function createOrder($costumerId , $totalPrice)
-    {
-        $cartItems = Cart::where('costumer_id', $costumerId)->get();
-        $totalPrice = $this->calculateTotalPrice($costumerId);
 
-        $order = new Order();
-        $order->total_price = $totalPrice;
-        $order->status = 'Pending'; 
-        $order->costumer_id = $costumerId;
-        $order->save();
+    public function createOrder($customerId)
+{
+    $cartItems = Cart::where('customer_id', $customerId)->get();
+    $totalPrice = $this->calculateTotalPrice($customerId);
 
-        foreach ($cartItems as $cartItem) {
-            $orderline = new Orderline();
-            $orderline->order_id = $order->id;
-            $orderline->book_id = $cartItem->book_id;
-            $orderline->quantity = $cartItem->quantity;
-            $orderline->unitprice = $cartItem->book->price;
-            $orderline->save();
+    $order = new Order();
+    $order->total_price = $totalPrice;
+    $order->status = 'Pending'; 
+    $order->customer_id = $customerId;
+    $order->save();
+
+    foreach ($cartItems as $cartItem) {
+        $orderline = new Orderline();
+        $orderline->order_id = $order->id;
+        $orderline->book_id = $cartItem->book_id;
+        $orderline->quantity = $cartItem->quantity;
+        $orderline->unitprice = $cartItem->book->price;
+        $orderline->save();
+    }
+
+   
+    Cart::where('customer_id', $customerId)->delete();
+
+    return $order;
+}
+
+    // public function createOrder($costumerId , $totalPrice)
+    // {
+    //     $cartItems = Cart::where('costumer_id', $costumerId)->get();
+    //     $totalPrice = $this->calculateTotalPrice($costumerId);
+
+    //     $order = new Order();
+    //     $order->total_price = $totalPrice;
+    //     $order->status = 'Pending'; 
+    //     $order->costumer_id = $costumerId;
+    //     $order->save();
+
+    //     foreach ($cartItems as $cartItem) {
+    //         $orderline = new Orderline();
+    //         $orderline->order_id = $order->id;
+    //         $orderline->book_id = $cartItem->book_id;
+    //         $orderline->quantity = $cartItem->quantity;
+    //         $orderline->unitprice = $cartItem->book->price;
+    //         $orderline->save();
          
             
-        }
+    //     }
 
-         Cart::where('costumer_id', $costumerId)->delete();
+    //      Cart::where('costumer_id', $costumerId)->delete();
 
-        return $order;
-    }
+    //     return $order;
+    // }
 }
 
 
