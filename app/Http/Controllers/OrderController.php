@@ -24,18 +24,14 @@ class OrderController extends Controller
 
         public function createOrder(Request $request)
         {
+
             try {
                 $user = auth()->user();
                 $customerId = $user->costumer->id;
                 $order = $this->orderService->createOrder($customerId);
                 $totalPrice = $this->orderService->calculateTotalPrice($customerId);
                 Stripe::setApiKey('sk_test_51P6xhJEp1ITeo4C2L5SKGC2uHqJrsjUEUbMiKJI5lz0K34ospdtyAhJ6pTY9XGTcbA52FJx2nxLgK6PR1bLXVBKp00xkC1xZdz');
-               
-                
-                
                 $unitAmount = $totalPrice * 100;
-        
-             
                 $lineItems = [
                     [
                         'price_data' => [
@@ -50,7 +46,8 @@ class OrderController extends Controller
                         'quantity' => 1,
                     ],
                 ];
-                dd($unitAmount);
+
+                // dd($unitAmount);
               
                 $session = Session::create([
                     'payment_method_types' => ['card'],
@@ -62,6 +59,7 @@ class OrderController extends Controller
         
               
                 return redirect($session->url);
+                
             } catch (\Exception $e) {
                 return response()->json(['error' => $e->getMessage()]);
             }

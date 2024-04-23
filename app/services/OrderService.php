@@ -21,7 +21,7 @@ class OrderService implements OrderServiceInterface
     // }
     public function createOrder($costumerId)
     {
-        $this->orderRepository->calculateTotalPrice($costumerId);
+        // $this->orderRepository->calculateTotalPrice($costumerId);
         return $this->orderRepository->createOrder($costumerId);
     }
 

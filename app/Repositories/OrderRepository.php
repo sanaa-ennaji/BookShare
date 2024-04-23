@@ -41,7 +41,7 @@ class OrderRepository implements OrderRepositoryInterface
         $orderline->save();
     }                               
 
-    Cart::where('costumer_id', $customerId)->delete();
+    // Cart::where('costumer_id', $customerId)->delete();
 
     return $order;
 }
