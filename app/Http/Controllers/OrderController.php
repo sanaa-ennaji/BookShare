@@ -23,45 +23,52 @@ class OrderController extends Controller
        
 
         public function createOrder(Request $request)
-    {
-
-        try {
-       
-            $user = auth()->user();
-            $customerId = $user->costumer->id;
-            $order = $this->orderService->createOrder($customerId);
-            $totalPrice = $this->orderService->calculateTotalPrice($customerId);
-            Stripe::setApiKey(config('services.stripe.secret'));
-
-           
-            $lineItems = [
-                [
-                    'price_data' => [
-                        'currency' => 'usd',
-                        'product_data' => [
-                            'name' => 'Order #' . $order->id,
-                            'description' => 'Payment for Order #' . $order->id,
+        {
+            try {
+                $user = auth()->user();
+                $customerId = $user->costumer->id;
+                $order = $this->orderService->createOrder($customerId);
+                $totalPrice = $this->orderService->calculateTotalPrice($customerId);
+                
+                // Set your Stripe API key
+                Stripe::setApiKey('k_test_51P6xhJEp1ITeo4C2L5SKGC2uHqJrsjUEUbMiKJI5lz0K34ospdtyAhJ6pTY9XGTcbA52FJx2nxLgK6PR1bLXVBKp00xkC1xZdz');
+               
+                
+                // Calculate the unit amount in cents
+                $unitAmount = $totalPrice * 100;
+        
+                // Create line items for the session
+                $lineItems = [
+                    [
+                        'price_data' => [
+                            'currency' => 'usd',
+                            'product_data' => [
+                                'name' => 'Order #' . $order->id,
+                                'description' => 'Payment for Order #' . $order->id,
+                            ],
+                            'unit_amount' => $unitAmount,
                         ],
-                        'unit_amount' => $totalPrice * 100, 
+                        'quantity' => 1,
                     ],
-                    'quantity' => 1,
-                ],
-            ];
-
-            $session = Session::create([
-                'payment_method_types' => ['card'],
-                'line_items' => $lineItems,
-                'mode' => 'payment',
-                'success_url' => route('payment.success'),
-                'cancel_url' => route('payment.cancel'), 
-            ]);
-
-            return redirect($session->url);
-        } catch (\Exception $e) {
-
-            return redirect()->route('payment.failure')->with('error', $e->getMessage());
+                ];
+        
+                // Create a session for checkout
+                $session = Session::create([
+                    'payment_method_types' => ['card'],
+                    'line_items' => $lineItems,
+                    'mode' => 'payment',
+                    // 'success_url' => route('payment.success'), 
+                    // 'cancel_url' => route('payment.cancel'), 
+                ]);
+        
+                // Redirect the user to the session URL
+                return redirect($session->url);
+            } catch (\Exception $e) {
+                // Handle any exceptions
+                return response()->json(['error' => $e->getMessage()]);
+            }
         }
-    }
+        
 
         // public function createOrder(Request $request)
         // {
