@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\DB;
+use Stripe\Stripe;
 use App\Models\Cart;
 use App\Models\Orderline;
 use Illuminate\Http\Request;
+use Stripe\Checkout\Session;
+use Illuminate\Support\Facades\DB;
 use App\ServiceInterface\OrderServiceInterface;
 
 class OrderController extends Controller
@@ -17,47 +19,49 @@ class OrderController extends Controller
             $this->orderService = $orderService;
         }
 
+
        
 
         public function createOrder(Request $request)
-        {
-            try {
-                $user = auth()->user();
-               
-            \Stripe\Stripe::setApiKey(getenv('STRIPE_SECRET_KEY'));
-              
-                $customerId = $user->costumer->id;
-               
-               
-                $order = $this->orderService->createOrder($customerId);
-        
-              
-                $totalPrice = $this->orderService->calculateTotalPrice($customerId);
-        
-              
-                $charge = \Stripe\Charge::create([
-                    'amount' => $totalPrice * 100, 
-                    'currency' => 'usd', 
-                    'source' => $request->stripeToken,
-                    'description' => 'Payment for Order #' . $order->id,
-                    'costumer' => $customerId,
-                ]);
-        
-                
-                if ($charge->status === 'succeeded') {
-                    $order->status = 'Paid';
-                    $order->save();
-        
-                    return response()->json(['message' => 'Order created and paid successfully'], 200);
-                } else {
-                    DB::rollBack();
-                    return response()->json(['error' => 'Payment failed'], 400);
-                }
-            } catch (\Exception $e) {
-                return response()->json(['error' => $e->getMessage()], 400);
-            }
+    {
+
+        try {
+       
+            $user = auth()->user();
+            $customerId = $user->costumer->id;
+            $order = $this->orderService->createOrder($customerId);
+            $totalPrice = $this->orderService->calculateTotalPrice($customerId);
+            Stripe::setApiKey(config('services.stripe.secret'));
+
+           
+            $lineItems = [
+                [
+                    'price_data' => [
+                        'currency' => 'usd',
+                        'product_data' => [
+                            'name' => 'Order #' . $order->id,
+                            'description' => 'Payment for Order #' . $order->id,
+                        ],
+                        'unit_amount' => $totalPrice * 100, 
+                    ],
+                    'quantity' => 1,
+                ],
+            ];
+
+            $session = Session::create([
+                'payment_method_types' => ['card'],
+                'line_items' => $lineItems,
+                'mode' => 'payment',
+                'success_url' => route('payment.success'),
+                'cancel_url' => route('payment.cancel'), 
+            ]);
+
+            return redirect($session->url);
+        } catch (\Exception $e) {
+
+            return redirect()->route('payment.failure')->with('error', $e->getMessage());
         }
-        
+    }
 
         // public function createOrder(Request $request)
         // {
