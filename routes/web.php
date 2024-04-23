@@ -60,6 +60,9 @@ Route::get('/admin/statistic', function () {
     return view('admin.statistique');
 }); 
 
+Route::get('/payment/success', function () {
+    return view('client.success');
+}); 
 Route::get('/admin/category', function () {
     return view('admin.category');
 }); 
@@ -68,7 +71,7 @@ Route::get('/dashboard', function () {
     return view('stores.dashboard');
 }); 
 
-Route::post('/CostumerRegister', [CostumerController::class, 'CostumerRegister'])->name('payment.success');
+Route::post('/CostumerRegister', [CostumerController::class, 'CostumerRegister']);
 Route::post('/StoreRegister', [StoreController::class, 'StoreRegister']);
 // Route::post('/', [BookController::class, 'StoreRegister']);
 Route::post('/createCategory', [CategoryController::class, 'createCategory'])->name('payment.cancel');
@@ -82,6 +85,7 @@ Route::get('/details/{id}', [BookController::class, 'showDetails'])->name('book.
 Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
 Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
 Route::post('/orders/create', [OrderController::class, 'createOrder'])->name('orders.create');
+Route::get('/payment/success', [OrderController::class, 'paymentSuccess'])->name('payment.success');
 
 // Route::get('/details', [BookController::class, 'showDetails']);
 // Route::get('/details', function () {

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Stripe\Stripe;
 use App\Models\Cart;
+use App\Models\Order;
 use App\Models\Orderline;
 use Illuminate\Http\Request;
 use Stripe\Checkout\Session;
@@ -66,6 +67,22 @@ class OrderController extends Controller
             }
         }
         
+        public function paymentSuccess(Request $request)
+        {
+         
+            $orderId = $request->input('orderId'); 
+    
+          
+            $order = Order::find($orderId);
+
+    
+            if ($order) {
+                $order->status = 'Paid';
+                $order->save();
+            }
+    
+            return view('client.success');
+        }
 
         // public function createOrder(Request $request)
         // {
