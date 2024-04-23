@@ -23,13 +23,13 @@ class OrderRepository implements OrderRepositoryInterface
 
     public function createOrder($customerId)
 {
-    $cartItems = Cart::where('customer_id', $customerId)->get();
+    $cartItems = Cart::where('costumer_id', $customerId)->get();
     $totalPrice = $this->calculateTotalPrice($customerId);
 
     $order = new Order();
     $order->total_price = $totalPrice;
     $order->status = 'Pending'; 
-    $order->customer_id = $customerId;
+    $order->costumer_id = $customerId;
     $order->save();
 
     foreach ($cartItems as $cartItem) {
@@ -42,7 +42,7 @@ class OrderRepository implements OrderRepositoryInterface
     }
 
    
-    Cart::where('customer_id', $customerId)->delete();
+    Cart::where('costumer_id', $customerId)->delete();
 
     return $order;
 }

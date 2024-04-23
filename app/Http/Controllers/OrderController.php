@@ -23,10 +23,12 @@ class OrderController extends Controller
         {
             try {
                 $user = auth()->user();
-                \Stripe\Stripe::setApiKey(getenv('STRIPE_SECRET_KEY'));
-                $customerId = $user->customer->id;
-                
-                // Create the order
+               
+            \Stripe\Stripe::setApiKey(getenv('STRIPE_SECRET_KEY'));
+              
+                $customerId = $user->costumer->id;
+               
+                // dd($customerId);
                 $order = $this->orderService->createOrder($customerId);
         
                 // Calculate the total price of the order
