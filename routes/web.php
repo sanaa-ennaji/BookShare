@@ -75,6 +75,10 @@ Route::get('/shipping' ,function (){
  return view('client.shippingDetails');
 });
 
+Route::get('/invoice' ,function (){
+    return view('client.invoice');
+   });
+
 Route::post('/CostumerRegister', [CostumerController::class, 'CostumerRegister']);
 Route::post('/StoreRegister', [StoreController::class, 'StoreRegister']);
 // Route::post('/', [BookController::class, 'StoreRegister']); 
