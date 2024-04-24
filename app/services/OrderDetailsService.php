@@ -17,7 +17,6 @@ class OrderDetailsService implements  OrderDetailsServiceInterface
         $this->orderDetailsRepository = $orderDetailsRepository;
     }
     public function create(array $data){
-        
         return $this->orderDetailsRepository->create($data);
     }
 }
