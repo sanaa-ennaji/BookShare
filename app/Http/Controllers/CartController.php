@@ -28,7 +28,8 @@ class CartController extends Controller
     
             $this->cartService->addToCart($costumerId, $bookId, $quantity);
     
-            return response()->json(['message' => 'Item added to cart successfully'], 200);
+            // return response()->json(['message' => 'Item added to cart successfully'], 200);
+            return view('cart'); 
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 400);
         }
