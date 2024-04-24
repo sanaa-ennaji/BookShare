@@ -42,8 +42,7 @@
 
                     <div class="mt-4">
                         <label for="adress2" class="block text-gray-700 dark:text-white mb-1">adress2</label>
-                        <input type="text" id="adress2" name="adress2"
-                            class="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none">
+                        <input type="text" id="adress2" name="adress2" class="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none">
                     </div>
 
                     <div class="mt-4">
