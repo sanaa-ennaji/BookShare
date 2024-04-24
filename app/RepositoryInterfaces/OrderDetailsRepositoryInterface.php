@@ -2,7 +2,7 @@
 
 namespace App\RepositoryInterfaces;
 
-interface OrderDetailRepositoryInterface
+interface OrderDetailsRepositoryInterface
 {
     public function create(array $data);
 }

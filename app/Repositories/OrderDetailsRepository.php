@@ -2,13 +2,15 @@
 
 namespace App\Repositories;
 
-use App\RepositoryInterfaces\OrderDetailRepositoryInterface;
-use App\Models\OrderDetail;
+use App\Models\Orderdetail;
+use App\RepositoryInterfaces\OrderDetailsRepositoryInterface;
 
-class OrderDetailsRepository implements OrderDetailRepositoryInterface
+
+
+class OrderDetailsRepository implements  OrderDetailsRepositoryInterface
 {
     public function create(array $data)
     {
-        return OrderDetail::create($data);
+        return Orderdetail::create($data);
     }
 }
