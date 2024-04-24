@@ -13,9 +13,12 @@ use App\Repositories\BookRepository;
 use App\Repositories\CartRepository;
 use App\Repositories\OrderRepository;
 use App\Repositories\StoreRepository;
+use App\Services\OrderDetailsService;
 use Illuminate\Support\ServiceProvider;
 use App\Repositories\CategoryRepository;
 use App\Repositories\CostumerRepository;
+use App\Http\Requests\OrderDetailRequest;
+use App\Repositories\OrderDetailsRepository;
 use App\ServiceInterface\BookServiceInterface;
 use App\ServiceInterface\CartServiceInterface;
 use App\ServiceInterface\OrderServiceInterface;
@@ -28,6 +31,7 @@ use App\RepositoryInterfaces\OrderRepositoryInterface;
 use App\RepositoryInterfaces\StoreRepositoryInterface;
 use App\RepositoryInterfaces\CategoryRepositoryInterface;
 use App\RepositoryInterfaces\CostumerRepositoryInterface;
+use App\RepositoryInterfaces\OrderDetailsRepositoryInterface;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -64,10 +68,15 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(OrderServiceInterface::class , function ($app) {
             return new OrderService($app->make(OrderRepositoryInterface::class));
         });
+
         $this->app->bind(CartServiceInterface::class, CartService::class);
         $this->app->bind(CartRepositoryInterface::class, CartRepository::class);
       
-      
+      $this->app->bind(OrderDetailsRepositoryInterface::class , OrderDetailsRepository::class);
+      $this->app->bind(OrderDetailsService::class ,function($app){
+        return new OrderDetailsService($app->make(OrerRepositoryInterface::class));
+      });
+
     }
   
 

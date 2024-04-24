@@ -3,7 +3,7 @@
 namespace App\Services;
 
 
-use App\Models\OrderDetail;
+
 use App\RepositoryInterfaces\OrderDetailsRepositoryInterface;
 use App\ServiceInterface\OrderDetailsServiceInterface;
 

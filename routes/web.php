@@ -70,6 +70,9 @@ Route::get('/admin/category', function () {
 Route::get('/dashboard', function () {
     return view('stores.dashboard');
 }); 
+Route::get('/shipping' ,function (){
+ return view('client.shippingDetails');
+});
 
 Route::post('/CostumerRegister', [CostumerController::class, 'CostumerRegister']);
 Route::post('/StoreRegister', [StoreController::class, 'StoreRegister']);
