@@ -17,7 +17,6 @@ use App\Services\OrderDetailsService;
 use Illuminate\Support\ServiceProvider;
 use App\Repositories\CategoryRepository;
 use App\Repositories\CostumerRepository;
-use App\Http\Requests\OrderDetailRequest;
 use App\Repositories\OrderDetailsRepository;
 use App\ServiceInterface\BookServiceInterface;
 use App\ServiceInterface\CartServiceInterface;
@@ -29,6 +28,7 @@ use App\RepositoryInterfaces\BookRepositoryInterface;
 use App\RepositoryInterfaces\CartRepositoryInterface;
 use App\RepositoryInterfaces\OrderRepositoryInterface;
 use App\RepositoryInterfaces\StoreRepositoryInterface;
+use App\ServiceInterface\OrderDetailsServiceInterface;
 use App\RepositoryInterfaces\CategoryRepositoryInterface;
 use App\RepositoryInterfaces\CostumerRepositoryInterface;
 use App\RepositoryInterfaces\OrderDetailsRepositoryInterface;
@@ -74,7 +74,7 @@ class AppServiceProvider extends ServiceProvider
       
       $this->app->bind(OrderDetailsRepositoryInterface::class , OrderDetailsRepository::class);
       $this->app->bind(OrderDetailsService::class ,function($app){
-        return new OrderDetailsService($app->make(OrderDetailsRepositoryInterface::class));
+        return new OrderDetailsService($app->make(OrderDetailsServiceInterface::class));
       });
 
     }

@@ -28,8 +28,8 @@ class CartController extends Controller
     
             $this->cartService->addToCart($costumerId, $bookId, $quantity);
     
-            // return response()->json(['message' => 'Item added to cart successfully'], 200);
-            return view('cart'); 
+            return response()->json(['message' => 'Item added to cart successfully'], 200);
+            // return view('cart'); 
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 400);
         }
@@ -51,12 +51,13 @@ class CartController extends Controller
         return view('cart', ['cartItems' => $cartItems, 'totalPrice' => $totalPrice]);
     }
     
+    
  
-    // public function removeFromCart(Request $request)
-    // {
-    //     $this->cartService->removeFromCart($request->all());
-    //     return response()->json(['message' => 'Book removed from cart successfully'], 200);
-    // }
+    public function removeFromCart(Request $request)
+    {
+        // $this->cartService->removeFromCart($request->all());
+        // return response()->json(['message' => 'Book removed from cart successfully'], 200);
+    }
 
     // Add more methods as needed
 }

@@ -35,8 +35,8 @@
         <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
             <div class="rounded-lg md:w-2/3">
                 @if ($cartItems->isEmpty())
-                    <p>Your cart is empty.</p>
-                @else
+                <p>Your cart is empty.</p>
+             @else
                     @foreach ($cartItems as $cartItem)
                         <div
                             class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start sm:h-[20vh] ">
