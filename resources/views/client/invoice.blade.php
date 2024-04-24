@@ -2,7 +2,7 @@
     <html lang="en">
       <head>
         <meta charset="utf-8">
-        <title>Example 1</title>
+        <title>Example</title>
         <link rel="stylesheet" href="css/style.css" media="all" />
       </head>
       <body>
@@ -22,8 +22,8 @@
           <h1>INVOICE 3-2-1</h1>
           <div id="company" class="clearfix">
             <div>Company Name</div>
-            <div>455 Foggy Heights,<br /> AZ 85004, US</div>
-            <div>(602) 519-0450</div>
+            <div>455 Foggy Heights,<br/> AZ 85004, US</div>
+            <div>+ 1(602) 519-0450</div>
       
           
           </div>
@@ -100,4 +100,4 @@
         </footer>
    
 </body>
-</html>
+</html>  
