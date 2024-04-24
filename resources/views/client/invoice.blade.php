@@ -7,15 +7,25 @@
       </head>
       <body>
         <header class="clearfix">
-          <div id="logo">
-            <img src="logo.png">
-          </div>
+            <div class="flex items-center justify-between mb-8">
+                <div class="flex items-center">
+                    <img class="h-8 w-8 mr-2" src="https://tailwindflex.com/public/images/logos/favicon-32x32.png"
+                        alt="Logo" />
+                    <div class="text-gray-700 font-semibold text-lg">Your Company Name</div>
+                </div>
+                <div class="text-gray-700">
+                    <div class="font-bold text-xl mb-2">INVOICE</div>
+                    <div class="text-sm">Date: 01/05/2023</div>
+                    <div class="text-sm">Invoice #: INV12345</div>
+                </div>
+            </div>
           <h1>INVOICE 3-2-1</h1>
           <div id="company" class="clearfix">
             <div>Company Name</div>
             <div>455 Foggy Heights,<br /> AZ 85004, US</div>
             <div>(602) 519-0450</div>
-            <div><a href="mailto:company@example.com">company@example.com</a></div>
+      
+          
           </div>
           <div id="project">
             <div><span>PROJECT</span> Website development</div>
