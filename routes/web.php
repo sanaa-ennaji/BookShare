@@ -7,6 +7,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CostumerController;
+use App\Http\Controllers\OrderDetailsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -89,7 +90,7 @@ Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add')
 Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
 Route::post('/orders/create', [OrderController::class, 'createOrder'])->name('orders.create');
 Route::get('/payment/success', [OrderController::class, 'paymentSuccess'])->name('payment.success');
-
+Route::post('/createaddress' , [OrderDetailsController::class , 'store']);
 // Route::get('/details', [BookController::class, 'showDetails']);
 // Route::get('/details', function () {
 //     return view('public.BookDetails');

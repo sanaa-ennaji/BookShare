@@ -18,19 +18,20 @@ class OrderDetailsController extends Controller
 
     public function store(OrderDetailRequest $request)
     {
-     
+        
         $data = $request->validated();
-
-        if ($data->fails()) {
-            return response()->json(['error' =>  $data->errors()->first()], 422);
-        }
-
+    
+        $orderId = $request->input('order_id');
+    
+        $data['order_id'] = $orderId;
+    
         try {
-         
             $this->orderDetailService->create($data);
             return response()->json(['message' => 'Order detail created successfully'], 200);
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 400);
         }
     }
+    
+    
 }

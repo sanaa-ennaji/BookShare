@@ -10,7 +10,8 @@
 <body>
     <div class=" dark:bg-gray-900">
         <div class="w-full max-w-3xl mx-auto p-8 ">
-            <form  class="bg-gray-100 dark:bg-gray-800 p-8 rounded-lg shadow-md border dark:border-gray-700">
+            <form method="POST" action="/createaddress"  class="bg-gray-100 dark:bg-gray-800 p-8 rounded-lg shadow-md border dark:border-gray-700">
+                @csrf
                 <h1 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Shipping Address</h1>
 
                 <div class="mb-6">
