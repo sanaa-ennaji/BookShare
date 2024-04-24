@@ -95,6 +95,7 @@
             <div class="notice">A finance charge of 1.5% will be made on unpaid balances after 30 days.</div>
           </div>
         </main>
+        
         <footer>
           Invoice was created on a computer and is valid without the signature and seal.
         </footer>
