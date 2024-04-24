@@ -82,10 +82,8 @@ Route::get('/invoice' ,function (){
 
 Route::post('/CostumerRegister', [CostumerController::class, 'CostumerRegister']);
 Route::post('/StoreRegister', [StoreController::class, 'StoreRegister']);
-// Route::post('/', [BookController::class, 'StoreRegister']); 
 Route::post('/createCategory', [CategoryController::class, 'createCategory'])->name('payment.cancel');
 Route::post('/createBook', [BookController::class, 'createBook']);
-//Route::post('/login', [UserController::class, 'login']);
 Route::get('/admin/category', [CategoryController::class, 'showCategories']);
 Route::get('/dashboard', [BookController::class, 'showCategoryAndBooks']);
 Route::get('/', [BookController::class, 'index']);
@@ -96,6 +94,7 @@ Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
 Route::post('/orders/create', [OrderController::class, 'createOrder'])->name('orders.create');
 Route::get('/payment/success', [OrderController::class, 'paymentSuccess'])->name('payment.success');
 Route::post('/createaddress' , [OrderDetailsController::class , 'store']);
+
 // Route::get('/details', [BookController::class, 'showDetails']);
 // Route::get('/details', function () {
 //     return view('public.BookDetails');
