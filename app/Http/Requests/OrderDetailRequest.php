@@ -14,7 +14,13 @@ class OrderDetailRequest extends FormRequest
         return true;
     }
 
-    public function rules()
+  
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
+     */
+    public function rules(): array
     {
         return [
             'first_name' => 'required|string|max:255',
@@ -25,17 +31,6 @@ class OrderDetailRequest extends FormRequest
             'city' => 'required|string|max:255',
             'state' => 'nullable|string|max:255',
             'zipcode' => 'required|string|max:45',
-        ];
-    }
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
-     */
-    public function rules(): array
-    {
-        return [
-            //
         ];
     }
 }
