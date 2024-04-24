@@ -53,7 +53,7 @@
 
                     <div class="grid grid-cols-2 gap-4 mt-4">
                         <div>
-                            <label for="state" class="block text-gray-700 dark:text-white mb-1">State</label>
+                            <label for="state" class="block text-gray-700 dark:text-white mb-1">State / County</label>
                             <input type="text" id="state" name="state"
                                 class="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none">
                         </div>
