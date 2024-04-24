@@ -5,6 +5,7 @@ use App\Http\Controllers\BookController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\StoreController;
+use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CostumerController;
 use App\Http\Controllers\OrderDetailsController;
@@ -99,3 +100,4 @@ Route::post('/createaddress' , [OrderDetailsController::class , 'store']);
 // Route::get('/details', function () {
 //     return view('public.BookDetails');
 // }); 
+Route::get('/invoice', [InvoiceController::class, 'Invoice']);
