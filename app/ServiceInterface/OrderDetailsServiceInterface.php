@@ -2,7 +2,7 @@
 
 namespace App\ServiceInterface;
 
-interface OrderDetailsServiceInterface
+interface  OrderDetailsServiceInterface
 {
     public function create(array $data);
 }
