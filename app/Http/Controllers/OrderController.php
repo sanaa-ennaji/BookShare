@@ -45,7 +45,7 @@ class OrderController extends Controller
                 ];
 
                 // dd($unitAmount);
-              
+                session(['order_id' => $order->id]);
                 $session = Session::create([
                     'payment_method_types' => ['card'],
                     'line_items' => $lineItems,

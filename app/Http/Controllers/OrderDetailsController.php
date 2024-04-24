@@ -18,20 +18,26 @@ class OrderDetailsController extends Controller
 
     public function store(OrderDetailRequest $request)
     {
-        
-        $data = $request->validated();
+     
+        $orderId = session('order_id');
     
-        $orderId = $request->input('order_id');
-    
-        $data['order_id'] = $orderId;
+       
+        if (!$orderId) {
+            return response()->json(['error' => 'Order ID not found in session'], 400);
+        }
     
         try {
+            
+            $data = array_merge($request->validated(), ['order_id' => $orderId]);
+   
             $this->orderDetailService->create($data);
+    
             return response()->json(['message' => 'Order detail created successfully'], 200);
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 400);
         }
     }
+    
     
     
 }
