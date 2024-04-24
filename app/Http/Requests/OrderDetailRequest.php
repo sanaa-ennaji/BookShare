@@ -27,7 +27,7 @@ class OrderDetailRequest extends FormRequest
             'last_name' => 'required|string|max:255',
             'phone' => 'nullable|string|max:255',
             'address' => 'required|string|max:255',
-            'address2' => 'nullable|string|max:255',
+            'adress2' => 'nullable|string|max:255',
             'city' => 'required|string|max:255',
             'state' => 'nullable|string|max:255',
             'zipcode' => 'required|string|max:45',

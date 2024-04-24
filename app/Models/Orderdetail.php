@@ -15,7 +15,7 @@ class Orderdetail extends Model
         'last_name',
         'phone',
         'address',
-        'address2',
+        'adress2',
         'city',
         'state',
         'zipcode',

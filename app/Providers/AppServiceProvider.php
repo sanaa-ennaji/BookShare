@@ -72,12 +72,16 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(CartServiceInterface::class, CartService::class);
         $this->app->bind(CartRepositoryInterface::class, CartRepository::class);
       
-      $this->app->bind(OrderDetailsRepositoryInterface::class , OrderDetailsRepository::class);
-      $this->app->bind(OrderDetailsService::class ,function($app){
-        return new OrderDetailsService($app->make(OrderDetailsServiceInterface::class));
-      });
 
-    }
+
+
+$this->app->bind(OrderDetailsServiceInterface::class, OrderDetailsService::class);
+      $this->app->bind(OrderDetailsRepositoryInterface::class , OrderDetailsRepository::class);
+    //   $this->app->bind(OrderDetailsService::class ,function($app){
+    //     return new OrderDetailsService($app->make(OrderDetailsServiceInterface::class));
+    //   });
+
+     }
   
 
 
