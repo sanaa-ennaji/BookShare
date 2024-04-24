@@ -29,6 +29,8 @@
                 <input type="hidden" name="book_id" value="{{ $book->id }}">
               <div class="border-b border-gray-200 pb-6">
                 <h1 class="lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 dark:text-white mt-2">{{$book->title}}</h1>
+                <h1 class="lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 dark:text-white mt-2"></h1>
+
               </div> 
               <div class="col-span-6 sm:col-span-3">
                 <label for="quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
