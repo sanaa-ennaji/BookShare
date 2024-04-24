@@ -3,7 +3,7 @@
       <head>
         <meta charset="utf-8">
         <title>Example 1</title>
-        <link rel="stylesheet" href="style.css" media="all" />
+        <link rel="stylesheet" href="css/style.css" media="all" />
       </head>
       <body>
         <header class="clearfix">
