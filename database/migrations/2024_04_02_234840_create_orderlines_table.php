@@ -18,7 +18,7 @@ return new class extends Migration
             ->onDelete('cascade')
             ->onUpdate('cascade');
             $table->foreignId('book_id')
-            ->constrained('books')
+            ->constrained('books') 
             ->onDelete('cascade')
             ->onUpdate('cascade');
             $table->integer('quantity');
