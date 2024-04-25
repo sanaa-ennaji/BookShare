@@ -28,6 +28,9 @@
     padding: 1rem;
     background-color: rgb(241 245 249);
 }
+img{ 
+  width: 80px;
+}
 table {
     width: 100%;
     border-spacing: 0;
@@ -69,7 +72,7 @@ footer {
     <table class="w-full">
         <tr>
             <td class="w-half">
-                <img src="{{ asset('laraveldaily.png') }}" alt="laravel daily" width="200" />
+                <img   src="../img/15744737.548a00c0e09dc-removebg-preview.png" alt="laravel daily" width="200" />
             </td>
             <td class="w-half">
                 <h2>Invoice ID: 834847473</h2>
@@ -81,14 +84,17 @@ footer {
         <table class="w-full">
             <tr>
                 <td class="w-half">
-                    <div><h4>To:</h4></div>
+                    <div><h4>costumer</h4></div>
                     <div>John Doe</div>
-                    <div>123 Acme Str.</div>
+                    <div>address</div>
+                    <div>date</div>
                 </td>
                 <td class="w-half">
-                    <div><h4>From:</h4></div>
-                    <div>Laravel Daily</div>
-                    <div>London</div>
+                    <div><h4>book store</h4></div>
+                    <div>name</div>
+                    <div>address</div>
+                    <div>phone</div>
+                  
                 </td>
             </tr>
         </table>
@@ -131,16 +137,14 @@ footer {
     <div class="total">
         Total: $129.00 USD
     </div>
-    <div id="notices">
+    {{-- <div id="notices">
       <div>NOTICE:</div>
       <div class="notice">A finance charge of 1.5% will be made on unpaid balances after 30 days.</div>
-    </div>
+    </div> --}}
   </main>
-  <footer>
-    Invoice was created on a computer and is valid without the signature and seal.
-  </footer>
+
     <div class="footer margin-top">
-        <div>Thank you</div>
+        <div> Invoice was created on a computer and is valid without the signature and seal.</div>
         <div>&copy;Bookshare </div>
     </div>
 </body>
