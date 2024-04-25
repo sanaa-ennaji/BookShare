@@ -36,7 +36,7 @@ public function displayInvoice()
         $orderItems = Orderline::where('order_id', $orderId)->get();
 
        
-        return view('invoice', ['order' => $order, 'orderItems' => $orderItems]);
+        return view('client.invoice', ['order' => $order, 'orderItems' => $orderItems]);
     } catch (\Exception $e) {
     
         return response()->json(['error' => $e->getMessage()], 400);
