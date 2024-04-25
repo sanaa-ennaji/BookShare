@@ -16,9 +16,9 @@ class InvoiceController extends Controller
     {
         $order = Order::findOrFail($orderId);
        $data = ['order' => $order];
-    $pdf = Pdf::loadView('client.invoice', $data);
+    $pdf = Pdf::loadView('client.generate-invoice', $data);
     $date = Carbon::now()->format('d-m-y');
-    return $pdf->download('invoice.pdf' . $order->id . '-' . $date . '.pdf');
+    return $pdf->download('invoice-' . $order->id . '-' . $date . '.pdf');
     }
 
 
@@ -40,7 +40,7 @@ public function displayInvoice()
         $orderItems = Orderline::where('order_id', $orderId)->get();
 
        
-        return view('client.invoice', ['order' => $order, 'orderItems' => $orderItems]);
+        return view('client.generate-invoice', ['order' => $order, 'orderItems' => $orderItems]);
     } catch (\Exception $e) {
     
         return response()->json(['error' => $e->getMessage()], 400);
