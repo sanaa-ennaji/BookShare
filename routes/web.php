@@ -95,6 +95,7 @@ Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
 Route::post('/orders/create', [OrderController::class, 'createOrder'])->name('orders.create');
 Route::get('/payment/success', [OrderController::class, 'paymentSuccess'])->name('payment.success');
 Route::post('/createaddress' , [OrderDetailsController::class , 'store']);
+Route::delete('/admin/category/{id}', 'CategoryController@deleteCategory')->name('admin.category.delete');
 
 // Route::get('/details', [BookController::class, 'showDetails']);
 // Route::get('/details', function () {

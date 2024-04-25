@@ -97,6 +97,8 @@
                   </div>
               </div>
               <div>
+            
+                
                 @foreach($categories as $category)
                 <div class="flex justify-between border-t text-sm font-normal  mt-4  space-x-4">
                     <div class="px-2 flex">
@@ -109,13 +111,14 @@
                             alt=""
                         />
                     </div>
-                
-                  <form class="px-2" action="/delete/{{$category->id}}" method="POST">
+                 
+                    <button type="button" onclick="openModal({{ $category->id }})" class="btn btn-danger">Delete</button>
+                  {{-- <form class="px-2" action="/delete/{{$category->id}}" method="POST">
                     @csrf
                     @method('DELETE')
-                      <button  type="submit"
+                      <button  type="submit" 
                       class="mb-2 md:mb-0 bg-blue-500 border border-blue-500 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-blue-600">delete</button> 
-                  </form>
+                  </form> --}}
                   <div class="px-2">
                     <button id="button{{ $category->id }}" onclick="toggleModal('progress-modal{{ $category->id }}', 'button{{ $category->id }}')"
                       class="mb-2 md:mb-0 bg-blue-500 border border-blue-500 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-blue-600">update</button> 
@@ -160,6 +163,33 @@
     </div> 
 
 </div>
+<div id="deleteModal" class="fixed inset-0 z-50 overflow-auto bg-black bg-opacity-50 flex justify-center items-center">
+    <div class="modal-content bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-xl font-semibold mb-4">Delete Category</h2>
+        <p class="mb-4">Are you sure you want to delete this category?</p>
+        <div class="flex justify-end">
+            <form id="deleteForm" action="" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mr-2">Delete</button>
+                <button type="button" onclick="closeModal()" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    function openModal(id) {
+        var modal = document.getElementById('deleteModal');
+        modal.style.display = "block";
+        var form = document.getElementById('deleteForm');
+        form.action = "/admin/category/" + id;
+    }
+
+    function closeModal() {
+        var modal = document.getElementById('deleteModal');
+        modal.style.display = "none";
+    }
+</script>
 
 
 
