@@ -8,7 +8,7 @@
     <style>
       body{
         margin: auto;
-        width: 80vw;
+        width: 90vw;
         height: 100vh;
       }
       h4 {
@@ -53,6 +53,16 @@ table tr.items td {
     margin-top: 1rem;
     font-size: 0.875rem;
 }
+footer {
+  color: #5D6975;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid #C1CED9;
+  padding: 8px 0;
+  text-align: center;
+}
     </style>
 </head>
 <body>
@@ -87,33 +97,51 @@ table tr.items td {
     <div class="margin-top">
         <table class="products">
             <tr>
-                <th>Qty</th>
-                <th>Description</th>
+                <th>Book</th>
                 <th>Price</th>
+                <th>Qty</th>
+                <th>total</th>
+              
             </tr>
             <tr class="items">
               
                     <td>
-                     ziuerh
+                   book name
                     </td>
                     <td>
-                       zebziuefuiezf
+                       300$
                     </td>
                     <td>
-                        300$
+                       3
                     </td>
+                    <td>
+                      300$
+                   </td>
+                >
                
             </tr>
         </table>
     </div>
- 
+    <div class="total">
+      SubTotal: $100.00 USD
+  </div>
+  <div class="total">
+    shipping: $29.00 USD
+</div>
     <div class="total">
         Total: $129.00 USD
     </div>
- 
+    <div id="notices">
+      <div>NOTICE:</div>
+      <div class="notice">A finance charge of 1.5% will be made on unpaid balances after 30 days.</div>
+    </div>
+  </main>
+  <footer>
+    Invoice was created on a computer and is valid without the signature and seal.
+  </footer>
     <div class="footer margin-top">
         <div>Thank you</div>
-        <div>&copy; Laravel Daily</div>
+        <div>&copy;Bookshare </div>
     </div>
 </body>
 </html>
