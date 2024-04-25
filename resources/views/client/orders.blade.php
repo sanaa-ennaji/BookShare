@@ -7,50 +7,15 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-    <!--
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
--->
+   
 <div class="bg-white">
-    <!--
-      Mobile menu
-  
-      Off-canvas menu for mobile, show/hide based on off-canvas menu state.
-    -->
+   
     <div class="relative z-40 lg:hidden" role="dialog" aria-modal="true">
-      <!--
-        Off-canvas menu backdrop, show/hide based on off-canvas menu state.
-  
-        Entering: "transition-opacity ease-linear duration-300"
-          From: "opacity-0"
-          To: "opacity-100"
-        Leaving: "transition-opacity ease-linear duration-300"
-          From: "opacity-100"
-          To: "opacity-0"
-      -->
+     
       <div class="fixed inset-0 bg-black bg-opacity-25"></div>
   
       <div class="fixed inset-0 z-40 flex">
-        <!--
-          Off-canvas menu, show/hide based on off-canvas menu state.
-  
-          Entering: "transition ease-in-out duration-300 transform"
-            From: "-translate-x-full"
-            To: "translate-x-0"
-          Leaving: "transition ease-in-out duration-300 transform"
-            From: "translate-x-0"
-            To: "-translate-x-full"
-        -->
+       
         <div class="relative flex w-full max-w-xs flex-col overflow-y-auto bg-white pb-12 shadow-xl">
           <div class="flex px-4 pb-2 pt-5">
             <button type="button" class="-m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400">
@@ -339,16 +304,7 @@
                           <button type="button" class="border-transparent text-gray-700 hover:text-gray-800 relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out" aria-expanded="false">Women</button>
                         </div>
   
-                        <!--
-                          'Women' mega menu, show/hide based on flyout menu state.
-  
-                          Entering: "transition ease-out duration-200"
-                            From: "opacity-0"
-                            To: "opacity-100"
-                          Leaving: "transition ease-in duration-150"
-                            From: "opacity-100"
-                            To: "opacity-0"
-                        -->
+                      
                         <div class="absolute inset-x-0 top-full text-gray-500 sm:text-sm">
                           <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
                           <div class="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true"></div>
@@ -443,16 +399,7 @@
                           <button type="button" class="border-transparent text-gray-700 hover:text-gray-800 relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out" aria-expanded="false">Men</button>
                         </div>
   
-                        <!--
-                          'Men' mega menu, show/hide based on flyout menu state.
-  
-                          Entering: "transition ease-out duration-200"
-                            From: "opacity-0"
-                            To: "opacity-100"
-                          Leaving: "transition ease-in duration-150"
-                            From: "opacity-100"
-                            To: "opacity-0"
-                        -->
+                
                         <div class="absolute inset-x-0 top-full text-gray-500 sm:text-sm">
                           <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
                           <div class="absolute inset-0 top-1/2 bg-white shadow" aria-hidden="true"></div>
