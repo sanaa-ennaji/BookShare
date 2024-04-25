@@ -303,10 +303,6 @@
         <div class="space-y-20">
           <div>
             <h3 class="sr-only">Order placed on <time datetime="2021-01-22">January 22, 2021</time></h3>
-  
-           
-                
-  
             <table class="mt-4 w-full text-gray-500 sm:mt-6">
               <caption class="sr-only">
                 Products
@@ -321,11 +317,15 @@
                 </tr>
               </thead>
               <tbody class="divide-y divide-gray-200 border-b border-gray-200 text-sm sm:border-t">
+               
+              
+             
+                @foreach ($orders as $order)
                 <tr>
-                    <td class="hidden py-6 pr-8 sm:table-cell">id</td>
-                    <td class="hidden py-6 pr-8 sm:table-cell">Jan 25, 2021</td>
+                    <td class="hidden py-6 pr-8 sm:table-cell"> {{ $order->id }}</td>
+                    <td class="hidden py-6 pr-8 sm:table-cell">{{ $order->created_at }}</td>
                   <td class="hidden py-6 pr-8 sm:table-cell">Delivered</td>
-                  <td class="hidden py-6 pr-8 sm:table-cell"> $36.00</td>
+                  <td class="hidden py-6 pr-8 sm:table-cell">{{ $order->total_price }}</td>
                   <td class="whitespace-nowrap py-6 text-right font-medium">
                     <a href="#" class="mt-6 flex w-full items-center justify-center rounded-md border border-gray-300 bg-white  py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:w-auto">
                         download Invoice
@@ -333,13 +333,12 @@
                       </a>
                   </td>
                 </tr>
-  
-                <!-- More products... -->
+                @endforeach
               </tbody>
             </table>
           </div>
   
-          <!-- More orders... -->
+      
         </div>
       </section>
     </main>
