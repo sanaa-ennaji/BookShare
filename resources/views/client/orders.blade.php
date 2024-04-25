@@ -548,9 +548,9 @@
                   </div>
                 </div>
   
-                <!-- Mobile menu and search (lg-) -->
+             
                 <div class="flex flex-1 items-center lg:hidden">
-                  <!-- Mobile menu toggle, controls the 'mobileMenuOpen' state. -->
+              
                   <button type="button" class="-ml-2 rounded-md bg-white p-2 text-gray-400">
                     <span class="sr-only">Open menu</span>
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">

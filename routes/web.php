@@ -79,7 +79,9 @@ Route::get('/shipping' ,function (){
 Route::get('/invoice' ,function (){
     return view('client.invoice');
    });
-
+   Route::get('costumer/orders' ,function (){
+    return view('client.orders');
+   });
 
 Route::post('/CostumerRegister', [CostumerController::class, 'CostumerRegister']);
 Route::post('/StoreRegister', [StoreController::class, 'StoreRegister']);
@@ -102,3 +104,4 @@ Route::post('/createaddress' , [OrderDetailsController::class , 'store']);
 // }); 
 
 Route::get('/invoice',  [InvoiceController::class , 'displayInvoice'])->name('order.items');
+Route::get('costumer/orders' , [OrderController::class , 'costumerOrders']);
