@@ -109,23 +109,24 @@ footer {
                 <th>total</th>
               
             </tr>
+            @foreach ($orderItems as $orderItem)
             <tr class="items">
               
                     <td>
-                   book name
+                        {{ $orderItem->book->title }}
                     </td>
                     <td>
-                       300$
+                        {{ $orderItem->unitprice }}
+                      
                     </td>
                     <td>
-                       3
+                        {{ $orderItem->order->quantity }}
                     </td>
                     <td>
-                      300$
-                   </td>
-                
-               
+                        {{ $orderItem->order->total_price }}
+                    </td>
             </tr>
+            @endforeach
         </table>
     </div>
     <div class="total">
