@@ -104,8 +104,7 @@ Route::post('/createaddress' , [OrderDetailsController::class , 'store']);
 // Route::get('/invoice' ,function (){
 //     return view('client.invoice');
 //    });
-//    Route::get('/invoice', [InvoiceController::class, 'displayInvoice']);
-   Route::get('/invoice/{orderId}/generate', [InvoiceController::class, 'generateInvoice']);
-   
+Route::get('/invoice/{orderId}', [InvoiceController::class, 'displayInvoice']);
+Route::get('/invoice/{orderId}/generate', [InvoiceController::class, 'generateInvoice'])->name('invoice.generate');
 
 Route::get('costumer/orders' , [OrderController::class , 'costumerOrders']);

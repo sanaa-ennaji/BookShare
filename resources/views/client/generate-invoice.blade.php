@@ -109,7 +109,7 @@ footer {
                 <th>total</th>
               
             </tr>
-            @foreach ($orderItems as $orderItem)
+            {{-- @foreach ($orderItems as $orderItem)
             <tr class="items">
               
                     <td>
@@ -126,7 +126,7 @@ footer {
                         {{ $orderItem->order->total_price }}
                     </td>
             </tr>
-            @endforeach
+            @endforeach --}}
         </table>
     </div>
     <div class="total">
