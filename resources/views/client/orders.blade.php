@@ -8,278 +8,7 @@
 </head>
 <body>
    
-<div class="bg-white">
-   
-    <div class="relative z-40 lg:hidden" role="dialog" aria-modal="true">
-     
-      <div class="fixed inset-0 bg-black bg-opacity-25"></div>
-  
-      <div class="fixed inset-0 z-40 flex">
-       
-        <div class="relative flex w-full max-w-xs flex-col overflow-y-auto bg-white pb-12 shadow-xl">
-          <div class="flex px-4 pb-2 pt-5">
-            <button type="button" class="-m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400">
-              <span class="sr-only">Close menu</span>
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-  
-          <!-- Links -->
-          <div class="mt-2">
-            <div class="border-b border-gray-200">
-              <div class="-mb-px flex space-x-8 px-4" aria-orientation="horizontal" role="tablist">
-                <!-- Selected: "border-indigo-600 text-indigo-600", Not Selected: "border-transparent text-gray-900" -->
-                <button id="tabs-1-tab-1" class="border-transparent text-gray-900 flex-1 whitespace-nowrap border-b-2 px-1 py-4 text-base font-medium" aria-controls="tabs-1-panel-1" role="tab" type="button">Women</button>
-                <!-- Selected: "border-indigo-600 text-indigo-600", Not Selected: "border-transparent text-gray-900" -->
-                <button id="tabs-1-tab-2" class="border-transparent text-gray-900 flex-1 whitespace-nowrap border-b-2 px-1 py-4 text-base font-medium" aria-controls="tabs-1-panel-2" role="tab" type="button">Men</button>
-              </div>
-            </div>
-  
-            <!-- 'Women' tab panel, show/hide based on tab state. -->
-            <div id="tabs-1-panel-1" class="space-y-12 px-4 pb-6 pt-10" aria-labelledby="tabs-1-tab-1" role="tabpanel" tabindex="0">
-              <div class="grid grid-cols-1 items-start gap-x-6 gap-y-10">
-                <div class="grid grid-cols-1 gap-x-6 gap-y-10">
-                  <div>
-                    <p id="mobile-featured-heading-0" class="font-medium text-gray-900">Featured</p>
-                    <ul role="list" aria-labelledby="mobile-featured-heading-0" class="mt-6 space-y-6">
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Sleep</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Swimwear</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Underwear</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <p id="mobile-categories-heading" class="font-medium text-gray-900">Categories</p>
-                    <ul role="list" aria-labelledby="mobile-categories-heading" class="mt-6 space-y-6">
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Basic Tees</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Artwork Tees</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Bottoms</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Underwear</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Accessories</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="grid grid-cols-1 gap-x-6 gap-y-10">
-                  <div>
-                    <p id="mobile-collection-heading" class="font-medium text-gray-900">Collection</p>
-                    <ul role="list" aria-labelledby="mobile-collection-heading" class="mt-6 space-y-6">
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Everything</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Core</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">New Arrivals</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Sale</a>
-                      </li>
-                    </ul>
-                  </div>
-  
-                  <div>
-                    <p id="mobile-brand-heading" class="font-medium text-gray-900">Brands</p>
-                    <ul role="list" aria-labelledby="mobile-brand-heading" class="mt-6 space-y-6">
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Full Nelson</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">My Way</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Re-Arranged</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Counterfeit</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Significant Other</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 'Men' tab panel, show/hide based on tab state. -->
-            <div id="tabs-1-panel-2" class="space-y-12 px-4 pb-6 pt-10" aria-labelledby="tabs-1-tab-2" role="tabpanel" tabindex="0">
-              <div class="grid grid-cols-1 items-start gap-x-6 gap-y-10">
-                <div class="grid grid-cols-1 gap-x-6 gap-y-10">
-                  <div>
-                    <p id="mobile-featured-heading-1" class="font-medium text-gray-900">Featured</p>
-                    <ul role="list" aria-labelledby="mobile-featured-heading-1" class="mt-6 space-y-6">
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Casual</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Boxers</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Outdoor</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <p id="mobile-categories-heading" class="font-medium text-gray-900">Categories</p>
-                    <ul role="list" aria-labelledby="mobile-categories-heading" class="mt-6 space-y-6">
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Artwork Tees</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Pants</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Accessories</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Boxers</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Basic Tees</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="grid grid-cols-1 gap-x-6 gap-y-10">
-                  <div>
-                    <p id="mobile-collection-heading" class="font-medium text-gray-900">Collection</p>
-                    <ul role="list" aria-labelledby="mobile-collection-heading" class="mt-6 space-y-6">
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Everything</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Core</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">New Arrivals</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Sale</a>
-                      </li>
-                    </ul>
-                  </div>
-  
-                  <div>
-                    <p id="mobile-brand-heading" class="font-medium text-gray-900">Brands</p>
-                    <ul role="list" aria-labelledby="mobile-brand-heading" class="mt-6 space-y-6">
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Significant Other</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">My Way</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Counterfeit</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Re-Arranged</a>
-                      </li>
-                      <li class="flex">
-                        <a href="#" class="text-gray-500">Full Nelson</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-  
-          <div class="space-y-6 border-t border-gray-200 px-4 py-6">
-            <div class="flow-root">
-              <a href="#" class="-m-2 block p-2 font-medium text-gray-900">Company</a>
-            </div>
-            <div class="flow-root">
-              <a href="#" class="-m-2 block p-2 font-medium text-gray-900">Stores</a>
-            </div>
-          </div>
-  
-          <div class="space-y-6 border-t border-gray-200 px-4 py-6">
-            <div class="flow-root">
-              <a href="#" class="-m-2 block p-2 font-medium text-gray-900">Create an account</a>
-            </div>
-            <div class="flow-root">
-              <a href="#" class="-m-2 block p-2 font-medium text-gray-900">Sign in</a>
-            </div>
-          </div>
-  
-          <div class="space-y-6 border-t border-gray-200 px-4 py-6">
-            <!-- Currency selector -->
-            <form>
-              <div class="inline-block">
-                <label for="mobile-currency" class="sr-only">Currency</label>
-                <div class="group relative -ml-2 rounded-md border-transparent focus-within:ring-2 focus-within:ring-white">
-                  <select id="mobile-currency" name="currency" class="flex items-center rounded-md border-transparent bg-none py-0.5 pl-2 pr-5 text-sm font-medium text-gray-700 focus:border-transparent focus:outline-none focus:ring-0 group-hover:text-gray-800">
-                    <option>CAD</option>
-                    <option>USD</option>
-                    <option>AUD</option>
-                    <option>EUR</option>
-                    <option>GBP</option>
-                  </select>
-                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center">
-                    <svg class="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <header class="relative">
-      <nav aria-label="Top">
-        <!-- Top navigation -->
-        <div class="bg-gray-900">
-          <div class="mx-auto flex h-10 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-            <!-- Currency selector -->
-            <form class="hidden lg:block lg:flex-1">
-              <div class="flex">
-                <label for="desktop-currency" class="sr-only">Currency</label>
-                <div class="group relative -ml-2 rounded-md border-transparent bg-gray-900 focus-within:ring-2 focus-within:ring-white">
-                  <select id="desktop-currency" name="currency" class="flex items-center rounded-md border-transparent bg-gray-900 bg-none py-0.5 pl-2 pr-5 text-sm font-medium text-white focus:border-transparent focus:outline-none focus:ring-0 group-hover:text-gray-100">
-                    <option>CAD</option>
-                    <option>USD</option>
-                    <option>AUD</option>
-                    <option>EUR</option>
-                    <option>GBP</option>
-                  </select>
-                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center">
-                    <svg class="h-5 w-5 text-gray-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                      <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </form>
-  
-            <p class="flex-1 text-center text-sm font-medium text-white lg:flex-none">Get free delivery on orders over $100</p>
-  
-            <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-              <a href="#" class="text-sm font-medium text-white hover:text-gray-100">Create an account</a>
-              <span class="h-6 w-px bg-gray-600" aria-hidden="true"></span>
-              <a href="#" class="text-sm font-medium text-white hover:text-gray-100">Sign in</a>
-            </div>
-          </div>
-        </div>
+
   
         <!-- Secondary navigation -->
         <div class="bg-white">
@@ -575,28 +304,8 @@
           <div>
             <h3 class="sr-only">Order placed on <time datetime="2021-01-22">January 22, 2021</time></h3>
   
-            <div class="rounded-lg bg-gray-50 px-4 py-6 sm:flex sm:items-center sm:justify-between sm:space-x-6 sm:px-6 lg:space-x-8">
-              <dl class="flex-auto space-y-6 divide-y divide-gray-200 text-sm text-gray-600 sm:grid sm:grid-cols-3 sm:gap-x-6 sm:space-y-0 sm:divide-y-0 lg:w-1/2 lg:flex-none lg:gap-x-8">
-                <div class="flex justify-between sm:block">
-                  <dt class="font-medium text-gray-900">Date placed</dt>
-                  <dd class="sm:mt-1">
-                    <time datetime="2021-01-22">January 22, 2021</time>
-                  </dd>
-                </div>
-                <div class="flex justify-between pt-6 sm:block sm:pt-0">
-                  <dt class="font-medium text-gray-900">Order number</dt>
-                  <dd class="sm:mt-1">WU88191111</dd>
-                </div>
-                <div class="flex justify-between pt-6 font-medium text-gray-900 sm:block sm:pt-0">
-                  <dt>Total amount</dt>
-                  <dd class="sm:mt-1">$104.00</dd>
-                </div>
-              </dl>
-              <a href="#" class="mt-6 flex w-full items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:w-auto">
-                View Invoice
-                <span class="sr-only">for order WU88191111</span>
-              </a>
-            </div>
+           
+                
   
             <table class="mt-4 w-full text-gray-500 sm:mt-6">
               <caption class="sr-only">
@@ -604,27 +313,24 @@
               </caption>
               <thead class="sr-only text-left text-sm text-gray-500 sm:not-sr-only">
                 <tr>
-                  <th scope="col" class="py-3 pr-8 font-normal sm:w-2/5 lg:w-1/3">Product</th>
-                  <th scope="col" class="hidden w-1/5 py-3 pr-8 font-normal sm:table-cell">Price</th>
-                  <th scope="col" class="hidden py-3 pr-8 font-normal sm:table-cell">Status</th>
-                  <th scope="col" class="w-0 py-3 text-right font-normal">Info</th>
+                  <th scope="col" class="hidden w-1/5 py-3 pr-8 font-normal sm:table-cell">order number</th>
+                  <th scope="col" class="hidden w-1/5 py-3 pr-8 font-normal sm:table-cell">date</th>
+                  <th scope="col" class="hidden w-1/5 py-3 pr-8 font-normal sm:table-cell">status</th>
+                  <th scope="col" class="hidden py-3 pr-8 font-normal sm:table-cell">total</th>
+                  <th scope="col" class="hidden py-3 pr-8 font-normal sm:table-cell">Info</th>
                 </tr>
               </thead>
               <tbody class="divide-y divide-gray-200 border-b border-gray-200 text-sm sm:border-t">
                 <tr>
-                  <td class="py-6 pr-8">
-                    <div class="flex items-center">
-                      <img src="https://tailwindui.com/img/ecommerce-images/order-history-page-04-product-01.jpg" alt="Black tee with intersecting red, white, and green curved lines on front." class="mr-6 h-16 w-16 rounded object-cover object-center">
-                      <div>
-                        <div class="font-medium text-gray-900">Men&#039;s 3D Glasses Artwork Tee</div>
-                        <div class="mt-1 sm:hidden">$36.00</div>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="hidden py-6 pr-8 sm:table-cell">$36.00</td>
-                  <td class="hidden py-6 pr-8 sm:table-cell">Delivered Jan 25, 2021</td>
+                    <td class="hidden py-6 pr-8 sm:table-cell">id</td>
+                    <td class="hidden py-6 pr-8 sm:table-cell">Jan 25, 2021</td>
+                  <td class="hidden py-6 pr-8 sm:table-cell">Delivered</td>
+                  <td class="hidden py-6 pr-8 sm:table-cell"> $36.00</td>
                   <td class="whitespace-nowrap py-6 text-right font-medium">
-                    <a href="#" class="text-indigo-600">View<span class="hidden lg:inline"> Product</span><span class="sr-only">, Men&#039;s 3D Glasses Artwork Tee</span></a>
+                    <a href="#" class="mt-6 flex w-full items-center justify-center rounded-md border border-gray-300 bg-white  py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:w-auto">
+                        download Invoice
+                        <span class="sr-only">for order WU88191111</span>
+                      </a>
                   </td>
                 </tr>
   
