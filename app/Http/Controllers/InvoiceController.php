@@ -10,12 +10,13 @@ use Illuminate\Http\Request;
 
 class InvoiceController extends Controller
 {
-    // public function Invoice()
-    // {
-    //     $pdf = PDF::loadView('invoice_pdf');
-
-    //     return $pdf->download('itcodestuff.pdf');
-    // }
+    public function generateInvoice($orderId)
+    {
+        $order = Order::findOrFail($orderId);
+       
+    $pdf = Pdf::loadView('pdf.invoice', $data);
+    return $pdf->download('invoice.pdf');
+    }
 
 
 
