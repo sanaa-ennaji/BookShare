@@ -63,6 +63,9 @@ class OrderController extends Controller
         }
         
         
+        public function costumerOrders (){
+            
+        }
 
         // public function createOrder(Request $request)
         // {
