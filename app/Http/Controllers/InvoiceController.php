@@ -2,20 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
+// use Barryvdh\DomPDF\PDF;
 use App\Models\Order;
-use Barryvdh\DomPDF\PDF;
 use App\Models\OrderItem;
 use App\Models\Orderline;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class InvoiceController extends Controller
 {
     public function generateInvoice($orderId)
     {
         $order = Order::findOrFail($orderId);
-       
-    $pdf = Pdf::loadView('pdf.invoice', $data);
-    return $pdf->download('invoice.pdf');
+       $data = ['order' => $order];
+    $pdf = Pdf::loadView('client.invoice', $data);
+    $date = Carbon::now()->format('d-m-y');
+    return $pdf->download('invoice.pdf' . $order->id . '-' . $date . '.pdf');
     }
 
 

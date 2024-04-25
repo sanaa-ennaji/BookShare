@@ -103,5 +103,5 @@ Route::post('/createaddress' , [OrderDetailsController::class , 'store']);
 //     return view('public.BookDetails');
 // }); 
 
-Route::get('/invoice',  [InvoiceController::class , 'displayInvoice'])->name('order.items');
+Route::get('/invoice/{$orderID}',  [InvoiceController::class , 'displayInvoice'])->name('order.items');
 Route::get('costumer/orders' , [OrderController::class , 'costumerOrders']);
