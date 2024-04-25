@@ -20,7 +20,7 @@ class InvoiceController extends Controller
 
 
 
-public function displayOrderItems()
+public function displayInvoice()
 {
     try {
       
