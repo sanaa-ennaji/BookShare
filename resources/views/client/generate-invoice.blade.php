@@ -75,7 +75,7 @@ footer {
                 <img   src="../img/15744737.548a00c0e09dc-removebg-preview.png" alt="laravel daily" width="200" />
             </td>
             <td class="w-half">
-                <h2>Invoice ID: 834847473</h2>
+                <h2>Invoice ID: {{$order->id}}</h2>
             </td>
         </tr>
     </table>
@@ -111,7 +111,6 @@ footer {
             </tr>
             @foreach ($orderItems as $orderItem)
             <tr class="items">
-              
                     <td>
                         {{ $orderItem->book->title }}
                     </td>
