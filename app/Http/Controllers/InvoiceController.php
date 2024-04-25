@@ -31,12 +31,12 @@ class InvoiceController extends Controller
     {
         try {
             $order = Order::findOrFail($orderId);
-            $orderItems = $order->orderItems;
-            return view('client.generate-invoice', compact('order', 'orderItems'));
+            return view('client.generate-invoice', compact('order'));
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 400);
         }
     }
+    
     
     
     
