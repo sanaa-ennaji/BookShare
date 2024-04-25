@@ -7,7 +7,7 @@
     <title>Invoice</title>
     <style>
       body{
-        /* margin: 2rem  10rem; */
+        margin: auto;
         width: 80vw;
         height: 100vh;
       }
