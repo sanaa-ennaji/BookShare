@@ -120,7 +120,7 @@ footer {
                       
                     </td>
                     <td>
-                        {{ $orderItem->order->quantity }}
+                        {{ $orderItem->quantity }}
                     </td>
                     <td>
                         {{ $orderItem->order->total_price }}
