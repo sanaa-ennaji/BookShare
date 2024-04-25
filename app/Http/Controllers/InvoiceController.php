@@ -27,21 +27,15 @@ class InvoiceController extends Controller
 
 
 
-public function displayInvoice($orderId)
-{
-    try {
-      
-
-        $order = Order::findOrFail($orderId);
-
-      
-        $orderItems = Orderline::where('order_id', $orderId)->get();
-
-        return view('client.generate-invoice', ['order' => $order, 'orderItems' => $orderItems]);
-    } catch (\Exception $e) {
-    
-        return response()->json(['error' => $e->getMessage()], 400);
+    public function displayInvoice($orderId)
+    {
+        try {
+            $order = Order::findOrFail($orderId);
+            $orderItems = Orderline::where('order_id', $orderId)->get();
+            return view('client.generate-invoice', compact('order', 'orderItems'));
+        } catch (\Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 400);
+        }
     }
-}
-
+    
 }
