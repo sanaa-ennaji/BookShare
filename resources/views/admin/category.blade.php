@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    {{-- @include('components/head') --}}
 <body class="bg-gray-200">
     <div class="text-gray-800 font-inter">
 
