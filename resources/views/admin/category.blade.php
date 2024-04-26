@@ -61,10 +61,10 @@
               <div class="flex justify-between bg-gradient-to-tr from-indigo-600 to-blue-600 rounded-md py-2 px-4 text-white font-bold text-md">
                
                 <div>
-                  <span>image</span>
+                  <span>title</span>
                 </div>
                 <div>
-                  <span>title</span>
+                  <span>image</span>
                 </div>
                 <div>
                     <span>delete</span>
@@ -144,7 +144,5 @@
 </div>
 
 <script src="https://cdn.tailwindcss.com"></script>
-
-<script src="js/cities.js"></script>
 </body>
 </html>

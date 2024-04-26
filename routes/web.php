@@ -81,11 +81,16 @@ Route::get('/shipping' ,function (){
     return view('client.orders');
    });
 
+Route::post('/createCategory', [CategoryController::class, 'createCategory'])->name('payment.cancel');
+Route::get('/admin/category', [CategoryController::class, 'showCategories']);
+Route::delete('/delete/{id}', [CategoryController::class, 'deleteCategory'])->name('admin.category.delete');
+Route::delete('/update/{id}', [CategoryController::class, ' updateCategory'])->name('admin.category.delete');
+
+
 Route::post('/CostumerRegister', [CostumerController::class, 'CostumerRegister']);
 Route::post('/StoreRegister', [StoreController::class, 'StoreRegister']);
-Route::post('/createCategory', [CategoryController::class, 'createCategory'])->name('payment.cancel');
 Route::post('/createBook', [BookController::class, 'createBook']);
-Route::get('/admin/category', [CategoryController::class, 'showCategories']);
+
 Route::get('/dashboard', [BookController::class, 'showCategoryAndBooks']);
 Route::get('/', [BookController::class, 'index']);
 
@@ -95,7 +100,7 @@ Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
 Route::post('/orders/create', [OrderController::class, 'createOrder'])->name('orders.create');
 Route::get('/payment/success', [OrderController::class, 'paymentSuccess'])->name('payment.success');
 Route::post('/createaddress' , [OrderDetailsController::class , 'store']);
-Route::delete('/admin/category/{id}', 'CategoryController@deleteCategory')->name('admin.category.delete');
+
 
 // Route::get('/details', [BookController::class, 'showDetails']);
 // Route::get('/details', function () {

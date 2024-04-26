@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-  @include('components/sideBar')
+  {{-- @include('components/sideBar') --}}
 
       <div class="mt-12">
         <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" id="btn"
