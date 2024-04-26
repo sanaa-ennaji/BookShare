@@ -98,6 +98,7 @@ Route::put('/updateCategory/{id}', [CategoryController::class, 'updateCategory']
 Route::post('/CostumerRegister', [CostumerController::class, 'CostumerRegister']);
 Route::post('/StoreRegister', [StoreController::class, 'StoreRegister']);
 Route::post('/loginauth', [userController::class, 'login']);
+Route::post('/logout', [userController::class, 'logout']);
 Route::post('/createBook', [BookController::class, 'createBook']);
 
 Route::get('/dashboard', [BookController::class, 'showCategoryAndBooks']);
