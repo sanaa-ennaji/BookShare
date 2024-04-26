@@ -15,11 +15,11 @@
 
 <div class="lg:p-36 md:p-52 sm:20 p-8 w-full lg:w-1/2">
   <h1 class="text-2xl font-semibold mb-4">Login</h1>
-  <form action="#" method="POST">
- 
+  <form action="/loginauth" method="POST">
+ @csrf
     <div class="mb-4">
-      <label for="username" class="block text-gray-600">Username</label>
-      <input type="text" id="username" name="username" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" autocomplete="off">
+      <label for="email" class="block text-gray-600">email</label>
+      <input type="text" id="email" name="email" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" autocomplete="off">
     </div>
 
     <div class="mb-4">

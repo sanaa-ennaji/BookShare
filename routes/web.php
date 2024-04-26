@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\userController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\StoreController;
@@ -96,6 +97,7 @@ Route::put('/updateCategory/{id}', [CategoryController::class, 'updateCategory']
 
 Route::post('/CostumerRegister', [CostumerController::class, 'CostumerRegister']);
 Route::post('/StoreRegister', [StoreController::class, 'StoreRegister']);
+Route::post('/loginauth', [userController::class, 'login']);
 Route::post('/createBook', [BookController::class, 'createBook']);
 
 Route::get('/dashboard', [BookController::class, 'showCategoryAndBooks']);

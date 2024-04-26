@@ -36,7 +36,7 @@
           <td class="px-6 py-4">{{ $store->city }}</td>
           <td class="px-6 py-4">{{ $store->phone }}</td>
         
-          <td class="px-6 py-4">100</td>
+          <td class="px-6 py-4">{{ $store-> }}</td>
           <td class="px-6 py-4">
             <span class="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-semibold text-green-600 cursor-pointer"
             onclick="updateStatus('{{ $store->id }}', 'accepted')">
