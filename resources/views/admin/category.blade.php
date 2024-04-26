@@ -14,7 +14,8 @@
         add new Category
     </button>
 
-    <div id="deleteModal" class="hidden fixed inset-0 z-50 overflow-auto bg-black bg-opacity-50 flex justify-center items-center">
+
+    {{-- <div id="deleteModal" class="hidden fixed inset-0 z-50 overflow-auto bg-black bg-opacity-50 flex justify-center items-center">
         <div class="modal-content bg-white p-6 rounded-lg shadow-lg w-[50%] h-[25%] mx-auto mt-20">
             <h2 class="text-xl font-semibold mb-4">Delete Category</h2>
             <p class="mb-4">Are you sure you want to delete this category?</p>
@@ -27,20 +28,15 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> --}}
 
-
-    <div id="crud-modal" tabindex="-1" aria-hidden="true"
-        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-        <div class="relative p-4 w-full max-w-[30%] max-h-full">
-
-
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-
-                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                        Create Category
-                    </h3>
+    <div id="crud-modal" class="hidden fixed inset-0 z-50 overflow-y-auto overflow-x-hidden flex justify-center items-center">
+    <div class="relative p-4 w-full max-w-[30%] max-h-full">
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                    Create Category
+                </h3>
                     <button type="button"
                         class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
                         data-modal-toggle="crud-modal">
