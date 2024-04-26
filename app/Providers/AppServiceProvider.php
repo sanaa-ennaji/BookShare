@@ -5,12 +5,14 @@ namespace App\Providers;
 
 use App\Services\BookService;
 use App\Services\CartService;
+use App\Services\AdminService;
 use App\Services\OrderService;
 use App\Services\StoreService;
 use App\Services\CategoryService;
 use App\Services\CostumerService;
 use App\Repositories\BookRepository;
 use App\Repositories\CartRepository;
+use App\Repositories\AdminRepository;
 use App\Repositories\OrderRepository;
 use App\Repositories\StoreRepository;
 use App\Services\OrderDetailsService;
@@ -20,12 +22,14 @@ use App\Repositories\CostumerRepository;
 use App\Repositories\OrderDetailsRepository;
 use App\ServiceInterface\BookServiceInterface;
 use App\ServiceInterface\CartServiceInterface;
+use App\ServiceInterface\AdminServiceInterface;
 use App\ServiceInterface\OrderServiceInterface;
 use App\ServiceInterface\StoreServiceInterface;
 use App\ServiceInterface\CategoryServiceInterface;
 use App\ServiceInterface\CostumerServiceInterface;
 use App\RepositoryInterfaces\BookRepositoryInterface;
 use App\RepositoryInterfaces\CartRepositoryInterface;
+use App\RepositoryInterfaces\AdminRepositoryInterface;
 use App\RepositoryInterfaces\OrderRepositoryInterface;
 use App\RepositoryInterfaces\StoreRepositoryInterface;
 use App\ServiceInterface\OrderDetailsServiceInterface;
@@ -73,8 +77,8 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(CartRepositoryInterface::class, CartRepository::class);
       
 
-        $this->app->bind(adminServiceInterface::class, adminService::class);
-        $this->app->bind(adminRepositoryInterface::class, adminRepository::class);
+        $this->app->bind(AdminServiceInterface::class, AdminService::class);
+        $this->app->bind(AdminRepositoryInterface::class, AdminRepository::class);
 
 
 $this->app->bind(OrderDetailsServiceInterface::class, OrderDetailsService::class);

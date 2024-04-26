@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\InvoiceController;
@@ -77,14 +78,14 @@ Route::get('/shipping' ,function (){
 });
 
 
-Route::get('admin/stores' ,function (){
-    return view('admin.stores');
-   });
+// Route::get('admin/stores' ,function (){
+//     return view('admin.stores');
+//    });
 
    Route::get('costumer/orders' ,function (){
     return view('client.orders');
    });
-
+   Route::get('admin/stores', [AdminController::class, 'displayValidatedStores'])->name('validated.stores');
 Route::post('/createCategory', [CategoryController::class, 'createCategory'])->name('payment.cancel');
 Route::get('/admin/category', [CategoryController::class, 'showCategories']);
 Route::delete('/delete/{id}', [CategoryController::class, 'deleteCategory'])->name('admin.category.delete');

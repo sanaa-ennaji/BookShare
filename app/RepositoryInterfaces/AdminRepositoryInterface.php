@@ -3,11 +3,12 @@
 
 namespace App\RepositoryInterfaces;
 
-interface UsersRepositoryInterface
+interface   AdminRepositoryInterface
 {
 
-    public function updateUser($id, array $data);
-    public function deleteUser($id);
-    public function getAllUsers();
-    public function getArchivedUsers();
+
+    // public function updateUser($id, array $data);
+    // public function deleteUser($id);
+    public function displayStores();
+    // public function getArchivedUsers();
 }

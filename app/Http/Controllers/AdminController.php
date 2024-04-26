@@ -3,18 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\ServiceInterface\AdminServiceInterface;
 
 class AdminController extends Controller
 {
     
     
     protected $adminService;
-    public function __construct(AdminInterface $adminService)
+    public function __construct(AdminServiceInterface $adminService)
     {
         $this->adminService = $adminService;
     }
     public function displayStores (){
-        $stores = $this->adminService->getValidatedStores();
+        $stores = $this->adminService->displayStores();
 
         return view('admin.stores', compact('stores'));
     }
