@@ -61,34 +61,30 @@
     </table>
   </div>
   <script src="../js/cities.js"></script>
- <script>
-    function updateStatus(storeId, newStatus) {
-        // Send an AJAX request to update the status
-        fetch(`/stores/${storeId}/status`, {
-            method: 'PUT',
+  <script>
+    function updateStatus(storeId, status) {
+     
+        fetch('/update-status', {
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-CSRF-TOKEN': '{{ csrf_token() }}', // Assuming you are using CSRF protection
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
             },
-            body: JSON.stringify({ status: newStatus }),
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Failed to update status');
+            body: JSON.stringify({
+                storeId: storeId,
+                status: status
+            })
+        }).then(response => {
+            if (response.ok) {
+                location.reload();
+            } else {
+                console.error('Failed to update status');
             }
-            return response.json();
-        })
-        .then(data => {
-            // Update the status element in the DOM
-            const statusElement = document.getElementById(`status-${storeId}`);
-            statusElement.textContent = newStatus;
-        })
-        .catch(error => {
+        }).catch(error => {
             console.error('Error:', error);
         });
     }
-</script>
-
+  </script>
 <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>

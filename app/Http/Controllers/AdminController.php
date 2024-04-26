@@ -21,23 +21,28 @@ class AdminController extends Controller
         return view('admin.stores', compact('stores'));
     }
 
+    public function Storesdamanede (){
+        $stores = $this->adminService->Storesdamanede();
+
+        return view('admin.damandes', compact('stores'));
+    }
    
     public function updateStatus(Request $request)
     {
-        // Validate the request
+        
         $request->validate([
             'storeId' => 'required|exists:stores,id',
             'status' => 'required|in:active,banned',
         ]);
 
-        // Find the store by ID
+    
         $store = Store::findOrFail($request->storeId);
 
         // Update the store status
         $store->status = $request->status;
         $store->save();
 
-        // Return a response
+      
         return response()->json(['message' => 'Store status updated successfully'], 200);
     }
     

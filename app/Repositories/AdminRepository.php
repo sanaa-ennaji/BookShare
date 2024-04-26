@@ -15,4 +15,7 @@ class AdminRepository implements AdminRepositoryInterface {
         return Store::where('is_validated', 'accepted')->get();
     }
   
+    public function Storesdamanede(){
+        return Store::where('is_validated', 'pending')->get();
+    }
 }
