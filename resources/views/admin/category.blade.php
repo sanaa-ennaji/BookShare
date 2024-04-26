@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+    @include('components/head')
 <body class="bg-gray-200">
     <div class="text-gray-800 font-inter">
 
-        {{-- @include('components/sidestore') --}}
+        @include('components/sidestore')
 
     <div class="mt-12 ml-4">
         <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" id="btn"
@@ -232,10 +233,10 @@
 
 
         
-{{-- 
+
 <script src="https://unpkg.com/@popperjs/core@2"></script>
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="../js/sidebar.js"></script> --}}
+<script src="../js/sidebar.js"></script>
 <script src="js/cities.js"></script>
 </body>
 </html>
