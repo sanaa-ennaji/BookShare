@@ -22,7 +22,7 @@ class CategoryController extends Controller
         return redirect()->back()->with('success', 'Category created successfully');
     }
 
-    public function updateCategory(Request $request, $id)
+    public function updateCategory(CategoryRequest $request, $id)
     {
         $data = $request->validated();
         $this->categoryService->updateCategory($data, $id);

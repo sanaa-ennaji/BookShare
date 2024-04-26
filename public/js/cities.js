@@ -17,9 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-
-
 function openCreateTrajetModal() {
     document.getElementById('createTrajetModal').classList.remove('hidden');
 }

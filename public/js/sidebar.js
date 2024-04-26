@@ -125,11 +125,8 @@ document.querySelectorAll('[data-tab]').forEach(function (item) {
         target.classList.remove('hidden')
     })
 })
-// end: Tab
 
 
-
-// start: Chart
 new Chart(document.getElementById('order-chart'), {
     type: 'line',
     data: {

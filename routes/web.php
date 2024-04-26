@@ -84,7 +84,7 @@ Route::get('/shipping' ,function (){
 Route::post('/createCategory', [CategoryController::class, 'createCategory'])->name('payment.cancel');
 Route::get('/admin/category', [CategoryController::class, 'showCategories']);
 Route::delete('/delete/{id}', [CategoryController::class, 'deleteCategory'])->name('admin.category.delete');
-Route::delete('/update/{id}', [CategoryController::class, ' updateCategory'])->name('admin.category.delete');
+Route::put('/updateCategory/{id}', [CategoryController::class, 'updateCategory']);
 
 
 Route::post('/CostumerRegister', [CostumerController::class, 'CostumerRegister']);
