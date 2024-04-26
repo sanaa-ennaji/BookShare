@@ -1,5 +1,5 @@
 
-<nav class="fixed top-0 z-30 w-full bg-blue-100 border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+<nav class="fixed top-0 z-30 w-full bg-blue-500 border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
     <div class="px-3 py-3 lg:px-5 lg:pl-3">
       <div class="flex items-center justify-between">
         <div class="flex items-center justify-start rtl:justify-end">
@@ -47,8 +47,8 @@
   </nav>
 
   <div class="flex ">
-  <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full mr-10 bg-blue-500 border-r border-gray-200  sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
-    <a href="/" class="flex ms-2 md:me-24">
+  <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-5 transition-transform -translate-x-full mr-10 bg-blue-500 border-r border-gray-200  sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
+    <a href="/" class="flex ms-2 md:me-24 mb-5 ml-5">
         <img   src="../img/15744737.548a00c0e09dc-removebg-preview.png" class="h-8 me-3" alt="Logo" />
       </a>
      <div class="h-full px-5 pb-4 overflow-y-auto bg-blue-500 dark:bg-gray-800">
