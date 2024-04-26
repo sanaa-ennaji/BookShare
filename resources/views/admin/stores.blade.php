@@ -12,11 +12,12 @@
           <th scope="col" class="px-6 py-4 font-medium text-gray-900">Name</th>
           <th scope="col" class="px-6 py-4 font-medium text-gray-900">city</th>
           <th scope="col" class="px-6 py-4 font-medium text-gray-900">phone</th>
-          <th scope="col" class="px-6 py-4 font-medium text-gray-900">books</th>
+          <th scope="col" class="px-6 py-4 font-medium text-gray-900">bookStore</th>
           <th scope="col" class="px-6 py-4 font-medium text-gray-900">status</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-gray-100 border-t border-gray-100">
+        @foreach($stores as $store)
         <tr class="hover:bg-gray-50">
           <th class="flex gap-3 px-6 py-4 font-normal text-gray-900">
             <div class="relative h-10 w-10">
@@ -28,24 +29,35 @@
               <span class="absolute right-0 bottom-0 h-2 w-2 rounded-full bg-green-400 ring ring-white"></span>
             </div>
             <div class="text-sm">
-              <div class="font-medium text-gray-700">Steven Jobs</div>
-              <div class="text-gray-400">jobs@sailboatui.com</div>
+              <div class="font-medium text-gray-700">{{ $store->user->name }}</div>
+              <div class="text-gray-400">{{ $store->user->email }}</div>
             </div>
           </th>
-          <td class="px-6 py-4">Product Designer</td>
-          <td class="px-6 py-4">Product Designer</td>
+          <td class="px-6 py-4">{{ $store->city }}</td>
+          <td class="px-6 py-4">{{ $store->phone }}</td>
         
           <td class="px-6 py-4">100</td>
           <td class="px-6 py-4">
+            @if($store->status === 'banned' )
+          
             <span
-              class="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-semibold text-green-600"
-            >
-              <span class="h-1.5 w-1.5 rounded-full bg-green-600"></span>
-              Active
-            </span>
-          </td>
+            class="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-semibold text-green-600">
+            <span class="h-1.5 w-1.5 rounded-full bg-green-600"></span>
+           active
+           
+          </span>
+            @endif
+            <span
+            class="inline-flex items-center gap-1 rounded-full bg-red-50 px-2 py-1 text-xs font-semibold text-red-600">
+           
+            {{ $store->status === 'banned' ? null : 'banned' }}
+          </span>
          
+           
+          </td>
+
         </tr>
+        @endforeach
        
        
       </tbody>
