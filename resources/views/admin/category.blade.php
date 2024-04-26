@@ -2,23 +2,14 @@
 <html lang="en">
     @include('components/head')
 <body class="bg-gray-200">
-  
-
     @include('components/sidebare')
    
-
-
-
     <div class="mt-20 ml-40">
         <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" id="btn"
         class="relative block text-white bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 ml-40 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         type="button">
         add new Category
     </button>
-    
-
-
-
     <div id="crud-modal"
     class="hidden overflow-y-auto overflow-x-hidden fixed inset-0 z-50 flex justify-center items-center">
     <div class="relative p-4 w-full max-w-[30%] max-h-full bg-white rounded-lg shadow dark:bg-gray-700">
@@ -98,13 +89,13 @@
                         />
                     </div>
                  
-                    <button type="button" onclick="openModal({{ $category->id }})" class="btn btn-danger">Delete</button>
-                  {{-- <form class="px-2" action="/delete/{{$category->id}}" method="POST">
+               
+                  <form class="px-2" action="/delete/{{$category->id}}" method="POST">
                     @csrf
                     @method('DELETE')
                       <button  type="submit" 
                       class="mb-2 md:mb-0 bg-blue-500 border border-blue-500 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-blue-600">delete</button> 
-                  </form> --}}
+                  </form>
                   <div class="px-2">
                     <button id="button{{ $category->id }}" onclick="toggleModal('progress-modal{{ $category->id }}', 'button{{ $category->id }}')"
                       class="mb-2 md:mb-0 bg-blue-500 border border-blue-500 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-blue-600">update</button> 
@@ -151,11 +142,6 @@
 </div>
 
 </div>
-
-
-
-        
-
 
 <script src="https://cdn.tailwindcss.com"></script>
 
