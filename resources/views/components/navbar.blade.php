@@ -7,7 +7,7 @@
       id="navbarSupportedContent1"
       data-twe-collapse-item>
  
-      <a
+      <a 
         class=" me-5 ms-5 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
         href="/">
         <img
@@ -83,7 +83,7 @@
       </span>
     </a>
    
-    <a
+    <a 
       class="ps-2 text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80"
       href="/wishlist">
       <span class="[&>svg]:w-5">
@@ -93,9 +93,9 @@
           
       </span>
     </a>
-    <a
+    <button aria-expanded="false" data-dropdown-toggle="dropdown-user"
     class="flex items-center px-2 text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80"
-    href="/register"
+    href=""
     type="button"
     id="dropdownMenuButton2"
     data-twe-dropdown-toggle-ref
@@ -123,6 +123,27 @@
           clip-rule="evenodd" />
       </svg>
     </span>
-  </a>
+    </button>
+  </div>
+  <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown-user">
+    <div class="px-4 py-3" role="none">
+      <p class="text-sm text-gray-900 dark:text-white" role="none">
+       name
+      </p>
+      <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
+        neil.sims@emailcom
+      </p>
+    </div>
+    <ul class="py-1" role="none">
+      <li>
+        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Dashboard</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">profile</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Sign out</a>
+      </li>
+    </ul>
   </div>
 </nav>
