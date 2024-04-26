@@ -6,7 +6,7 @@ use App\RepositoryInterfaces\AdminRepositoryInterface;
 use App\ServiceInterface\AdminServiceInterface;
 
 
-class   AdminService implements AdminServiceInterface
+class AdminService implements AdminServiceInterface
 {
     protected $storeRepository;
 
@@ -18,5 +18,8 @@ class   AdminService implements AdminServiceInterface
     public function displayStores()
     {
         return $this->storeRepository->displayStores();
+    }
+    public function Storesdamanede(){
+        return $this->storeRepository->Storesdamanede();
     }
 }

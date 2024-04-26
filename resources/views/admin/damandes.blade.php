@@ -59,7 +59,7 @@
   </div>
   <script src="../js/cities.js"></script>
   <script>
-    function updateStatus(storeId, status) {
+    function updateStatus(storeId, is_validated) {
      
         fetch('/update-status', {
             method: 'POST',

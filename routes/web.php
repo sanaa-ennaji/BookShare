@@ -85,7 +85,7 @@ Route::get('/shipping' ,function (){
    Route::get('costumer/orders' ,function (){
     return view('client.orders');
    });
-
+   Route::get('admin/damandes', [AdminController::class, 'Storesdamanede'])->name('damandes.stores');
    Route::post('/update-status', [AdminController::class, 'updateStatus'])->name('update-status');
  Route::get('admin/stores', [AdminController::class, 'displayStores'])->name('validated.stores');
 Route::post('/createCategory', [CategoryController::class, 'createCategory'])->name('payment.cancel');

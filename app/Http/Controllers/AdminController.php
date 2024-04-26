@@ -18,7 +18,7 @@ class AdminController extends Controller
     public function displayStores (){
         $stores = $this->adminService->displayStores();
 
-        return view('admin.stores', compact('stores'));
+        return view('admin.damandes', compact('stores'));
     }
 
     public function Storesdamanede (){
