@@ -77,6 +77,10 @@ Route::get('/shipping' ,function (){
 });
 
 
+Route::get('admin/stores' ,function (){
+    return view('admin.stores');
+   });
+
    Route::get('costumer/orders' ,function (){
     return view('client.orders');
    });

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     
+
     public function ArchiveUser () {
 
     }
@@ -17,9 +18,10 @@ class AdminController extends Controller
     }
 
  public function displayCostumers (){
-    
+
  }
-    
+   
+ 
 // public function userStatistics()
 // {
 //     $userId = Auth::id();
