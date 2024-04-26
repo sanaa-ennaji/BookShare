@@ -102,9 +102,9 @@ Route::delete('/admin/category/{id}', 'CategoryController@deleteCategory')->name
 //     return view('public.BookDetails');
 // }); 
 
-// Route::get('/invoice' ,function (){
-//     return view('client.invoice');
-//    });
+Route::get('/sidebare' ,function (){
+    return view('components.sidebare');
+   });
 Route::get('/invoice/{orderId}', [InvoiceController::class, 'displayInvoice']);
 Route::get('/invoice/{orderId}/generate', [InvoiceController::class, 'generateInvoice'])->name('invoice.generate');
 
