@@ -3,11 +3,7 @@
 namespace App\Http\Controllers;
 
 use Carbon\Carbon;
-// use Barryvdh\DomPDF\PDF;
 use App\Models\Order;
-use App\Models\OrderItem;
-use App\Models\Orderline;
-use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
 
 class InvoiceController extends Controller
