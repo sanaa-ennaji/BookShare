@@ -7,7 +7,20 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     
+    
+    protected $adminService;
+    public function __construct(AdminInterface $adminService)
+    {
+        $this->adminService = $adminService;
+    }
+    public function displayStores (){
+        $stores = $this->adminService->getValidatedStores();
 
+        return view('admin.stores', compact('stores'));
+    }
+
+   
+    
     public function ArchiveUser () {
 
     }
@@ -20,6 +33,8 @@ class AdminController extends Controller
  public function displayCostumers (){
 
  }
+   
+
    
  
 // public function userStatistics()

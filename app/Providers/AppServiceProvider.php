@@ -73,6 +73,8 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(CartRepositoryInterface::class, CartRepository::class);
       
 
+        $this->app->bind(adminServiceInterface::class, adminService::class);
+        $this->app->bind(adminRepositoryInterface::class, adminRepository::class);
 
 
 $this->app->bind(OrderDetailsServiceInterface::class, OrderDetailsService::class);
