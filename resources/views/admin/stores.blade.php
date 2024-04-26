@@ -38,23 +38,20 @@
         
           <td class="px-6 py-4">100</td>
           <td class="px-6 py-4">
-            @if($store->status === 'banned' )
-          
-            <span
-            class="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-semibold text-green-600">
-            <span class="h-1.5 w-1.5 rounded-full bg-green-600"></span>
-           active
-           
-          </span>
-            @endif
-            <span
-            class="inline-flex items-center gap-1 rounded-full bg-red-50 px-2 py-1 text-xs font-semibold text-red-600">
-           
-            {{ $store->status === 'banned' ? null : 'banned' }}
-          </span>
-         
-           
-          </td>
+            @if($store->status === 'banned')
+            <span class="inline-flex items-center gap-1 rounded-full bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 cursor-pointer"
+                  onclick="updateStatus('{{ $store->id }}', 'active')">
+                Banned
+            </span>
+        @else
+            <span class="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-semibold text-green-600 cursor-pointer"
+                  onclick="updateStatus('{{ $store->id }}', 'banned')">
+                Active
+            </span>
+        @endif
+        
+        </td>
+        
 
         </tr>
         @endforeach
@@ -64,6 +61,30 @@
     </table>
   </div>
   <script src="../js/cities.js"></script>
+  <script>
+    function updateStatus(storeId, status) {
+     
+        fetch('/update-status', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            },
+            body: JSON.stringify({
+                storeId: storeId,
+                status: status
+            })
+        }).then(response => {
+            if (response.ok) {
+                location.reload();
+            } else {
+                console.error('Failed to update status');
+            }
+        }).catch(error => {
+            console.error('Error:', error);
+        });
+    }
+  </script>
 <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>

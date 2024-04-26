@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Store;
 use Illuminate\Http\Request;
 use App\ServiceInterface\AdminServiceInterface;
 
@@ -21,6 +22,24 @@ class AdminController extends Controller
     }
 
    
+    public function updateStatus(Request $request)
+    {
+        // Validate the request
+        $request->validate([
+            'storeId' => 'required|exists:stores,id',
+            'status' => 'required|in:active,banned',
+        ]);
+
+        // Find the store by ID
+        $store = Store::findOrFail($request->storeId);
+
+        // Update the store status
+        $store->status = $request->status;
+        $store->save();
+
+        // Return a response
+        return response()->json(['message' => 'Store status updated successfully'], 200);
+    }
     
     public function ArchiveUser () {
 
