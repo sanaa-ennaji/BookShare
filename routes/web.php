@@ -86,7 +86,7 @@ Route::get('/shipping' ,function (){
     return view('client.orders');
    });
 
-   Route::post('/update-status', [AdminController::class, 'updateStatus'])->name('update-status');
+   Route::put('/stores/{storeId}/status', [AdminController::class, 'updateStatus'])->name('stores.updateStatus');
  Route::get('admin/stores', [AdminController::class, 'displayStores'])->name('validated.stores');
 Route::post('/createCategory', [CategoryController::class, 'createCategory'])->name('payment.cancel');
 Route::get('/admin/category', [CategoryController::class, 'showCategories']);
