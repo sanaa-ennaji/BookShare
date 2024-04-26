@@ -5,7 +5,8 @@
     <div class="text-gray-800 font-inter">
 
         @include('components/sidestore')
-    <div class="mt-12">
+
+    <div class="mt-12 ml-4">
         <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" id="btn"
         class="relative block text-white bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         type="button">
@@ -36,6 +37,7 @@
                     </button>
                 </div>
 
+              
 
                 <form class="p-4 md:p-5" method="POST" action="/createCategory"  enctype="multipart/form-data">
                     @csrf
@@ -124,7 +126,9 @@
                       class="mb-2 md:mb-0 bg-blue-500 border border-blue-500 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-blue-600">update</button> 
                 </div>
               </div>
-
+             
+            
+        
 
               <div id="progress-modal{{ $category->id }}"
                 class="hidden fixed inset-0 z-50 justify-center items-center w-full h-full">
@@ -153,7 +157,8 @@
           
             </div>
               @endforeach
-              
+           
+            
               </div>
             
             </div>
@@ -163,12 +168,13 @@
     </div> 
 
 </div>
-<div id="deleteModal" class="fixed inset-0 z-50 overflow-auto bg-black bg-opacity-50 flex justify-center items-center">
-    <div class="modal-content bg-white p-6 rounded-lg shadow-lg">
+
+<div id="deleteModal" class="hidden fixed inset-0 z-50 overflow-auto bg-black bg-opacity-50 flex justify-center items-center">
+    <div class="modal-content bg-white p-6 rounded-lg shadow-lg w-[50%] h-[25%] mx-auto mt-20">
         <h2 class="text-xl font-semibold mb-4">Delete Category</h2>
         <p class="mb-4">Are you sure you want to delete this category?</p>
         <div class="flex justify-end">
-            <form id="deleteForm" action="" method="POST">
+            <form id="deleteForm" action="/delete" method="POST">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mr-2">Delete</button>
@@ -177,6 +183,8 @@
         </div>
     </div>
 </div>
+
+
 <script>
     function openModal(id) {
         var modal = document.getElementById('deleteModal');
@@ -192,6 +200,12 @@
 </script>
 
 
+
+</style>
+
+
+
+        
 
 <script src="https://unpkg.com/@popperjs/core@2"></script>
 <script src="https://cdn.tailwindcss.com"></script>
