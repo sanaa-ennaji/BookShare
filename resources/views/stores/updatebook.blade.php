@@ -1,124 +1,103 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <!-- component -->
+    @include('components/head')
+<body class="bg-gray-200">
+  
+  
 <div class="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
-    <div class="container max-w-screen-lg mx-auto">
-      <div>
-        <h2 class="font-semibold text-xl text-gray-600">Responsive Form</h2>
-        <p class="text-gray-500 mb-6">Form is mobile responsive. Give it a try.</p>
-  
-        <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
-          <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
-            <div class="text-gray-600">
-              <p class="font-medium text-lg">Personal Details</p>
-              <p>Please fill out all the fields.</p>
+    
+   
+    
+
+        <form class="p-4 md:p-5" method="POST" action="/createBook" enctype="multipart/form-data">
+
+            @csrf
+            <div class="grid gap-4 mb-4 grid-cols-2">
+                <div class="col-span-2 sm:col-span-1">
+                    <label for="title"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">title</label>
+                <input type="text" id="title" name="title" value="{{$book->title}}"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                </div>
+
+
+                <div class="col-span-2 sm:col-span-1">
+                    <label for="author"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">author</label>
+                <input type="text" id="author" name="author" value="{{$book->author}}"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+
+                </div>
+              
+                <div class="col-span-2 sm:col-span-1">
+                    <label for="ISBN"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ISBN</label>
+                    <input type="number" id="ISBN" name="ISBN" {{$book->ISBN}}
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                 
+                </div>
+                <div class="col-span-2 sm:col-span-1">
+                    <label for="time"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">quantity</label>
+                    <input type="number" id="quantity   {{$book->tquantity}}                                                                                                  h" name="quantity"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                 
+                </div>
+
+                <div class="col-span-2 sm:col-span-1">
+                    <label for="price" 
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">price</label>
+                    <input type="number" name="price" id="price" value=""
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                        placeholder="$2999" required="">
+                </div>
+                <div class="col-span-2 sm:col-span-1">
+                    <label for="Category"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
+                <select id="Category" name="categorie_id"
+                    class="citySelect bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                    <option value="{{$book->category->title}}">{{$book->category->title}}</option>
+                    <option selected value="kids">kids</option>
+                    <option selected value="fantasia">fantasia</option>
+                    <option selected value="horror">horror</option>
+                </select>
+                </div>
+              
+
+                <div class="col-span-2">
+                    <label for="description"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Description</label>
+                    <textarea id="description" name="description" rows="4"
+                        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Write description here"></textarea>
+                </div>
+                <div>
+
+                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        for="file_input">Upload file</label>
+                    <input
+                        class="block w-full text-sm text-blue-900 border border-blue-300 rounded-lg cursor-pointer bg-blue-50 dark:text-blue-400 focus:outline-none dark:bg-blue-700 dark:border-blue-600 dark:placeholder-blue-400"
+                        aria-describedby="file_input_help" name="image" id="images" 
+                         type="file">
+                    <p class="mt-1 text-sm text-blue-500 dark:text-gray-300" id="file_input_help">SVG, PNG,
+                        JPG or GIF (MAX. 800x400px).</p>
+                </div>
             </div>
-  
-            <div class="lg:col-span-2">
-              <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
-                <div class="md:col-span-5">
-                  <label for="full_name">Full Name</label>
-                  <input type="text" name="full_name" id="full_name" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
-                </div>
-  
-                <div class="md:col-span-5">
-                  <label for="email">Email Address</label>
-                  <input type="text" name="email" id="email" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="email@domain.com" />
-                </div>
-  
-                <div class="md:col-span-3">
-                  <label for="address">Address / Street</label>
-                  <input type="text" name="address" id="address" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
-                </div>
-  
-                <div class="md:col-span-2">
-                  <label for="city">City</label>
-                  <input type="text" name="city" id="city" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
-                </div>
-  
-                <div class="md:col-span-2">
-                  <label for="country">Country / region</label>
-                  <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                    <input name="country" id="country" placeholder="Country" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
-                    <button tabindex="-1" class="cursor-pointer outline-none focus:outline-none transition-all text-gray-300 hover:text-red-600">
-                      <svg class="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                      </svg>
-                    </button>
-                    <button tabindex="-1" for="show_more" class="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-300 hover:text-blue-600">
-                      <svg class="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
-                    </button>
-                  </div>
-                </div>
-  
-                <div class="md:col-span-2">
-                  <label for="state">State / province</label>
-                  <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                    <input name="state" id="state" placeholder="State" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
-                    <button tabindex="-1" class="cursor-pointer outline-none focus:outline-none transition-all text-gray-300 hover:text-red-600">
-                      <svg class="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                      </svg>
-                    </button>
-                    <button tabindex="-1" for="show_more" class="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-300 hover:text-blue-600">
-                      <svg class="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
-                    </button>
-                  </div>
-                </div>
-  
-                <div class="md:col-span-1">
-                  <label for="zipcode">Zipcode</label>
-                  <input type="text" name="zipcode" id="zipcode" class="transition-all flex items-center h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" value="" />
-                </div>
-  
-                <div class="md:col-span-5">
-                  <div class="inline-flex items-center">
-                    <input type="checkbox" name="billing_same" id="billing_same" class="form-checkbox" />
-                    <label for="billing_same" class="ml-2">My billing address is different than above.</label>
-                  </div>
-                </div>
-  
-                <div class="md:col-span-2">
-                  <label for="soda">How many soda pops?</label>
-                  <div class="h-10 w-28 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                    <button tabindex="-1" for="show_more" class="cursor-pointer outline-none focus:outline-none border-r border-gray-200 transition-all text-gray-500 hover:text-blue-600">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mx-2" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                      </svg>
-                    </button>
-                    <input name="soda" id="soda" placeholder="0" class="px-2 text-center appearance-none outline-none text-gray-800 w-full bg-transparent" value="0" />
-                    <button tabindex="-1" for="show_more" class="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-500 hover:text-blue-600">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mx-2 fill-current" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-        
-                <div class="md:col-span-5 text-right">
-                  <div class="inline-flex items-end">
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
-                  </div>
-                </div>
-  
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  
-      <a href="https://www.buymeacoffee.com/dgauderman" target="_blank" class="md:absolute bottom-0 right-0 p-4 float-right">
-        <img src="https://www.buymeacoffee.com/assets/img/guidelines/logo-mark-3.svg" alt="Buy Me A Coffee" class="transition-all rounded-full w-14 -rotate-45 hover:shadow-sm shadow-lg ring hover:ring-4 ring-white">
-      </a>
+            <button type="submit" 
+                class="left-0 text-white inline-flex items-center bg-blue-600  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            update book
+            </button>
+        </form>
     </div>
+</div>
+</div>
   </div>
 </body>
 </html>

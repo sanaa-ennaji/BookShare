@@ -83,6 +83,13 @@ class BookController extends Controller
         return redirect()->back()->with('success', 'Book updated successfully');
     }
 
+    public function edit($id)
+    {
+        $book = Book::findOrFail($id); 
+
+        return view('stores.updatebook', compact('book')); 
+    }
+
     public function destroy($id)
     {
         $this->bookService->deletebook($id);
