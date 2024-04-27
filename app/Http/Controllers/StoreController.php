@@ -39,9 +39,33 @@ class StoreController extends Controller
 
   
 
-    public function updateStoreProfile () {
+    public function updateStoreProfile(Request $request , $id)
+    {
+        $data = $request->validate([
+            'description' => ['required'],
+        ]);
+ 
+        if ($request->hasFile('cover')) {
+            $file = $request->file('cover');
+            $imageName = time() . '.' . $file->extension();
+            $file->storeAs('public/img', $imageName);
+            $data['image'] = $imageName;
+        }
 
+         
+    if ($request->hasFile('image')) {
+        $file = $request->file('image');
+        $imageName = time() . '.' . $file->extension();
+        $file->storeAs('public/img', $imageName);
+        $data['image'] = $imageName;
+    }
 
+      
+       
+         
+        $this->storeService->updateStoreProfile($data ,$id);
+
+        return redirect()->back()->with('success', 'Store profile updated successfully');
     }
 
     

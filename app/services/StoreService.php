@@ -17,4 +17,9 @@ class StoreService implements StoreServiceInterface
         return $this->storeRepository->StoreRegister($data,$StoreData);
     }
 
+    public function updateProfile(array $data, int $id){
+        return $this->storeRepository->updateProfile( $data, $id);
+
+    }
+
 }
