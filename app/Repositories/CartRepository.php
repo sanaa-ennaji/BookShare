@@ -32,5 +32,8 @@ class CartRepository implements CartRepositoryInterface
         return Cart::findOrFail($id)->delete();
     }
  
-    
+    public function getCartItemCount($costumerId)
+    {
+        return Cart::where('costumer_id', $costumerId)->count();
+    }
 }

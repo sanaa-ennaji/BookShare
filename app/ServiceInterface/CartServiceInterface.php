@@ -8,4 +8,5 @@ interface CartServiceInterface
     public function getUserCart($costumerId);
     public function calculateTotalPrice($cartItems);
     public function deleteItem(int $id );
+    public function getCartItemCount($costumerId);
 }

@@ -52,6 +52,10 @@ class CartService implements CartServiceInterface
         return $this->cartRepository->deleteItem($id);
         
     }
+    public function getCartItemCount($costumerId)
+    {
+        return $this->cartRepository->getCartItemCount($costumerId);
+    }
    
 
    

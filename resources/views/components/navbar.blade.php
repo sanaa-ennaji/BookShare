@@ -45,7 +45,7 @@
 
 
     <div class="relative flex items-center">
-      <a
+      <a id="cart-icon"
       class="ps-2 text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80"
       href="/cart">
       <span class="[&>svg]:w-5">
@@ -56,9 +56,12 @@
           <path
             d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
         </svg>
+        <span
+        class="cart-count absolute -mt-6 ms-3 rounded-full bg-red-400 px-[0.35em] py-[0.15em] text-[0.6rem] font-bold leading-none text-white"
+        ></span>
       </span>
     </a>
-   
+          
     <a 
       class="ps-2 text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80"
       href="/wishlist">
@@ -165,3 +168,25 @@
     </ul>
   </div>
 </nav>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+       
+        function updateCartCount() {
+            $.ajax({
+                url: '{{ route("cart.count") }}',
+                type: 'GET',
+                success: function(response) {
+                    $('.cart-count').text(response.count);
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr.responseText);
+                }
+            });
+        }
+
+      
+        updateCartCount();
+    });
+</script>

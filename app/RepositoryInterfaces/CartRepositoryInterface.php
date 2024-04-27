@@ -8,5 +8,6 @@ interface CartRepositoryInterface
     public function getUserCart($costumerId);
     public function getTotalPrice($costumerId);
     public function deleteItem(int $id );
-
+    public function getCartItemCount($costumerId);
+   
 }

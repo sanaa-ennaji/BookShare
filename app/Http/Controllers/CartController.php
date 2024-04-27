@@ -28,7 +28,7 @@ class CartController extends Controller
     
             $this->cartService->addToCart($costumerId, $bookId, $quantity);
     
-            // return response()->json(['message' => 'Item added to cart successfully'], 200);
+            // return response()->json(['message' => ' added to cart successfully'], 200);
             return  redirect()->route('cart.show')->with('success', 'Book updated successfully'); 
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 400);
@@ -59,8 +59,14 @@ class CartController extends Controller
         return  redirect()->back()->with('error', 'removed successfully');
     }
 
-    public function count ()  {
+    public function getCartCount()
+    {
+       
+        $user = auth()->user();
+        $costumerId = $user->costumer->id;
+        $cartCount = $this->cartService->getCartItemCount($costumerId); 
         
+        return response()->json(['count' => $cartCount]);
     }
 
 }
