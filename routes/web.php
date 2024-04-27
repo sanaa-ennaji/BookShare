@@ -76,7 +76,7 @@ Route::get('/dashboard', function () {
 }); 
 Route::get('/shipping' ,function (){
  return view('client.shippingDetails');
-});
+})->name('payment.success');
 
 
 Route::get('public/books' ,function (){
@@ -111,7 +111,7 @@ Route::get('/details/{id}', [BookController::class, 'showDetails'])->name('book.
 Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
 Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
 Route::post('/orders/create', [OrderController::class, 'createOrder'])->name('orders.create');
-Route::get('/payment/success', [OrderController::class, 'paymentSuccess'])->name('payment.success');
+Route::get('/payment/success', [OrderController::class, 'paymentSuccess']);
 Route::post('/createaddress' , [OrderDetailsController::class , 'store']);
 
 // Route::get('/searsh' ,function (){

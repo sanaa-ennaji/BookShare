@@ -20,52 +20,56 @@ class OrderController extends Controller
             $this->orderService = $orderService;
         }
 
+     
+        
+        
         public function createOrder(Request $request)
-        {
+{
+    try {
+        $user = auth()->user();
+        $customerId = $user->costumer->id;
+        $order = $this->orderService->createOrder($customerId);
+        $totalPrice = $this->orderService->calculateTotalPrice($customerId);
+       
 
-            try {
-                $user = auth()->user();
-                $customerId = $user->costumer->id;
-                $order = $this->orderService->createOrder($customerId);
-                $totalPrice = $this->orderService->calculateTotalPrice($customerId);
-            
+        $unitAmount = $totalPrice * 100;
 
-
-                Stripe::setApiKey('sk_test_51P6xhJEp1ITeo4C2L5SKGC2uHqJrsjUEUbMiKJI5lz0K34ospdtyAhJ6pTY9XGTcbA52FJx2nxLgK6PR1bLXVBKp00xkC1xZdz');
-                $unitAmount = $totalPrice * 100;
-                $lineItems = [
-                    [
-                        'price_data' => [
-                            'currency' => 'usd',
-                            'product_data' => [
-                                'name' => 'Order #' . $order->id,
-                                'description' => 'Payment for Order #' . $order->id,
-                            ],
-                            'unit_amount' => $unitAmount,
-                          
-                        ],
-                        'quantity' => 1,
+        Cart::where('costumer_id', $customerId)->delete();
+        $lineItems = [
+            [
+                'price_data' => [
+                    'currency' => 'usd',
+                    'product_data' => [
+                        'name' => 'Order #' . $order->id,
+                        'description' => 'Payment for Order #' . $order->id,
                     ],
-                ];
-                Cart::where('costumer_id', $customerId)->delete();
-                // dd($unitAmount);
-                session(['order_id' => $order->id]);
-                $session = Session::create([
-                    'payment_method_types' => ['card'],
-                    'line_items' => $lineItems,
-                    'mode' => 'payment',
-                    'success_url' => route('payment.success'), 
-                    'cancel_url' => route('payment.cancel'), 
-                ]);
+                    'unit_amount' => $unitAmount,
+                ],
+                'quantity' => 1,
+            ],
+        ];
+
+      
+        Stripe::setApiKey('sk_test_51P6xhJEp1ITeo4C2L5SKGC2uHqJrsjUEUbMiKJI5lz0K34ospdtyAhJ6pTY9XGTcbA52FJx2nxLgK6PR1bLXVBKp00xkC1xZdz');
+        $session = Session::create([
+            'payment_method_types' => ['card'],
+            'line_items' => $lineItems,
+            'mode' => 'payment',
+            'success_url' => route('payment.success'), 
+            'cancel_url' => route('cart.show'), 
+        ]);
+
         
-              
-                return redirect($session->url);
-                
-            } catch (\Exception $e) {
-                return response()->json(['error' => $e->getMessage()]);
-            }
-        }
-        
+        session(['order_id' => $order->id]);
+
+    
+        return redirect($session->url);
+    } catch (\Exception $e) {
+        return response()->json(['error' => $e->getMessage()]);
+    }
+}
+
+
         
         public function costumerOrders (){
             $user = auth()->user();
@@ -75,21 +79,7 @@ class OrderController extends Controller
 }
         }
 
-        // public function createOrder(Request $request)
-        // {
-
-        //     try {
-        //         $user = auth()->user();
-        //         $costumerId = $user->costumer->id;
-        //         $this->orderService->calculateTotalPrice($costumerId);
-        //         $this->orderService->createOrder($costumerId);
-    
-        //         return response()->json(['message' => 'Order created successfully'], 200);
-        //     } catch (\Exception $e) {
-        //         return response()->json(['error' => $e->getMessage()], 400);
-        //     }
-        // }
-
+       
     
 
         
