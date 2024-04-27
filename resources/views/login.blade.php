@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   @vite('resources/css/app.css')
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script> --}}
 </head>
     <body >
 <div class="bg-gray-100 flex justify-center items-center h-screen">
@@ -17,21 +17,28 @@
   <h1 class="text-2xl font-semibold mb-4">Login</h1>
   <form action="/loginauth" method="POST">
  @csrf
-    <div class="mb-4">
-      <label for="email" class="block text-gray-600">email</label>
-      <input type="text" id="email" name="email" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" autocomplete="off">
-    </div>
+ <div>
+  <div class="mb-5">
+   <label for="email" class="mb-3 block text-base font-medium text-[#07074D]">
+       Email
+   </label>
+   <input type="email" name="email" id="email" placeholder="name00@gmail.com"
+       class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+  </div>
 
-    <div class="mb-4">
-      <label for="password" class="block text-gray-600">Password</label>
-      <input type="password" id="password" name="password" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" autocomplete="off">
-    </div>
+  <div class="mb-5">
+   <label for="password" class="mb-3 block text-base font-medium text-[#07074D]">
+       Password
+     </label>
+     <input type="text" name="password" id="password" placeholder="********"
+         class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+</div>
   
       
    <div class="flex justify-between">
     <div class="mb-4 flex items-center">
-      <input type="checkbox" id="remember" name="remember" class="text-blue-500">
-      <label for="remember" class="text-gray-600 ml-2">Remember Me</label>
+      {{-- <input type="checkbox" id="remember" name="remember" class="text-blue-500">
+      <label for="remember" class="text-gray-600 ml-2">Remember Me</label> --}}
     </div>
   
     <div class="mb-6 text-blue-500">

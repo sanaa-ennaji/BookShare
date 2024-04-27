@@ -114,7 +114,7 @@ class BookController extends Controller
             return response()->json(['books' => $books]);
         } else {
        
-            return view('welcome', compact('books'));
+            return view('public.books', compact('books'));
         }
     }
     

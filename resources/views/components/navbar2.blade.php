@@ -1,7 +1,7 @@
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
-    <div class="antialiased bg-white dark-mode:bg-gray-900  w-[70%] mx-auto ">
-        <div class="w-full text-gray-700 dark-mode:text-gray-200 dark-mode:bg-gray-800">
+    <div class="antialiased bg-gray-100  dark-mode:bg-gray-900">
+        <div class=" w-[70%]   mx-auto  text-gray-700 dark-mode:text-gray-200 dark-mode:bg-gray-800">
             <div x-data="{ open: true }"
                 class="flex flex-col  px-4 md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
                

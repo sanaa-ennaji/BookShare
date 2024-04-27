@@ -80,7 +80,7 @@ Route::get('/shipping' ,function (){
 
 
 Route::get('public/books' ,function (){
-    return view('admin.stores');
+    return view('public.books');
    });
 
    Route::get('costumer/orders' ,function (){
@@ -113,6 +113,7 @@ Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
 Route::post('/orders/create', [OrderController::class, 'createOrder'])->name('orders.create');
 Route::get('/payment/success', [OrderController::class, 'paymentSuccess'])->name('payment.success');
 Route::post('/createaddress' , [OrderDetailsController::class , 'store']);
+
 Route::get('/search', [BookController::class, 'searshBook'])->name('search');
 
 
@@ -121,9 +122,9 @@ Route::get('/search', [BookController::class, 'searshBook'])->name('search');
 //     return view('public.BookDetails');
 // }); 
 
-Route::get('/sidebare' ,function (){
-    return view('components.sidebare');
-   });
+// Route::get('/sidebare' ,function (){
+//     return view('components.sidebare');
+//    });
 Route::get('/invoice/{orderId}', [InvoiceController::class, 'displayInvoice']);
 Route::get('/invoice/{orderId}/generate', [InvoiceController::class, 'generateInvoice'])->name('invoice.generate');
 

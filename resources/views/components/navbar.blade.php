@@ -1,5 +1,5 @@
 <nav
-  class="flex-no-wrap  relative bg-blue-100 flex w-full items-center  bg-zinc-50 py-2 shadow-dark-mild dark:bg-neutral-700 lg:flex-wrap lg:justify-start ">
+  class="flex-no-wrap  bg-gray-200 relative flex w-full items-center  bg-zinc-50 py-2 shadow-dark-mild dark:bg-neutral-700 lg:flex-wrap lg:justify-start ">
   <div class="flex w-full flex-wrap items-center justify-between w-[60%] mx-auto">
    
     <div
