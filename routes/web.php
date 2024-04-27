@@ -89,7 +89,7 @@ Route::get('public/books' ,function (){
    Route::get('admin/damandes', [AdminController::class, 'Storesdamanede'])->name('damandes.stores');
    Route::post('/update-status', [AdminController::class, 'updateStatus'])->name('update-status');
  Route::get('admin/stores', [AdminController::class, 'displayStores'])->name('validated.stores');
-Route::post('/createCategory', [CategoryController::class, 'createCategory'])->name('payment.cancel');
+Route::post('/createCategory', [CategoryController::class, 'createCategory']);
 Route::get('/admin/category', [CategoryController::class, 'showCategories']);
 Route::delete('/delete/{id}', [CategoryController::class, 'deleteCategory'])->name('admin.category.delete');
 Route::put('/updateCategory/{id}', [CategoryController::class, 'updateCategory']);

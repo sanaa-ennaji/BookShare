@@ -28,6 +28,9 @@ class OrderController extends Controller
                 $customerId = $user->costumer->id;
                 $order = $this->orderService->createOrder($customerId);
                 $totalPrice = $this->orderService->calculateTotalPrice($customerId);
+            
+
+
                 Stripe::setApiKey('sk_test_51P6xhJEp1ITeo4C2L5SKGC2uHqJrsjUEUbMiKJI5lz0K34ospdtyAhJ6pTY9XGTcbA52FJx2nxLgK6PR1bLXVBKp00xkC1xZdz');
                 $unitAmount = $totalPrice * 100;
                 $lineItems = [
@@ -44,7 +47,7 @@ class OrderController extends Controller
                         'quantity' => 1,
                     ],
                 ];
-
+                Cart::where('costumer_id', $customerId)->delete();
                 // dd($unitAmount);
                 session(['order_id' => $order->id]);
                 $session = Session::create([
