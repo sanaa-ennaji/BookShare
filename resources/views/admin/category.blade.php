@@ -58,7 +58,7 @@
           <h2 class="mb-4 text-xl font-bold text-gray-700">Admin & User</h2>
           <div>
             <div>
-              <div class="flex justify-between bg-gradient-to-tr from-indigo-600 to-blue-600 rounded-md py-2 px-4 text-white font-bold text-md">
+              <div class="flex justify-between bg-gradient-to-tr from-blue-600 to-blue-600 rounded-md py-2 px-4 text-white font-bold text-md">
                
                 <div>
                   <span>title</span>

@@ -73,7 +73,7 @@
                    </div>
                    <p class="text-sm text-center text-gray-400  mt-4 mb-4">
                        alreaday have an acount ? 
-                       <a href="/login" class="font-semibold text-indigo-500 focus:text-blue-600 focus:outline-none focus:underline"> Log in</a>.
+                       <a href="/login" class="font-semibold text-blue-500 focus:text-blue-600 focus:outline-none focus:underline"> Log in</a>.
                      </p>
                </form>
                <div class="flex flex-row justify-center mb-8">

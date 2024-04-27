@@ -114,9 +114,9 @@ Route::post('/orders/create', [OrderController::class, 'createOrder'])->name('or
 Route::get('/payment/success', [OrderController::class, 'paymentSuccess']);
 Route::post('/createaddress' , [OrderDetailsController::class , 'store']);
 
-// Route::get('/searsh' ,function (){
-//     return view('public.books');
-//    });
+Route::get('/profile-update' ,function (){
+    return view('stores.updateProfile');
+   });
 Route::get('/searsh', [BookController::class, 'searshBook'])->name('search');
 Route::delete('/deleteItem/{id}', [CartController::class, 'removeFromCart'])->name('cart.remove');
 Route::get('/cart/count', [CartController::class, 'getCartCount'])->name('cart.count');
