@@ -34,6 +34,9 @@ class BookService implements BookServiceInterface {
 
     }
 
+    public function All(){
+        return $this->bookRepository->All();
+    }
     public function searchBooks($query)
     {
         return $this->bookRepository->search($query);

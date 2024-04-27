@@ -114,7 +114,10 @@ Route::post('/orders/create', [OrderController::class, 'createOrder'])->name('or
 Route::get('/payment/success', [OrderController::class, 'paymentSuccess'])->name('payment.success');
 Route::post('/createaddress' , [OrderDetailsController::class , 'store']);
 
-Route::get('/search', [BookController::class, 'searshBook'])->name('search');
+Route::get('/searsh' ,function (){
+    return view('public.books');
+   });
+Route::get('/searsh', [BookController::class, 'searshBook'])->name('search');
 
 
 // Route::get('/details', [BookController::class, 'showDetails']);

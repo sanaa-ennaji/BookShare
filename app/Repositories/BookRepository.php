@@ -42,10 +42,10 @@ class BookRepository implements BookRepositoryInterface
     return $books;
 }
 
-// public function getAll()
-// {
-//     return Book::all();
-// }
+public function All()
+{
+    return Book::all();
+}
 
 public function search($query)
 {

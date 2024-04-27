@@ -14,7 +14,7 @@
   
           @include('components/navbar2')
     
-    <section id="Projects"
+    <section id="booksSection"
     class="w-[60vw] mx-auto grid grid-cols-2 sm:grid-cols-5 grid-cols-2 justify-items-center justify-center gap-y-10 gap-x-20 sm:gap-x-5 mt-20 mb-5">
    
     @foreach($books as $book)
@@ -77,5 +77,29 @@
 
 
 </section> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+      
+        $('#searchForm').submit(function(e) {
+            e.preventDefault(); 
+    
+            var searchQuery = $('#searchInput').val();
+
+            $.ajax({
+                url: '{{ route("search") }}',
+                type: 'GET',
+                data: { search: searchQuery },
+                success: function(response) {
+                 
+                    $('#booksSection').html(response);
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr.responseText);
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>
