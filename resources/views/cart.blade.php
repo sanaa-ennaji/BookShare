@@ -45,22 +45,24 @@
                             <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
                                 <div class="mt-5 sm:mt-0">
                                     <h2 class="text-lg font-bold text-gray-900">{{ $cartItem->book->title }} </h2>
-                                    <p class="mt-1 text-xs text-gray-700">{{ $cartItem->book->price }} MAD</p>
+                                    <p class="mt-1 text-xs text-gray-700">{{ $cartItem->book->price }}$</p>
                                     <div class="flex items-center border-gray-100 mt-5">
-                                        <span
+                                        {{-- <span
                                             class="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50">
-                                            - </span>
+                                            - </span> --}}
                                         <input class="h-8 w-8 border bg-white text-center text-xs outline-none"
-                                            type="number" value="{{ $cartItem->quantity }} " min="1" />
-                                        <span
+                                            type="number" value="{{$cartItem->quantity}}" min="1" />
+                                        {{-- <span
                                             class="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50">
-                                            + </span>
+                                            + </span> --}}
                                     </div>
                                 </div>
 
                                 <div class="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
                                     <div class="flex items-center space-x-4">
-
+                                        <form class="px-2" action="/deleteItem/{{$cartItem->id}}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
                                         <button
                                             class="rounded-full group flex items-center justify-center focus-within:outline-red-500">
                                             <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
@@ -74,6 +76,7 @@
                                                     stroke="#EF4444" stroke-width="1.6" stroke-linecap="round" />
                                             </svg>
                                         </button>
+                                        </form>
                                     </div>
                                 </div>
 
@@ -135,3 +138,4 @@
     </div>
     </div>
 </body>
+

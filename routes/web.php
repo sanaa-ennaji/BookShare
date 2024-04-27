@@ -118,6 +118,7 @@ Route::post('/createaddress' , [OrderDetailsController::class , 'store']);
 //     return view('public.books');
 //    });
 Route::get('/searsh', [BookController::class, 'searshBook'])->name('search');
+Route::delete('/deleteItem/{id}', [CartController::class, 'removeFromCart'])->name('cart.remove');
 
 
 // Route::get('/details', [BookController::class, 'showDetails']);

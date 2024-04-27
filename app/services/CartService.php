@@ -47,11 +47,12 @@ class CartService implements CartServiceInterface
         return $totalPrice;
     }
 
-    // public function createOrder($costumerId)
-    // {
-    //     $totalPrice = $this->cartRepository->getTotalPrice($costumerId);
-    //     return $this->cartRepository->createOrder($costumerId, $totalPrice);
-    // }
+    public function deleteItem(int $id ){
+
+        return $this->cartRepository->deleteItem($id);
+        
+    }
+   
 
    
     

@@ -3,7 +3,7 @@
 namespace App\Repositories;
 
 use App\Models\Cart;
-use App\Models\Order;
+
 use App\RepositoryInterfaces\CartRepositoryInterface;
 
 class CartRepository implements CartRepositoryInterface
@@ -27,7 +27,10 @@ class CartRepository implements CartRepositoryInterface
         return Cart::where('costumer_id', $costumerId)->sum('total_price');
     }
 
-
+    public function deleteItem(int $id )
+    {
+        return Cart::findOrFail($id)->delete();
+    }
  
     
 }

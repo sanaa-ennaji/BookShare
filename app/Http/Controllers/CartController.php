@@ -53,12 +53,15 @@ class CartController extends Controller
     
     
  
-    public function removeFromCart(Request $request)
+    public function removeFromCart(int $id)
     {
-        // $this->cartService->removeFromCart($request->all());
-        // return response()->json(['message' => 'Book removed from cart successfully'], 200);
+        $this->cartService->deleteItem($id);
+        return  redirect()->back()->with('error', 'removed successfully');
     }
 
-    // Add more methods as needed
+    public function count ()  {
+        
+    }
+
 }
 
