@@ -24,4 +24,14 @@ class BookService implements BookServiceInterface {
         return $this->bookRepository->getAll();
     }
     
+    public function deletebook(int $id){
+        return $this->bookRepository->deletebook($id);
+    }
+
+    
+    public function updatebook(array $data, int $id){
+        return $this->bookRepository->updatebook( $data, $id);
+
+    }
 }
+

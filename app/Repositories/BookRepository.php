@@ -19,13 +19,13 @@ class BookRepository implements BookRepositoryInterface
     }
     
 
-    public function update(array $data, int $id)
+    public function updatebook(array $data, int $id)
     {
       
         return Book::findOrFail($id)->update($data);
     }
 
-    public function delete(int $id)
+    public function deletebook(int $id)
     {
         return Book::findOrFail($id)->delete();
     }
