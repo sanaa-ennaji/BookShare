@@ -96,11 +96,28 @@ class BookController extends Controller
         return redirect()->back()->with('success', 'Book deleted successfully');
     }
 
-    public function searchBook () {
-
-
+    public function searshBook(Request $request)
+    {
+  
+        $books = $this->bookService->getAll();
+    
+       
+        $searchQuery = $request->input('search');
+    
+        if ($searchQuery) {
+         
+            $books = $this->bookService->searchBooks($searchQuery);
+        }
+    
+  
+        if ($request->ajax()) {
+            return response()->json(['books' => $books]);
+        } else {
+       
+            return view('welcome', compact('books'));
+        }
     }
-
+    
     public function filterByCategory () {
 
     }

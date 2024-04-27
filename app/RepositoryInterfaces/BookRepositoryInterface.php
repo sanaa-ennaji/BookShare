@@ -13,4 +13,5 @@ interface BookRepositoryInterface
     public function getById(int $id);
 
     public function getAll();
+    public function search($query);
 }

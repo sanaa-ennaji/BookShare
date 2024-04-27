@@ -79,9 +79,9 @@ Route::get('/shipping' ,function (){
 });
 
 
-// Route::get('admin/stores' ,function (){
-//     return view('admin.stores');
-//    });
+Route::get('public/books' ,function (){
+    return view('admin.stores');
+   });
 
    Route::get('costumer/orders' ,function (){
     return view('client.orders');
@@ -113,6 +113,7 @@ Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
 Route::post('/orders/create', [OrderController::class, 'createOrder'])->name('orders.create');
 Route::get('/payment/success', [OrderController::class, 'paymentSuccess'])->name('payment.success');
 Route::post('/createaddress' , [OrderDetailsController::class , 'store']);
+Route::get('/search', [BookController::class, 'searshBook'])->name('search');
 
 
 // Route::get('/details', [BookController::class, 'showDetails']);

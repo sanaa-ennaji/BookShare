@@ -34,7 +34,7 @@ class BookRepository implements BookRepositoryInterface
     {
         return Book::findOrFail($id);
     }
-    public function getAll($perPage = 6)
+    public function getAll($perPage = 8)
 {
   
     $books = Book::paginate($perPage);
@@ -42,10 +42,19 @@ class BookRepository implements BookRepositoryInterface
     return $books;
 }
 
-    // public function getAll()
-    // {
-    //     return Book::all();
-    // }
+// public function getAll()
+// {
+//     return Book::all();
+// }
+
+public function search($query)
+{
+    return Book::where('title', 'like', "%$query%")
+        ->orWhere('author', 'like', "%$query%")
+        ->orWhere('isbn', 'like', "%$query%")
+        ->orWhere('price', 'like', "%$query%")
+        ->get();
+}
 }
 
 

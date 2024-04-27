@@ -33,5 +33,12 @@ class BookService implements BookServiceInterface {
         return $this->bookRepository->updatebook( $data, $id);
 
     }
+
+    public function searchBooks($query)
+    {
+        return $this->bookRepository->search($query);
+    }
+
+    
 }
 
