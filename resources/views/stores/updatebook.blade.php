@@ -7,11 +7,13 @@
 <div class="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
     
    
-    
+   
 
-        <form class="p-4 md:p-5" method="POST" action="/createBook" enctype="multipart/form-data">
-
+        <form class="p-4 md:p-5" method="POST" action="/updatebook/{{$book->id}}" enctype="multipart/form-data">
+            <h2 class="font-semibold text-xl text-gray-600 mb-5">Update book</h2>
             @csrf
+            @method('PUT')
+      
             <div class="grid gap-4 mb-4 grid-cols-2">
                 <div class="col-span-2 sm:col-span-1">
                     <label for="title"
@@ -32,14 +34,14 @@
                 <div class="col-span-2 sm:col-span-1">
                     <label for="ISBN"
                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ISBN</label>
-                    <input type="number" id="ISBN" name="ISBN" {{$book->ISBN}}
+                    <input type="number" id="ISBN" name="ISBN" value="{{$book->ISBN}}"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                  
                 </div>
                 <div class="col-span-2 sm:col-span-1">
                     <label for="time"
                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">quantity</label>
-                    <input type="number" id="quantity   {{$book->tquantity}}                                                                                                  h" name="quantity"
+                    <input type="number" id="quantity"   value="{{$book->quantity}}"  name="quantity"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                  
                 </div>
@@ -47,7 +49,7 @@
                 <div class="col-span-2 sm:col-span-1">
                     <label for="price" 
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">price</label>
-                    <input type="number" name="price" id="price" value=""
+                    <input type="number" name="price" id="price" value="{{$book->price}}"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                         placeholder="$2999" required="">
                 </div>
@@ -56,21 +58,24 @@
                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
                 <select id="Category" name="categorie_id"
                     class="citySelect bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                    <option value="{{$book->category->title}}">{{$book->category->title}}</option>
-                    <option selected value="kids">kids</option>
-                    <option selected value="fantasia">fantasia</option>
-                    <option selected value="horror">horror</option>
+                    <option selected value="{{$book->category->id}}">{{$book->category->title}}</option>
+                    <option  value="{{$book->category->id}}">kids</option>
+                    <option  value="{{$book->category->id}}">fantasia</option>
+                    <option  value="{{$book->category->id}}">horror</option>
                 </select>
                 </div>
               
-
+                @error('image')
+                <div class="text-red-500">{{ $message }}</div>
+            @enderror
                 <div class="col-span-2">
                     <label for="description"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                         Description</label>
-                    <textarea id="description" name="description" rows="4"
-                        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Write description here"></textarea>
+                        <textarea id="description" name="description" rows="4"  
+                      class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Write description here">{{$book->description}}</textarea>
+
                 </div>
                 <div>
 

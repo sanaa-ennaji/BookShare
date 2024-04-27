@@ -47,7 +47,6 @@
                         </svg>
                         <span class="text-sm">YouCode safi, Simplone</span>
                     </div>
-
                 </div>
                 <form class="md:col-span-8 p-10" method="POST" action="/StoreRegister" enctype="multipart/form-data">
                     @csrf

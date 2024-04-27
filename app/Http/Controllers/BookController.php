@@ -66,22 +66,25 @@ class BookController extends Controller
         return view('welcome', compact('books'));
     }
 
-    public function updatebook(Request $request, $id)
-    {
-        $data = $request->validated();
-       
-        if ($request->hasFile('image')) {
-            $file = $request->file('image');
-            $imageName = time() . '.' . $file->extension();
-            $file->storeAs('public/img', $imageName);
-            $data['image'] = $imageName;
-        }
-      
+    public function updatebook(BookRequest $request, $id)
+{
+   
+   
 
-        $this->bookService->updatebook($data, $id);
-
-        return redirect()->back()->with('success', 'Book updated successfully');
+    $data = $request->validated();
+    
+    if ($request->hasFile('image')) {
+        $file = $request->file('image');
+        $imageName = time() . '.' . $file->extension();
+        $file->storeAs('public/img', $imageName);
+        $data['image'] = $imageName;
     }
+
+    $this->bookService->updatebook($data, $id);
+
+    return redirect()->route('stores.books')->with('success', 'Book updated successfully');
+}
+
 
     public function edit($id)
     {

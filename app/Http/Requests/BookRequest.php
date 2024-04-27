@@ -21,7 +21,7 @@ class BookRequest extends FormRequest
      */
     public function rules(): array
     {
-
+     
         return [
            
                 'title' => ['required'],
@@ -37,6 +37,7 @@ class BookRequest extends FormRequest
            
             
         ];
+      
      
     }
 }

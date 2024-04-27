@@ -101,7 +101,7 @@ Route::post('/loginauth', [userController::class, 'login']);
 Route::post('/logout', [userController::class, 'logout']);
 Route::post('/createBook', [BookController::class, 'createBook']);
 
-Route::get('/dashboard', [BookController::class, 'showCategoryAndBooks']);
+Route::get('/dashboard', [BookController::class, 'showCategoryAndBooks'])->name('stores.books');
 Route::get('/', [BookController::class, 'index']);
 Route::get('/editbook/{id}', [BookController::class, 'edit'])->name('book.edit');
 Route::put('/updatebook/{id}', [BookController::class, 'updatebook'])->name('book.update');
