@@ -1,6 +1,6 @@
 <?php
 namespace App\Repositories;
-
+use Illuminate\Pagination\LengthAwarePaginator;
 use App\Models\Book;
 use App\RepositoryInterfaces\BookRepositoryInterface;
 
@@ -34,11 +34,18 @@ class BookRepository implements BookRepositoryInterface
     {
         return Book::findOrFail($id);
     }
+    public function getAll($perPage = 6)
+{
+  
+    $books = Book::paginate($perPage);
 
-    public function getAll()
-    {
-        return Book::all();
-    }
+    return $books;
+}
+
+    // public function getAll()
+    // {
+    //     return Book::all();
+    // }
 }
 
 

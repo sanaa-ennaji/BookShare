@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use App\Models\Book;
-
+use Illuminate\Pagination\Paginator;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Requests\BookRequest;
@@ -68,9 +68,6 @@ class BookController extends Controller
 
     public function updatebook(BookRequest $request, $id)
 {
-   
-   
-
     $data = $request->validated();
     
     if ($request->hasFile('image')) {
@@ -100,6 +97,7 @@ class BookController extends Controller
     }
 
     public function searchBook () {
+
 
     }
 

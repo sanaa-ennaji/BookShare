@@ -172,7 +172,7 @@
                 <div class="flex items-center mx-1">
                     <p class="text-lg font-semibold text-black cursor-auto mb-2">$149</p>
                     <del>
-                        <p class="text-sm text-gray-600 cursor-auto ml-2 mb-2">$199</p>
+                        <p class="text-sm text-gray-600 cursor-auto ml-2 mb-2">{{ $book->price}}</p>
                     </del>
                   
                  
@@ -182,7 +182,8 @@
     </div>
 </a>
 @endforeach
-   
+
+
 </section>
         <div class="flex flex-col justify-center items-center ">
             <div class="relative flex flex-col items-center  mx-auto p-4  bg-clip-border   dark:!bg-navy-800 dark:text-white dark:shadow-none">
@@ -494,8 +495,28 @@
        
         </div>
  
-    </div>
+        <div class="flex justify-center mt-4">
+            <!-- Previous Page Link -->
+            @if ($books->onFirstPage())
+                <span class="px-2 py-1 rounded-md bg-gray-200 text-gray-600 cursor-not-allowed">&laquo; Previous</span>
+            @else
+                <a href="{{ $books->previousPageUrl() }}" class="px-2 py-1 rounded-md bg-gray-200 text-gray-600 hover:bg-gray-300">&laquo; Previous</a>
+            @endif
+        
+            <!-- Current Page Number -->
+            <span class="px-2 py-1 rounded-md bg-blue-500 text-white">{{ $books->currentPage() }}</span>
+        
+            <!-- Next Page Link -->
+            @if ($books->hasMorePages())
+                <a href="{{ $books->nextPageUrl() }}" class="px-2 py-1 rounded-md bg-gray-200 text-gray-600 hover:bg-gray-300">Next &raquo;</a>
+            @else
+                <span class="px-2 py-1 rounded-md bg-gray-200 text-gray-600 cursor-not-allowed">Next &raquo;</span>
+            @endif
+        </div>
+        
 
+    </div>
+  
 <script>
     kofiWidgetOverlay.draw('mohamedghulam', {
             'type': 'floating-chat',
