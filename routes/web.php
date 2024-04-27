@@ -114,9 +114,9 @@ Route::post('/orders/create', [OrderController::class, 'createOrder'])->name('or
 Route::get('/payment/success', [OrderController::class, 'paymentSuccess'])->name('payment.success');
 Route::post('/createaddress' , [OrderDetailsController::class , 'store']);
 
-Route::get('/searsh' ,function (){
-    return view('public.books');
-   });
+// Route::get('/searsh' ,function (){
+//     return view('public.books');
+//    });
 Route::get('/searsh', [BookController::class, 'searshBook'])->name('search');
 
 

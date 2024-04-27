@@ -19,7 +19,7 @@
     </div> 
 
     
-<form id="searchForm" class="mx-auto w-[40vw]  rounded-2xl">
+<form id="searchForm" class="mx-auto w-[40vw]  rounded-2xl" action="{{ route('search') }}" method="GET">
       <div class="flex">
           <select class="flex-shrink-0 z-10 inline-flex items-center py-2  text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-full hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600">
             <option value="03">03 - March</option>
