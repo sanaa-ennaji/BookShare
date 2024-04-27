@@ -195,8 +195,7 @@
               </svg>
             </button>
           </form>
-
-            <a x-data="{ tooltip: 'Edite' }" href="#">
+ <a  href="/updatebook/{{$book->id}}">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -213,6 +212,8 @@
                 />
               </svg>
             </a>
+            <button id="button{{ $book->id }}" onclick="toggleModal('progress-modal{{ $book->id }}', 'button{{ $book->id }}')"
+              class="mb-2 md:mb-0 bg-blue-500 border border-blue-500 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-blue-600">update</button> 
           </div>
         </td>
   

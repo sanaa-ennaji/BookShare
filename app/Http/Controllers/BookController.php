@@ -66,7 +66,7 @@ class BookController extends Controller
         return view('welcome', compact('books'));
     }
 
-    public function update(Request $request, $id)
+    public function updatebook(Request $request, $id)
     {
         $data = $request->validated();
        

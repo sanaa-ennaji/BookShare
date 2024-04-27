@@ -103,7 +103,7 @@ Route::post('/createBook', [BookController::class, 'createBook']);
 
 Route::get('/dashboard', [BookController::class, 'showCategoryAndBooks']);
 Route::get('/', [BookController::class, 'index']);
-
+Route::put('/updatebook/{id}', [BookController::class, 'updatebook']);
 Route::delete('/deletebook/{id}', [BookController::class, 'destroy']);
 Route::get('/details/{id}', [BookController::class, 'showDetails'])->name('book.details');
 Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
