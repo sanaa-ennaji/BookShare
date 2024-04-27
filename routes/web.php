@@ -133,4 +133,4 @@ Route::get('/cart/count', [CartController::class, 'getCartCount'])->name('cart.c
 Route::get('/invoice/{orderId}', [InvoiceController::class, 'displayInvoice']);
 Route::get('/invoice/{orderId}/generate', [InvoiceController::class, 'generateInvoice'])->name('invoice.generate');
 
-Route::get('costumer/orders' , [OrderController::class , 'costumerOrders']);
+Route::get('costumer/orders' , [OrderController::class , 'costumerOrders'])->name('orders.show');
