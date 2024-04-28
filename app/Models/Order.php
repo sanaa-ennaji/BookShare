@@ -21,9 +21,10 @@ class Order extends Model
 
     public function costumer()
     {
-        return $this->belongsTo(Costumer::class, 'costumer_id');
+        return $this->belongsTo(Costumer::class, 'orderlines', 'order_id', 'costumer_id');
     }
-
+  
+    
     public function orderItems()
     {
         return $this->hasMany(Orderline::class);

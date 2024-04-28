@@ -83,13 +83,13 @@ footer {
     <div class="margin-top">
         <table class="w-full">
             <tr>
-                {{-- <td class="w-half">
-                    <div><h4>costumer</h4></div>
-                    <div>{{$order->costumer->user->name}}</div>
-                    <div>{{$order->details->details}}</div>
-                    <div>date</div>
-                </td>
                 <td class="w-half">
+                    <div><h4>costumer</h4></div>
+                    <div>  {{ Auth::user()->name }}</div>
+                    <div>  {{ Auth::user()->email }}</div>
+                    <div>{{$order->created_at}}</div>
+                </td>
+                {{-- <td class="w-half">
                     <div><h4>book store</h4></div>
                     <div>{{$order->orderItems->book->store->user->name}}</div>
                     <div>address</div>

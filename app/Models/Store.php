@@ -23,4 +23,6 @@ class Store extends Model
     {
         return $this->hasMany(Book::class);
     }
+
+    
 }

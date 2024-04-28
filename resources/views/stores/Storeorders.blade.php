@@ -9,11 +9,11 @@
     <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
       <thead class="bg-gray-50">
         <tr>
-          <th scope="col" class="px-6 py-4 font-medium text-gray-900">Name</th>
-          <th scope="col" class="px-6 py-4 font-medium text-gray-900">city</th>
-          <th scope="col" class="px-6 py-4 font-medium text-gray-900">phone</th>
-          <th scope="col" class="px-6 py-4 font-medium text-gray-900">bookStore</th>
+          <th scope="col" class="px-6 py-4 font-medium text-gray-900">order</th>
+          <th scope="col" class="px-6 py-4 font-medium text-gray-900">costumer</th>
+          <th scope="col" class="px-6 py-4 font-medium text-gray-900">total price</th>
           <th scope="col" class="px-6 py-4 font-medium text-gray-900">status</th>
+          <th scope="col" class="px-6 py-4 font-medium text-gray-900">status update</th>
         </tr>
       </thead>
       <tbody class="divide-y divide-gray-100 border-t border-gray-100">
@@ -24,22 +24,16 @@
     @foreach($orders as $order)
         <tr class="hover:bg-gray-50">
           <th class="flex gap-3 px-6 py-4 font-normal text-gray-900">
-            <div class="relative h-10 w-10">
-              <img
-                class="h-full w-full rounded-full object-cover object-center"
-                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                alt=""
-              />
-              <span class="absolute right-0 bottom-0 h-2 w-2 rounded-full bg-green-400 ring ring-white"></span>
-            </div>
             <div class="text-sm">
               <div class="font-medium text-gray-700">{{ $order->id }}</div>
-              <div class="text-gray-400">{{ $order->orderItems->book->title }}</div>
+              {{-- <div class="text-gray-400">{{ $order->orderItems->book->title }}</div> --}}
             </div>
           </th>
-          <td class="px-6 py-4">  {{ $order->coetumer->user->name }}</td>
-          <td class="px-6 py-4"> {{ $order->quantity }}</td>
-        
+          {{-- <td class="px-6 py-4">  {{ $order->coetumer->user->name }}</td> --}}
+       
+          <td class="px-6 py-4">Customer Name: {{ $customer->user->name }}</td>
+   
+          <td class="px-6 py-4">{{ $order->status }}</td>
           <td class="px-6 py-4">{{ $order->total_price }}</td>
           <td class="px-6 py-4">
         
@@ -61,8 +55,8 @@
                         <label for="statu" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">delete user</label>
                         <select name="status" id="statu"
                                 class="citySelect bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option value="1" >dilevred</option>
-                                <option value="0">returned</option>
+                                <option value="dilevred">dilevred</option>
+                                <option value="dilevred">returned</option>
                             </select>
                           
                     </div>

@@ -6,8 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       @vite('resources/css/app.css')
     </head>
-        <body >
-
+<body>
     @include('components/navbar')
     @include('components/navbar2')
     <div class="w-[80vw] mx-auto">

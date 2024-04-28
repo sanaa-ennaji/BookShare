@@ -78,9 +78,9 @@
       
       </section>
     
-          <section  class="w-[60vw] mx-auto grid grid-cols-2 sm:grid-cols-5 grid-cols-2 justify-items-center justify-center gap-y-10 gap-x-20 sm:gap-x-5 mt-20 mb-5">
+          {{-- <section  class="w-[60vw] mx-auto grid grid-cols-2 sm:grid-cols-5 grid-cols-2 justify-items-center justify-center gap-y-10 gap-x-20 sm:gap-x-5 mt-20 mb-5">
           
-        </section>
+        </section> --}}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $(document).ready(function() {
@@ -131,7 +131,7 @@
             fetchBooks(searchQuery);
         });
 
-        // Fetch all books initially
+     
         fetchBooks('');
     });
 </script>
