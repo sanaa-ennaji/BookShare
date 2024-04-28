@@ -14,7 +14,7 @@ class storeRepository implements StoreRepositoryInterface
         $user = User::create($data);
         $storeData['user_id'] = $user->id;
        Store::create($storeData);
-        return $user ;
+        return $user;
     }
 
     public function updateProfile(array $data, int $id){

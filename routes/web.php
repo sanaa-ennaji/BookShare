@@ -130,8 +130,8 @@ Route::get('/stores/store', [AdminController::class, 'indexStores']);
 //     return view('public.BookDetails');
 // }); 
 
-// Route::get('/sidebare' ,function (){
-//     return view('components.sidebare');
+// Route::get('/statistics' ,function (){
+//     return view('stores.statistics');
 //    });
 Route::get('/invoice/{orderId}', [InvoiceController::class, 'displayInvoice']);
 Route::get('/invoice/{orderId}/generate', [InvoiceController::class, 'generateInvoice'])->name('invoice.generate');
@@ -141,3 +141,5 @@ Route::get('costumer/orders' , [OrderController::class , 'costumerOrders'])->nam
 Route::get('/google/redirect', [App\Http\Controllers\GoogleLoginController::class, 'redirectToGoogle'])->name('google.redirect');
 // Route::get('/google/callback', [App\Http\Controllers\GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');
 Route::get('/callback/google', [GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');
+
+Route::get('/statistics', [StoreController::class, 'StoreStatistics'])->name('store.statistics');

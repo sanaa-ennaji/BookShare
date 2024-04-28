@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Store;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\ServiceInterface\StoreServiceInterface;
 
 
@@ -79,7 +80,22 @@ class StoreController extends Controller
         return view('stores.profile', compact('store', 'books')); 
     }
     
+
+public function StoreStatistics()
+{
+    $user = Auth::user();
+    $store = $user->store;
     
+    if (!$store) {
+      return redirect()->back();
+    }
+    
+    $bookCount = $store->books->count();
+   $orderCount = $store->books->flatMap->orders->count();
+
+    
+    return view('stores.statistics', compact('store', 'bookCount', 'orderCount'));
+}
 
 
 }
