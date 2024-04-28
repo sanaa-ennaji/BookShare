@@ -127,11 +127,8 @@
     </div>
 
 
- 
-       
-       
             <section id="Projects"
-                class="w-[60vw] mx-auto sm:ml-40 ml:40 grid grid-cols-2 sm:grid-cols-5 grid-cols-2 justify-items-center justify-center gap-y-10 gap-x-20 sm:gap-x-5 mt-20 mb-5">
+                class="w-[60vw] mx-auto sm:ml-64 ml:40 grid grid-cols-2 sm:grid-cols-5 grid-cols-2 justify-items-center justify-center gap-y-10 gap-x-20 sm:gap-x-5 mt-20 mb-5">
 
                 @foreach ($books as $book)
                     <a href="{{ route('book.details', ['id' => $book->id]) }}">
@@ -228,24 +225,24 @@
         <div class="bg-gray-100">
             <div class="max-w-screen-lg px-4 sm:px-6 text-gray-800 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto">
                 <div class="p-5">
-                    <h3 class="font-bold text-xl text-indigo-600">BookShare</h3>
+                    <h3 class="font-bold text-xl text-blue-600">BookShare</h3>
                 </div>
                 <div class="p-5">
-                    <div class="text-sm uppercase text-indigo-600 font-bold">Resources</div>
+                    <div class="text-sm uppercase text-blue-600 font-bold">Resources</div>
                     <a class="my-3 block" href="/#">Documentation <span class="text-teal-600 text-xs p-1"></span></a><a
                         class="my-3 block" href="/#">Tutorials <span class="text-teal-600 text-xs p-1"></span></a><a
                         class="my-3 block" href="/#">Support <span class="text-teal-600 text-xs p-1">New</span></a>
                 </div>
                 <div class="p-5">
-                    <div class="text-sm uppercase text-indigo-600 font-bold">Support</div>
+                    <div class="text-sm uppercase text-blue-600 font-bold">Support</div>
                     <a class="my-3 block" href="/#">Help Center <span class="text-teal-600 text-xs p-1"></span></a><a
                         class="my-3 block" href="/#">Privacy Policy <span class="text-teal-600 text-xs p-1"></span></a><a
                         class="my-3 block" href="/#">Conditions <span class="text-teal-600 text-xs p-1"></span></a>
                 </div>
                 <div class="p-5">
-                    <div class="text-sm uppercase text-indigo-600 font-bold">Contact us</div>
-                    <a class="my-3 block" href="/#">XXX XXXX, Floor 4 San Francisco, CA
-                        <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">contact@company.com
+                    <div class="text-sm uppercase text-blue-600 font-bold">Contact us</div>
+                    <a class="my-3 block" href="/#">YouCode, Simplone, Mo
+                        <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">BookShare@company.com
                         <span class="text-teal-600 text-xs p-1"></span></a>
                 </div>
             </div>
@@ -256,7 +253,7 @@
               max-w-screen-lg items-center">
                 <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
                     <a href="/#" class="w-6 mx-1">
-                        <svg class="fill-current cursor-pointer text-gray-500 hover:text-indigo-600" width="100%" height="100%"
+                        <svg class="fill-current cursor-pointer text-gray-500 hover:text-blue-600" width="100%" height="100%"
                             viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
                             style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
@@ -277,7 +274,7 @@
                         </svg>
                     </a>
                     <a href="/#" class="w-6 mx-1">
-                        <svg class="fill-current cursor-pointer text-gray-500 hover:text-indigo-600" width="100%" height="100%"
+                        <svg class="fill-current cursor-pointer text-gray-500 hover:text-blue-600" width="100%" height="100%"
                             viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
                             style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
@@ -289,7 +286,7 @@
                         </svg>
                     </a>
                     <a href="/#" class="w-6 mx-1">
-                        <svg class="fill-current cursor-pointer text-gray-500 hover:text-indigo-600" width="100%" height="100%"
+                        <svg class="fill-current cursor-pointer text-gray-500 hover:text-blue-600" width="100%" height="100%"
                             viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
                             style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
@@ -313,7 +310,7 @@
                         </svg>
                     </a>
                     <a href="/#" class="w-6 mx-1">
-                        <svg class="fill-current cursor-pointer text-gray-500 hover:text-indigo-600" width="100%" height="100%"
+                        <svg class="fill-current cursor-pointer text-gray-500 hover:text-blue-600" width="100%" height="100%"
                             viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
                             style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
@@ -333,21 +330,9 @@
                           0.4,1.5l0,4.5l2.9,0Z"></path>
                         </svg>
                     </a>
-                    <a href="/#" class="w-6 mx-1">
-                        <svg class="fill-current cursor-pointer text-gray-500 hover:text-indigo-600" width="100%" height="100%"
-                            viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
-                            style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2;">
-                            <path id="Combined-Shape" d="M12,24c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12c-6.627,0
-                          -12,5.373 -12,12c0,6.627 5.373,12 12,12Zm6.591,-15.556l-0.722,0c-0.189,0
-                          -0.681,0.208 -0.681,0.385l0,6.422c0,0.178 0.492,0.323
-                          0.681,0.323l0.722,0l0,1.426l-4.675,0l0,-1.426l0.935,0l0,-6.655l-0.163,0l-2.251,8.081l-1.742,0l-2.222,-8.081l-0.168,0l0,6.655l0.935,0l0,1.426l-3.74,0l0,-1.426l0.519,0c0.203,0
-                          0.416,-0.145 0.416,-0.323l0,-6.422c0,-0.177 -0.213,-0.385
-                          -0.416,-0.385l-0.519,0l0,-1.426l4.847,0l1.583,5.704l0.042,0l1.598,-5.704l5.021,0l0,1.426Z"></path>
-                        </svg>
-                    </a>
+                   
                 </div>
-                <div class="my-5">© Copyright 2020. All Rights Reserved.</div>
+                <div class="my-5">© Copyright 2024. Red Line.</div>
             </div>
         </div>
     
