@@ -15,7 +15,7 @@
                 <h1 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Shipping Address</h1>
 
                 <div class="mb-6">
-                    {{-- <h2 class="text-xl font-semibold text-gray-700 dark:text-white mb-2">Shipping Address</h2> --}}
+
                     <div class="grid grid-cols-2 gap-4">
                         <div>
                             <label for="first_name" class="block text-gray-700 dark:text-white mb-1">First Name</label>

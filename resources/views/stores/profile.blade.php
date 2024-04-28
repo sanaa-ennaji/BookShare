@@ -11,17 +11,7 @@
 <body >
     @include('components/navbar')
     @include('components/navbar2')
-    {{-- <div class="border-1  sm:h-[45vh] sm:w-[80%] mx-auto" style="background-image: url(https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);   background-repeat: no-repeat; background-size: cover; ">
-            <div class="flex rounded-t-lg bg-top-color sm:px-2 w-full">
-                <div class="overflow-hidden rounded-full sm:relative sm:p-0 sm:top-60 top-35 h-32 w-32 sm:w-25 sm:h-25 ">
-                  
-                    <img class="object-cover object-center h-32" src='../img/pexels-tuur-tisseghem-626986.jpg'>
-                </div>
-            </div>
-            </div>
-            <div class="border-1 w-[40%] sm:h-[45vh] sm:w-[80%] sm:mx-auto">
-              <h2 class="font-semibold relative">book storte</h2>
-              </div> --}}
+  
 
     <div class="w-[65vw] mx-auto">
         <div>
@@ -63,9 +53,10 @@
 </div>
 
 <section id="booksSection"
-          class="w-[60vw] mx-auto grid grid-cols-2 sm:grid-cols-4 grid-cols-2 justify-items-center justify-center gap-y-10 gap-x-20 sm:gap-x-5 mt-20 mb-5">
-         
-          @foreach($store->$books as $book)
+          class="w-[80vw] mx-auto grid grid-cols-2 sm:grid-cols-4 grid-cols-2 justify-items-center justify-center gap-y-10 gap-x-20 sm:gap-x-5 mt-20 mb-5">
+          @if($books->count() > 0)
+      
+          @foreach($books as $book)
           <a href="{{ route('book.details', ['id' => $book->id]) }}">
           <div class="w-50 bg-white rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
             
@@ -122,11 +113,15 @@
           </div>
       </a>
       @endforeach
-      
-      
-      </section>
-             
-
+    </section>
+    @else
+    <body class="">
+      <div class=" mx-auto">
+          <h1 class="text-[80px] font-extrabold text-gray-700">404</h1>
+          <p class="text-xl font-medium text-gray-600 mb-6">books Not Found</p>
+        
+      </div>
+      @endif
             </div>
 
           

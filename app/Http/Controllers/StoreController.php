@@ -34,7 +34,7 @@ class StoreController extends Controller
     $user =   $this->storeService->createStore($data ,$storeData);
    
          auth()->login($user);
-          return redirect('/waiting');
+          return redirect('/profile-update');
       
     }
 
@@ -71,12 +71,14 @@ class StoreController extends Controller
     }
     
 
-    public function StoreDetails($id){
-
+    public function StoreDetails($id)
+    {
+   
         $store = Store::findOrFail($id);
-        return view('stores.profile', compact('store')); 
-
+        $books = $store->books()->get(); 
+        return view('stores.profile', compact('store', 'books')); 
     }
+    
     
 
 

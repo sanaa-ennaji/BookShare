@@ -2,7 +2,7 @@
 <html lang="en">
     @include('components/head')
 <body class="bg-gray-200">
-    @include('components/sidebare')
+    @include('components/sideBar')
 
  
   <div class="mt-20 sm:ml-60">
