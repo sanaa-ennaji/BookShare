@@ -47,9 +47,9 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::get('/stores/store', function () {
-    return view('stores.store');
-});
+// Route::get('/stores/store', function () {
+//     return view('stores.store');
+// });
 
 Route::get('/stores/profile', function () {
     return view('stores.profile');
@@ -123,7 +123,7 @@ Route::delete('/deleteItem/{id}', [CartController::class, 'removeFromCart'])->na
 Route::get('/cart/count', [CartController::class, 'getCartCount'])->name('cart.count');
 
 
-// Route::get('/details', [BookController::class, 'showDetails']);
+Route::get('/stores/store', [AdminController::class, 'indexStores']);
 // Route::get('/details', function () {
 //     return view('public.BookDetails');
 // }); 
@@ -137,7 +137,5 @@ Route::get('/invoice/{orderId}/generate', [InvoiceController::class, 'generateIn
 Route::get('costumer/orders' , [OrderController::class , 'costumerOrders'])->name('orders.show');
 
 Route::get('/google/redirect', [App\Http\Controllers\GoogleLoginController::class, 'redirectToGoogle'])->name('google.redirect');
-Route::get('/google/callback', [App\Http\Controllers\GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');
-
-// Route::get('/login/google', [GoogleLoginController::class, 'redirectToGoogle'])->name('login.google');
-Route::get('/callback/google', [GoogleLoginController::class, 'handleGoogleCallback']);
+// Route::get('/google/callback', [App\Http\Controllers\GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');
+Route::get('/callback/google', [GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');

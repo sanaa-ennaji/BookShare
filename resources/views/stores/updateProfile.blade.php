@@ -12,7 +12,7 @@
     @include('components/navbar2')
     <div class="w-[80vw] mx-auto">
         <div>
-            <form method="POST" action="/updateProfile/{{ Auth::user()->store->id }}" >
+            <form method="POST" action="/updateProfile/{{ Auth::user()->store->id }}" enctype="multipart/form-data" >
                 @csrf
                 @method('PUT')
                 <div class="bg-white dark:bg-gray-800">

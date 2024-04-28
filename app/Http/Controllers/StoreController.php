@@ -39,33 +39,36 @@ class StoreController extends Controller
 
   
 
-    public function updateStoreProfile(Request $request ,int $id)
+    public function updateStoreProfile(Request $request, int $id)
     {
-        
+      
         $data = $request->validate([
             'description' => ['required'],
+            'cover' => [ 'image', 'mimes:jpeg,png,jpg,gif'], 
+            'image' => [ 'image', 'mimes:jpeg,png,jpg,gif'], 
         ]);
- 
-       
+    
+    
         if ($request->hasFile('cover')) {
-            $file = $request->file('cover');
-            $imageName = time() . '.' . $file->extension();
-            $file->storeAs('public/img', $imageName);
-            $data['image'] = $imageName;
+            $coverFile = $request->file('cover');
+            $coverImageName = time() . '.' . $coverFile->extension();
+            $coverFile->storeAs('public/img', $coverImageName);
+            $data['cover'] = $coverImageName; 
         }
+    
+        if ($request->hasFile('image')) {
+            $imageFile = $request->file('image');
+            $imageImageName = time() . '.' . $imageFile->extension();
+            $imageFile->storeAs('public/img', $imageImageName);
+            $data['image'] = $imageImageName; 
+        }
+  
 
-         
-    if ($request->hasFile('image')) {
-        $file = $request->file('image');
-        $imageName = time() . '.' . $file->extension();
-        $file->storeAs('public/img', $imageName);
-        $data['image'] = $imageName;
-    }
-
-        $this->storeService->updateProfile($data ,$id);
-
+        $this->storeService->updateProfile($data, $id);
+    
         return redirect()->back()->with('success', 'Store profile updated successfully');
     }
+    
 
     
 
