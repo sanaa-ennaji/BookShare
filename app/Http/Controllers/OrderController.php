@@ -21,6 +21,12 @@ class OrderController extends Controller
         }
 
      
+        public function costumerOrders (){
+            $user = auth()->user();
+            $costumerId = $user->costumer->id;
+            $orders = Order::where('costumer_id', $costumerId)->get();
+            return view('client.orders', ['orders' => $orders]);
+}
         
         
         public function createOrder(Request $request)
@@ -71,12 +77,7 @@ class OrderController extends Controller
 
 
         
-        public function costumerOrders (){
-            $user = auth()->user();
-            $costumerId = $user->costumer->id;
-            $orders = Order::where('costumer_id', $costumerId)->get();
-            return view('client.orders', ['orders' => $orders]);
-}
+
         }
 
        

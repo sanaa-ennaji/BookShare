@@ -3,16 +3,12 @@
     @include('components/head')
 <body class="bg-gray-200">
     @include('components/sideBar')
-
- 
-
     <div class="mt-20 sm:ml-80 sm:mr-5 ml-6 w-[95%]">
   
 <div class="grid gap-6 mb-8 grid-cols-2 md:grid-cols-2 xl:grid-cols-2">
 
     <div
-      class="min-w-0 rounded-lg shadow-xs overflow-hidden bg-white dark:bg-gray-800"
-    >
+      class="min-w-0 rounded-lg shadow-xs overflow-hidden bg-white dark:bg-gray-800">
       <div class="p-4 flex items-center">
         <div
           class="p-3 rounded-full text-blue-500 dark:text-blue-100 bg-blue-100 dark:bg-blue-500 mr-4"
@@ -25,7 +21,7 @@
         </div>
         <div>
           <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
-     books
+           books
           </p>
           <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
             {{ $bookCount }}
@@ -33,9 +29,9 @@
         </div>
       </div>
     </div>
+
     <div
-      class="min-w-0 rounded-lg shadow-xs overflow-hidden bg-white dark:bg-gray-800"
-    >
+      class="min-w-0 rounded-lg shadow-xs overflow-hidden bg-white dark:bg-gray-800">
       <div class="p-4 flex items-center">
         <div
           class="p-3 rounded-full text-blue-500 dark:text-blue-100 bg-blue-100 dark:bg-blue-500 mr-4"
@@ -48,15 +44,13 @@
         </div>
         <div>
           <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
-            {{ $orderCount }}
+          Orders
           </p>
-          <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">count</p>
+          <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">{{ $orderCount }}</p>
         </div>
       </div>
     </div>
   </div>
-
-
 
 <script src="https://cdn.tailwindcss.com"></script>
 </body>
