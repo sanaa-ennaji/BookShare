@@ -39,7 +39,7 @@ class StoreController extends Controller
 
   
 
-    public function updateStoreProfile(Request $request , $id)
+    public function updateStoreProfile(Request $request ,int $id)
     {
         $data = $request->validate([
             'description' => ['required'],
@@ -63,7 +63,7 @@ class StoreController extends Controller
       
        
          
-        $this->storeService->updateStoreProfile($data ,$id);
+        $this->storeService->updateProfile($data ,$id);
 
         return redirect()->back()->with('success', 'Store profile updated successfully');
     }

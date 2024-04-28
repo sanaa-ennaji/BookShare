@@ -17,4 +17,8 @@ class storeRepository implements StoreRepositoryInterface
         return $user ;
     }
 
+    public function updateProfile(array $data, int $id){
+        return Store::findOrFail($id)->update($data);
+    }
+
     }
