@@ -14,9 +14,8 @@
     class="w-[80%]  grid grid-cols-2 sm:grid-cols-4 grid-cols-2 justify-items-center justify-center gap-y-10 gap-x-10 sm:gap-x-5 mt-10 mb-5 mx-auto sm:mx-auto">
     
     @foreach($stores as $store)
-    <a href="{{ route('store.', ['id' => $store->id]) }}"> <div
-
-        class="max-w-2xl mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16 bg-white shadow-xl rounded-lg text-gray-900">
+    <a href="{{ route('store.profile', ['id' => $store->id]) }}"> 
+        <div class="max-w-2xl mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16 bg-white shadow-xl rounded-lg text-gray-900">
         <div class="rounded-t-lg h-32 overflow-hidden">
             <img class="object-cover object-top w-full" src="{{asset('storage/img/' . $store->cover)}}" alt='Mountain'>
         </div>

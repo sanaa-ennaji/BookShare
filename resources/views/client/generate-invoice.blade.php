@@ -119,14 +119,14 @@ footer {
     @endforeach
         </table>
     </div>
-    <div class="total">
+    {{-- <div class="total">
       SubTotal: $100.00 USD
   </div>
   <div class="total">
     shipping: $29.00 USD
-</div>
+</div> --}}
     <div class="total">
-        Total: $129.00 USD
+        {{ $order->total_price }}
     </div>
     {{-- <div id="notices">
       <div>NOTICE:</div>

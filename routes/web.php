@@ -109,6 +109,8 @@ Route::put('/updatebook/{id}', [BookController::class, 'updatebook'])->name('boo
 Route::put('/updateProfile/{id}', [StoreController::class, 'updateStoreProfile'])->name('store.update');
 Route::delete('/deletebook/{id}', [BookController::class, 'destroy']);
 Route::get('/details/{id}', [BookController::class, 'showDetails'])->name('book.details');
+
+Route::get('/StoreDtails/{id}', [StoreController::class, 'StoreDetails'])->name('store.profile');
 Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
 Route::get('/cart', [CartController::class, 'showCart'])->name('cart.show');
 Route::post('/orders/create', [OrderController::class, 'createOrder'])->name('orders.create');

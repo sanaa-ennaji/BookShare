@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Store;
 use Illuminate\Http\Request;
 use App\ServiceInterface\StoreServiceInterface;
 
@@ -70,6 +71,12 @@ class StoreController extends Controller
     }
     
 
+    public function StoreDetails($id){
+
+        $store = Store::findOrFail($id);
+        return view('stores.profile', compact('store')); 
+
+    }
     
 
 

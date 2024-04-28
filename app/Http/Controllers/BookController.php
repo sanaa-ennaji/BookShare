@@ -38,9 +38,9 @@ class BookController extends Controller
     public function showDetails($id)
     {
         $book = Book::findOrFail($id);
-        if (!$book) {
-            return abort(404); 
-        }
+        // if (!$book) {
+        //     return abort(404); 
+        // }
         return view('public.BookDetails', compact('book')); 
     }
 
