@@ -29,17 +29,32 @@
               {{-- <div class="text-gray-400">{{ $order->orderItems->book->title }}</div> --}}
             </div>
           </th>
-          {{-- <td class="px-6 py-4">  {{ $order->coetumer->user->name }}</td> --}}
-       
-          <td class="px-6 py-4">Customer Name: {{ $customer->user->name }}</td>
+          <td class="px-6 py-4"></td>
    
+   
+    
+      
+          {{-- <td class="px-6 py-4">{{ $order->costumer->id }}</td> --}}
+       
           <td class="px-6 py-4">{{ $order->status }}</td>
           <td class="px-6 py-4">{{ $order->total_price }}</td>
           <td class="px-6 py-4">
         
-                <button id="button{{ $order->id }}" onclick="toggleModal('progress-modal{{ $order->id }}', 'button{{ $order->id }}')"
-                  class="mb-2 md:mb-0 bg-purple-500 border border-purple-500 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-purple-600">
-                  update</button> 
+                <button id="button{{ $order->id }}" onclick="toggleModal('progress-modal{{ $order->id }}', 'button{{ $order->id }}')">
+                     <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-6 w-6"
+                x-tooltip="tooltip">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"
+                />
+              </svg></button> 
 
           </div>
 
@@ -48,21 +63,22 @@
             class="hidden fixed inset-0 z-50 justify-center items-center w-full h-full">
             <div class="relative p-4 w-full max-w-md max-h-full">
               <div class="relative py-4 px-5 bg-white rounded-lg shadow dark:bg-gray-700 right-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
-                <form class="" method="POST" action="/updateUser/{{ $order->id }}">
+                <form class="" method="POST" action="{{ route('orders.update', ['id' => $order->id]) }}">
+
                     @csrf
                     @method('PUT')
                     <div class="relative">
-                        <label for="statu" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">delete user</label>
+                        <label for="statu" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">update</label>
                         <select name="status" id="statu"
                                 class="citySelect bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option value="dilevred">dilevred</option>
-                                <option value="dilevred">returned</option>
+                                <option value="returned">returned</option>
                             </select>
                           
                     </div>
                     <div class="flex items-center mt-6 space-x-4 rtl:space-x-reverse">
                         <button type="submit"
-                            class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">confirm</button>
+                            class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">confirm</button>
                         <button onclick="closeModal('progress-modal{{$order->id }}')" type="button"
                             class="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Cancel</button>
                     </div>

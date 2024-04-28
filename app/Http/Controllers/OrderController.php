@@ -36,7 +36,7 @@ public function storeOrders()
 
     $orders = Order::whereHas('orderItems', function ($query) use ($store) {
         $query->whereIn('book_id', $store->books->pluck('id'));
-    })->with('costumer.user')->get();
+    })->get();
 
     return view('stores\Storeorders', ['orders' => $orders]);
 }
@@ -90,7 +90,16 @@ public function storeOrders()
 }
 
 
-        
+public function updateOrder(Request $request, $id)
+{
+    $order = Order::findOrFail($id);
+    $order->update([
+        'status' => $request->input('status')
+    ]);
+
+    return redirect()->back()->with('success', 'Order status updated successfully');
+}
+
 
         }
 

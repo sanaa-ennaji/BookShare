@@ -145,6 +145,7 @@ Route::get('/callback/google', [GoogleLoginController::class, 'handleGoogleCallb
 Route::get('/statistics', [StoreController::class, 'StoreStatistics'])->name('store.statistics');
 
 
+Route::put('/updateOrder/{id}', [OrderController::class, 'updateOrder'])->name('orders.update');
 
 
     Route::get('/store/orders', [OrderController::class, 'storeOrders'])->name('store.orders');
