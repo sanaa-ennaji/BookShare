@@ -15,51 +15,6 @@
           @include('components/navbar2')
 
       
-              {{-- @if ($book->reservations->count() >= $book->)
-              <p class="flex text-base leading-4 text-red-800 dark:text-red-300 mt-6">
-                <svg class="mx-3 text-gray-400 w-6 h-5 dark:text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
-              </svg>
-                All are Reserved no more availbale places 
-              </p>
-            
-          @else
-          {{-- <form action="{{ route('cart.add') }}" method="POST">
-            @csrf
-            <div class="px-4 py-5 sm:p-6">
-                <div class="grid grid-cols-6 gap-6">
-                    <div class="col-span-6 sm:col-span-3">
-                        <label for="book_id" class="block text-sm font-medium text-gray-700">Book ID</label>
-                        <input type="text" name="book_id" id="book_id" autocomplete="book_id" required
-                            class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                    </div>
-
-                    <div class="col-span-6 sm:col-span-3">
-                        <label for="quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
-                        <input type="number" name="quantity" id="quantity" autocomplete="quantity" required
-                            class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                    </div>
-                </div>
-            </div>
-            <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                <button type="submit"
-                    class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                    Add to Cart
-                </button>
-            </div>
-        </form>
-
-{{-- 
-          @auth
-              <button type="submit" class="bg-blue-600 dark:text-gray-900 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-base flex items-center justify-center leading-none text-white  w-full py-4  focus:outline-none">
-              add  to cart
-              </button>
-              @else
-              <a  href="/register" class="bg-blue-600 dark:text-gray-900 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-base flex items-center justify-center leading-none text-white w-full py-4 focus:outline-none">
-             register to cart!
-              </a>
-               @endauth --}}
-             
 
 
 
@@ -107,7 +62,8 @@
           <div class="col-span-6 sm:col-span-3">
             <label for="quantity" class="block text-sm font-medium text-gray-700 mt-2">Quantity</label>
             <input type="number" name="quantity" id="quantity" autocomplete="quantity" value="1" required
-                class="mt-1 w-[20%]  border-2 border-gray-500 block w-full shadow-sm sm:text-sm  rounded-md">
+            class="h-8 w-8 border bg-white text-center text-xs outline-none">
+                
         </div>
         <div class="flex w-[80vh] items-center pb-5 border-b-2 border-gray-200 mb-5">
          
@@ -119,11 +75,11 @@
             add to cart
           </button>
          </form>
-             <button class="rounded-full mt-1 w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-blue-500 ml-4">
+             {{-- <button class="rounded-full mt-1 w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-blue-500 ml-4">
               <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
                 <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
               </svg>
-            </button>
+            </button> --}}
               </div>
   
               <div class="ml-4">

@@ -84,7 +84,7 @@ Route::get('public/books' ,function (){
    Route::get('costumer/orders' ,function (){
     return view('client.orders');
    });
-   Route::get('adminDamandes', [AdminController::class, 'Storesdamanede'])->name('damandes.stores');
+   Route::get('/adminDamandes', [AdminController::class, 'Storesdamanede'])->name('damandes.stores');
    Route::post('/update-status', [AdminController::class, 'updateStatus'])->name('update-status');
  Route::get('/adminStores', [AdminController::class, 'displayStores'])->name('validated.stores');
 Route::post('/createCategory', [CategoryController::class, 'createCategory']);
@@ -143,10 +143,9 @@ Route::get('/statistics', [StoreController::class, 'StoreStatistics'])->name('st
 
 
 Route::put('/updateOrder/{id}', [OrderController::class, 'updateOrder'])->name('orders.update');
+Route::get('/store/orders', [OrderController::class, 'storeOrders'])->name('store.orders');
 
-
-    Route::get('/store/orders', [OrderController::class, 'storeOrders'])->name('store.orders');
-
+Route::post('/validation', [AdminController::class, 'updateStatus'])->name('validation');
 
 
 // admin 

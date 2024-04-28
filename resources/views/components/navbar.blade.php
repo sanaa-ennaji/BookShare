@@ -86,8 +86,9 @@
 </script>
     @endif
     @endauth
+    
        
-    <a 
+    {{-- <a 
       class="ps-2 text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80"
       href="/wishlist">
       <span class="[&>svg]:w-5">
@@ -96,7 +97,7 @@
           </svg>
           
       </span>
-    </a>
+    </a> --}}
     
     @auth
     <button aria-expanded="false" data-dropdown-toggle="dropdown-user"
@@ -131,37 +132,7 @@
   </button>
    
     @else
-    <a 
-    class="flex items-center px-2 text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80"
-    href="/register"
-    type="button"
-    id="dropdownMenuButton2"
-    data-twe-dropdown-toggle-ref
-    aria-expanded="false">
-    <span class="[&>svg]:h-5 [&>svg]:w-5">
-      <svg  class="text-blue-500"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        stroke-width="1.5">
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-      </svg>
-    </span>
-    <span class="[&>svg]:w-5">
-      <svg  class="text-blue-500"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-        fill="currentColor">
-        <path
-          fill-rule="evenodd"
-          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-          clip-rule="evenodd" />
-      </svg>
-    </span>
-  </a>
+    <a class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="/register">Sign up</a>
     @endauth
     @auth
   </div>

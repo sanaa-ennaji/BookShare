@@ -38,10 +38,9 @@
         
           <td class="px-6 py-4">{{ $store->address }}</td>
           <td class="px-6 py-4">
-            <span class="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-semibold text-green-600 cursor-pointer"
-            onclick="updateStatus('{{ $store->id }}', 'accepted')">
-          accepte
-      </span>
+            <button class="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-semibold text-green-600 cursor-pointer" onclick="validation('{{ $store->id }}', 'accepted')">
+              Accept
+          </button>
       <form method="POST" action="{{ route('stores.delete', ['id' => $store->id]) }}">
         @csrf
         @method('DELETE')
@@ -63,11 +62,9 @@
       </tbody>
     </table>
   </div>
-  <script src="../js/cities.js"></script>
   <script>
-    function updateStatus(storeId, is_validated) {
-     
-        fetch('/update-status', {
+    function validation(storeId, is_validated) {
+        fetch('/validation', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -75,7 +72,7 @@
             },
             body: JSON.stringify({
                 storeId: storeId,
-                status: status
+                is_validated: is_validated
             })
         }).then(response => {
             if (response.ok) {
@@ -87,7 +84,7 @@
             console.error('Error:', error);
         });
     }
-  </script>
+</script>
 <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>

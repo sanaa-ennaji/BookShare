@@ -127,18 +127,11 @@
     </div>
 
 
-    <div class="flex flex-wrap flex-row w-[90%] mx-auto gap-x-2">
-        {{-- <div class="flex items-center justify-between rounded-t-3xl p-3 w-[50%]">
-        <div class="text-lg font-bold text-navy-700 dark:text-white">
-            History
-        </div>
-        <button class="linear rounded-[20px] bg-lightPrimary px-4 py-2 text-base font-medium text-brand-500 transition duration-200 hover:bg-gray-100 active:bg-gray-200 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 dark:active:bg-white/20">
-            See all
-        </button>
-    </div> --}}
-        <div>
+ 
+       
+       
             <section id="Projects"
-                class="w-fit  sm:ml-40 ml:20 grid grid-cols-2 sm:grid-cols-4 grid-cols-2 justify-items-center justify-center gap-y-10 gap-x-20 sm:gap-x-5 mt-20 mb-5">
+                class="w-[60vw] mx-auto sm:ml-40 ml:40 grid grid-cols-2 sm:grid-cols-5 grid-cols-2 justify-items-center justify-center gap-y-10 gap-x-20 sm:gap-x-5 mt-20 mb-5">
 
                 @foreach ($books as $book)
                     <a href="{{ route('book.details', ['id' => $book->id]) }}">
@@ -201,7 +194,7 @@
                     </a>
                 @endforeach
             </section>
-            <div class="flex justify-center mt-4">
+            <div class="flex justify-center my-4">
 
                 @if ($books->onFirstPage())
                     <span class="px-2 py-1 rounded-md bg-gray-200 text-gray-600 cursor-not-allowed">&laquo;
@@ -284,25 +277,4 @@
 
         </div>
 
-        {{-- <script>
-    kofiWidgetOverlay.draw('mohamedghulam', {
-            'type': 'floating-chat',
-            'floating-chat.donateButton.text': 'Support me',
-            'floating-chat.donateButton.background-color': '#323842',
-            'floating-chat.donateButton.text-color': '#fff'
-        });
-</script> --}}
-
-
-
-
-        <style>
-            @layer utilities {
-
-                input[type="number"]::-webkit-inner-spin-button,
-                input[type="number"]::-webkit-outer-spin-button {
-                    -webkit-appearance: none;
-                    margin: 0;
-                }
-            }
-        </style>
+       
