@@ -41,7 +41,7 @@ class StoreController extends Controller
 
     public function updateStoreProfile(Request $request ,int $id)
     {
-        dd('ksjddkj');
+        
         $data = $request->validate([
             'description' => ['required'],
         ]);

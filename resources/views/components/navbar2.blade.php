@@ -1,7 +1,7 @@
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
     <div class="antialiased  dark-mode:bg-gray-900  ">
-        <div class=" w-[80%]   mx-auto  text-gray-700 dark-mode:text-gray-200 dark-mode:bg-gray-800">
+        <div class=" sm:w-[80%]   mx-auto  text-gray-700 dark-mode:text-gray-200 dark-mode:bg-gray-800">
             <div x-data="{ open: true }"
                 class="flex flex-col  px-4 md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
                
@@ -34,7 +34,7 @@
                 </div>
 
 
-                <nav :class="{ 'flex': open, 'hidden': !open }"
+                <nav :class="{ 'flex sm:bg:white bg-blue-100 rounded': open, 'hidden': !open }"
                     class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-center md:flex-row">
                     <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                     href="/books">Home</a>

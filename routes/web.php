@@ -10,6 +10,7 @@ use App\Http\Controllers\StoreController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CostumerController;
+use App\Http\Controllers\GoogleLoginController;
 use App\Http\Controllers\OrderDetailsController;
 
 /*
@@ -105,7 +106,7 @@ Route::get('/dashboard', [BookController::class, 'showCategoryAndBooks'])->name(
 Route::get('/', [BookController::class, 'index']);
 Route::get('/editbook/{id}', [BookController::class, 'edit'])->name('book.edit');
 Route::put('/updatebook/{id}', [BookController::class, 'updatebook'])->name('book.update');
-Route::put('/updateProfile/{id}', [BookController::class, 'updateProfile'])->name('store.update');
+Route::put('/updateProfile/{id}', [StoreController::class, 'updateStoreProfile'])->name('store.update');
 Route::delete('/deletebook/{id}', [BookController::class, 'destroy']);
 Route::get('/details/{id}', [BookController::class, 'showDetails'])->name('book.details');
 Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
@@ -134,3 +135,9 @@ Route::get('/invoice/{orderId}', [InvoiceController::class, 'displayInvoice']);
 Route::get('/invoice/{orderId}/generate', [InvoiceController::class, 'generateInvoice'])->name('invoice.generate');
 
 Route::get('costumer/orders' , [OrderController::class , 'costumerOrders'])->name('orders.show');
+
+Route::get('/google/redirect', [App\Http\Controllers\GoogleLoginController::class, 'redirectToGoogle'])->name('google.redirect');
+Route::get('/google/callback', [App\Http\Controllers\GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');
+
+// Route::get('/login/google', [GoogleLoginController::class, 'redirectToGoogle'])->name('login.google');
+Route::get('/callback/google', [GoogleLoginController::class, 'handleGoogleCallback']);

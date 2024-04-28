@@ -27,7 +27,7 @@
                         <div class="mx-auto">
                             <div class=" mx-auto xl:mx-0">
                                 <div class="rounded relative mt-8 h-48">
-                                    <img id='preview_img' src="" alt="" class="w-full h-full object-cover rounded absolute shadow"  />
+                                    <img id='preview_img' src="{{asset('storage/img/' . Auth::user()->store->cover)}}"  alt="" class="w-full h-full object-cover rounded absolute shadow"  />
                                     <div class="absolute bg-black opacity-50 top-0 right-0 bottom-0 left-0 rounded"></div>
                                     <div class="flex items-center px-3 py-2 rounded absolute right-0  mt-4 cursor-pointer">
                                         <input name="cover" type="file" onchange="loadFile(event)" class="block w-full text-sm text-slate-500 file:-mr-50 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:text-blue-700 hover:file:bg-blue-100" />
@@ -36,7 +36,7 @@
                                         <div class="flex items-center justify-center space-x-6 my-5  rounded-md">
                                             <label class="block">
                                                 <input name="image" type="file" onchange="loadFile2(event)" class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100 hidden" />
-                                                <img id='preview_img2' class="h-20 w-20 object-cover rounded-full shadow-lg cursor-pointer" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=338&ext=jpg&ga=GA1.1.1700460183.1708560000&semt=ais" alt="Current profile photo" />
+                                                <img id='preview_img2' class="h-20 w-20 object-cover rounded-full shadow-lg cursor-pointer" src="{{asset('storage/img/' . Auth::user()->store->image)}}" />
                                             </label>
                                         </div>
                                     </div>
