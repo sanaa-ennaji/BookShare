@@ -223,7 +223,7 @@
             </div>
         </div>
 
-        <div class="flex flex-col justify-center items-center ">
+        {{-- <div class="flex flex-col justify-center items-center ">
             <div
                 class="relative flex flex-col items-center  mx-auto p-4  bg-clip-border   dark:!bg-navy-800 dark:text-white dark:shadow-none">
                 <div
@@ -275,7 +275,7 @@
                                     class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5  rounded dark:bg-blue-200 dark:text-blue-800 ml-3">5.0</span>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                 </div>
 

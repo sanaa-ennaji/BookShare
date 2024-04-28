@@ -72,10 +72,10 @@ footer {
     <table class="w-full">
         <tr>
             <td class="w-half">
-                <img   src="../img/15744737.548a00c0e09dc-removebg-preview.png" alt="laravel daily" width="200" />
+                <img   src="img/15744737.548a00c0e09dc-removebg-preview.png"  width="200" />
             </td>
             <td class="w-half">
-                <h2>Invoice ID: {{$order->id}}</h2>
+                <h2>Invoice N: {{$order->id}}</h2>
             </td>
         </tr>
     </table>
@@ -83,19 +83,19 @@ footer {
     <div class="margin-top">
         <table class="w-full">
             <tr>
-                <td class="w-half">
+                {{-- <td class="w-half">
                     <div><h4>costumer</h4></div>
-                    <div>John Doe</div>
-                    <div>address</div>
+                    <div>{{$order->costumer->user->name}}</div>
+                    <div>{{$order->details->details}}</div>
                     <div>date</div>
                 </td>
                 <td class="w-half">
                     <div><h4>book store</h4></div>
-                    <div>name</div>
+                    <div>{{$order->orderItems->book->store->user->name}}</div>
                     <div>address</div>
                     <div>phone</div>
                   
-                </td>
+                </td> --}}
             </tr>
         </table>
     </div>
@@ -114,17 +114,17 @@ footer {
         <td>{{ $orderItem->book->title }}</td>
         <td>{{ $orderItem->unitprice }}</td>
         <td>{{ $orderItem->quantity }}</td>
-        <td>{{ $orderItem->total_price }}</td>
+        <td>{{ $orderItem->unitprice }}</td>
     </tr>
     @endforeach
         </table>
     </div>
     {{-- <div class="total">
       SubTotal: $100.00 USD
-  </div>
+  </div>  --}}
   <div class="total">
     shipping: $29.00 USD
-</div> --}}
+</div> 
     <div class="total">
         {{ $order->total_price }}
     </div>

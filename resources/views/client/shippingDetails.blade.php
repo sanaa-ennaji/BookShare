@@ -68,7 +68,7 @@
 
                 <div class="mt-8 flex justify-end">
                     <button type="submit"
-                        class="bg-teal-500 text-white px-4 py-2 rounded-lg hover:bg-teal-700 dark:bg-teal-600 dark:text-white dark:hover:bg-teal-900">confirme</button>
+                        class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 dark:bg-teal-600 dark:text-white dark:hover:bg-teal-900">confirme</button>
                 </div>
 
             </form>

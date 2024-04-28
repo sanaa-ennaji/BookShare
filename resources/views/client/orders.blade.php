@@ -54,7 +54,7 @@
                   <td class="hidden py-6 pr-8 sm:table-cell">Delivered</td>
                   <td class="hidden py-6 pr-8 sm:table-cell">{{ $order->total_price }}</td>
                   <td class="whitespace-nowrap py-6 text-right font-medium">
-                    <a href="{{url('/invoice/' .$order->id. '/generate' )}}" class="mt-6 flex w-full text-white items-center justify-center rounded-md border border-gray-300 bg-blue-500  py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:mt-0 sm:w-auto">
+                    <a href="{{url('/invoice/' .$order->id. '/generate' )}}" class="mt-6 flex w-full text-white items-center justify-center rounded-md border border-gray-300 bg-blue-500  py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:mt-0 sm:w-auto">
                         download Invoice
                        
                       </a>

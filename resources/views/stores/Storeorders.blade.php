@@ -17,7 +17,11 @@
         </tr>
       </thead>
       <tbody class="divide-y divide-gray-100 border-t border-gray-100">
-        {{-- @foreach($stores as $store) --}}
+        @if($orders->isEmpty())
+        <p>No orders found.</p>
+    @else
+
+    @foreach($orders as $order)
         <tr class="hover:bg-gray-50">
           <th class="flex gap-3 px-6 py-4 font-normal text-gray-900">
             <div class="relative h-10 w-10">
@@ -29,61 +33,60 @@
               <span class="absolute right-0 bottom-0 h-2 w-2 rounded-full bg-green-400 ring ring-white"></span>
             </div>
             <div class="text-sm">
-              <div class="font-medium text-gray-700">{{ $store->user->name }}</div>
-              <div class="text-gray-400">{{ $store->user->email }}</div>
+              <div class="font-medium text-gray-700">{{ $order->id }}</div>
+              <div class="text-gray-400">{{ $order->orderItems->book->title }}</div>
             </div>
           </th>
-          <td class="px-6 py-4">{{ $store->city }}</td>
-          <td class="px-6 py-4">{{ $store->phone }}</td>
+          <td class="px-6 py-4">  {{ $order->coetumer->user->name }}</td>
+          <td class="px-6 py-4"> {{ $order->quantity }}</td>
         
-          <td class="px-6 py-4">{{ $store->phone }}</td>
+          <td class="px-6 py-4">{{ $order->total_price }}</td>
           <td class="px-6 py-4">
-            @if($store->status === 'banned')
-            <span class="inline-flex items-center gap-1 rounded-full bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 cursor-pointer"
-                  onclick="updateStatus('{{ $store->id }}', 'active')">
-                Banned
-            </span>
-        @else
-            <span class="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-semibold text-green-600 cursor-pointer"
-                  onclick="updateStatus('{{ $store->id }}', 'banned')">
-                Active
-            </span>
-        @endif
         
-        </td>
-        
+                <button id="button{{ $order->id }}" onclick="toggleModal('progress-modal{{ $order->id }}', 'button{{ $order->id }}')"
+                  class="mb-2 md:mb-0 bg-purple-500 border border-purple-500 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-purple-600">
+                  update</button> 
 
+          </div>
+
+
+          <div id="progress-modal{{ $order->id }}"
+            class="hidden fixed inset-0 z-50 justify-center items-center w-full h-full">
+            <div class="relative p-4 w-full max-w-md max-h-full">
+              <div class="relative py-4 px-5 bg-white rounded-lg shadow dark:bg-gray-700 right-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
+                <form class="" method="POST" action="/updateUser/{{ $order->id }}">
+                    @csrf
+                    @method('PUT')
+                    <div class="relative">
+                        <label for="statu" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">delete user</label>
+                        <select name="status" id="statu"
+                                class="citySelect bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option value="1" >dilevred</option>
+                                <option value="0">returned</option>
+                            </select>
+                          
+                    </div>
+                    <div class="flex items-center mt-6 space-x-4 rtl:space-x-reverse">
+                        <button type="submit"
+                            class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">confirm</button>
+                        <button onclick="closeModal('progress-modal{{$order->id }}')" type="button"
+                            class="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Cancel</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+      
+        </td>
         </tr>
         @endforeach
-       
+        @endif
        
       </tbody>
     </table>
   </div>
   <script src="../js/cities.js"></script>
   <script>
-    function updateStatus(storeId, status) {
-     
-        fetch('/update-status', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRF-TOKEN': '{{ csrf_token() }}'
-            },
-            body: JSON.stringify({
-                storeId: storeId,
-                status: status
-            })
-        }).then(response => {
-            if (response.ok) {
-                location.reload();
-            } else {
-                console.error('Failed to update status');
-            }
-        }).catch(error => {
-            console.error('Error:', error);
-        });
-    }
+  
   </script>
 <script src="https://cdn.tailwindcss.com"></script>
 </body>

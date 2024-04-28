@@ -27,7 +27,18 @@ class OrderController extends Controller
             $orders = Order::where('costumer_id', $costumerId)->get();
             return view('client.orders', ['orders' => $orders]);
 }
-        
+    
+public function storeOrders()
+{
+    $user = auth()->user();
+    $store = $user->store;
+    $orders = Order::whereHas('orderItems', function ($query) use ($store) {
+        $query->whereIn('book_id', $store->books->pluck('id'));
+    })->get();
+
+    return view('stores\Storeorders', ['orders' => $orders]);
+}
+
         
         public function createOrder(Request $request)
 {

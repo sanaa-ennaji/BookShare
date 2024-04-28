@@ -143,3 +143,28 @@ Route::get('/google/redirect', [App\Http\Controllers\GoogleLoginController::clas
 Route::get('/callback/google', [GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');
 
 Route::get('/statistics', [StoreController::class, 'StoreStatistics'])->name('store.statistics');
+
+
+
+
+    Route::get('/store/orders', [OrderController::class, 'storeOrders'])->name('store.orders');
+
+
+
+// admin 
+
+
+
+
+
+
+
+// book store 
+
+
+
+
+
+
+
+ // client
