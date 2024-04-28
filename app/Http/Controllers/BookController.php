@@ -35,12 +35,10 @@ class BookController extends Controller
         return redirect()->back()->with('success', 'Category created successfully');
     }
 
+    
     public function showDetails($id)
     {
         $book = Book::findOrFail($id);
-        // if (!$book) {
-        //     return abort(404); 
-        // }
         return view('public.BookDetails', compact('book')); 
     }
 

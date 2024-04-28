@@ -130,8 +130,7 @@ Route::get('/stores/store', [AdminController::class, 'indexStores']);
 // Route::get('/statistics' ,function (){
 //     return view('stores.statistics');
 //    });
-Route::get('/invoice/{orderId}', [InvoiceController::class, 'displayInvoice']);
-Route::get('/invoice/{orderId}/generate', [InvoiceController::class, 'generateInvoice'])->name('invoice.generate');
+
 
 Route::get('costumer/orders' , [OrderController::class , 'costumerOrders'])->name('orders.show');
 
@@ -139,31 +138,24 @@ Route::get('/google/redirect', [App\Http\Controllers\GoogleLoginController::clas
 // Route::get('/google/callback', [App\Http\Controllers\GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');
 Route::get('/callback/google', [GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');
 
-Route::get('/statistics', [StoreController::class, 'StoreStatistics'])->name('store.statistics');
 
 
-Route::put('/updateOrder/{id}', [OrderController::class, 'updateOrder'])->name('orders.update');
-Route::get('/store/orders', [OrderController::class, 'storeOrders'])->name('store.orders');
-
-Route::post('/validation', [AdminController::class, 'updateStatus'])->name('validation');
 
 
 // admin 
-
+Route::post('/validation', [AdminController::class, 'validation'])->name('validation');
 Route::delete('/stores/{id}', [StoreController::class, 'deleteStore'])->name('stores.delete');
 
 
-
-
-
-
-
 // book store 
-
-
+Route::get('/statistics', [StoreController::class, 'StoreStatistics'])->name('store.statistics');
+Route::put('/updateOrder/{id}', [OrderController::class, 'updateOrder'])->name('orders.update');
+Route::get('/store/orders', [OrderController::class, 'storeOrders'])->name('store.orders');
 
 
 
 
 
  // client
+ Route::get('/invoice/{orderId}', [InvoiceController::class, 'displayInvoice']);
+Route::get('/invoice/{orderId}/generate', [InvoiceController::class, 'generateInvoice'])->name('invoice.generate');

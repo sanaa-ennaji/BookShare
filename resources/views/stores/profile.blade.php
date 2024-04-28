@@ -58,7 +58,7 @@
       
           @foreach($books as $book)
           <a href="{{ route('book.details', ['id' => $book->id]) }}">
-          <div class="w-50 bg-white rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+          <div class="w-50 bg-white rounded-xl ">
             
                   <img src="{{asset('storage/img/' . $book->image)}}"
                           alt="Product" class="h-60 w-40 object-cover rounded-xl" />
@@ -101,9 +101,9 @@
                           </div>
                       </div>
                       <div class="flex items-center mx-1">
-                          <p class="text-lg font-semibold text-black cursor-auto mb-2">$149</p>
+                          <p class="text-lg font-semibold text-black cursor-auto mb-2">${{ $book->price}}</p>
                           <del>
-                              <p class="text-sm text-gray-600 cursor-auto ml-2 mb-2">{{ $book->price}}</p>
+                              <p class="text-sm text-gray-600 cursor-auto ml-2 mb-2"></p>
                           </del>
                         
                        
