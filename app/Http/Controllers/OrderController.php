@@ -4,10 +4,8 @@ namespace App\Http\Controllers;
 use Stripe\Stripe;
 use App\Models\Cart;
 use App\Models\Order;
-use App\Models\Orderline;
 use Illuminate\Http\Request;
 use Stripe\Checkout\Session;
-use Illuminate\Support\Facades\DB;
 use App\ServiceInterface\OrderServiceInterface;
 
 class OrderController extends Controller

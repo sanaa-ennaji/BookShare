@@ -4,7 +4,7 @@
 <body class="bg-gray-200">
     @include('components/sidebare')
 
- 
+   
 
     <div class="mt-20 sm:ml-80 sm:mr-5 ml-6 w-[95%]">
   
@@ -26,10 +26,10 @@
         </div>
         <div>
           <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
-            Total clients
+            Total stores
           </p>
           <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-            6389
+            {{ $storeCount }}
           </p>
         </div>
       </div>
@@ -54,7 +54,7 @@
             Total costumers
           </p>
           <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-            6389
+            {{ $customerCount }}
           </p>
         </div>
       </div>
@@ -79,7 +79,7 @@
         total orders
           </p>
           <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">
-            376
+            {{ $orderCount }}
           </p>
         </div>
       </div>
@@ -103,7 +103,7 @@
           <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">
          books
           </p>
-          <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">35</p>
+          <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">{{ $bookCount }}</p>
         </div>
       </div>
     </div>

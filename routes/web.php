@@ -40,9 +40,6 @@ Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/payment', function () {
-    return view('payment');
-});
 Route::get('/register', function () {
     return view('register');
 });
@@ -61,14 +58,14 @@ Route::get('/StoreRegister', function () {
 Route::get('/waiting', function () {
     return view('stores.waiting');
 }); 
-Route::get('/admin/statistic', function () {
-    return view('admin.statistique');
-}); 
+
+Route::get('/adminStatistic', [AdminController::class, 'statistics'])->name('statistics');
+
 
 Route::get('/payment/success', function () {
     return view('client.success');
 }); 
-Route::get('/admin/category', function () {
+Route::get('/adminCategory', function () {
     return view('admin.category');
 }); 
 
@@ -87,11 +84,11 @@ Route::get('public/books' ,function (){
    Route::get('costumer/orders' ,function (){
     return view('client.orders');
    });
-   Route::get('admin/damandes', [AdminController::class, 'Storesdamanede'])->name('damandes.stores');
+   Route::get('adminDamandes', [AdminController::class, 'Storesdamanede'])->name('damandes.stores');
    Route::post('/update-status', [AdminController::class, 'updateStatus'])->name('update-status');
- Route::get('admin/stores', [AdminController::class, 'displayStores'])->name('validated.stores');
+ Route::get('/adminStores', [AdminController::class, 'displayStores'])->name('validated.stores');
 Route::post('/createCategory', [CategoryController::class, 'createCategory']);
-Route::get('/admin/category', [CategoryController::class, 'showCategories']);
+Route::get('/adminCategory', [CategoryController::class, 'showCategories']);
 Route::delete('/delete/{id}', [CategoryController::class, 'deleteCategory'])->name('admin.category.delete');
 Route::put('/updateCategory/{id}', [CategoryController::class, 'updateCategory']);
 
@@ -153,6 +150,8 @@ Route::put('/updateOrder/{id}', [OrderController::class, 'updateOrder'])->name('
 
 
 // admin 
+
+Route::delete('/stores/{id}', [StoreController::class, 'deleteStore'])->name('stores.delete');
 
 
 

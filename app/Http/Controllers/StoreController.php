@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use App\Models\Store;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -80,7 +80,21 @@ class StoreController extends Controller
         return view('stores.profile', compact('store', 'books')); 
     }
     
+   
 
+    public function deleteStore($id) {
+        $store = Store::findOrFail($id);
+        $user = $store->user;
+
+        $store->delete();
+    
+        if ($user) {
+            $user->delete();
+        }
+    
+        return redirect()->back()->with('success', 'Store and associated user deleted successfully');
+    }
+    
 public function StoreStatistics()
 {
     $user = Auth::user();

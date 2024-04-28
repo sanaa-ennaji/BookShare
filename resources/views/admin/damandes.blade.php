@@ -12,7 +12,7 @@
           <th scope="col" class="px-6 py-4 font-medium text-gray-900">Name</th>
           <th scope="col" class="px-6 py-4 font-medium text-gray-900">city</th>
           <th scope="col" class="px-6 py-4 font-medium text-gray-900">phone</th>
-          <th scope="col" class="px-6 py-4 font-medium text-gray-900">bookStore</th>
+          <th scope="col" class="px-6 py-4 font-medium text-gray-900">address</th>
           <th scope="col" class="px-6 py-4 font-medium text-gray-900">damane</th>
         </tr>
       </thead>
@@ -23,10 +23,10 @@
             <div class="relative h-10 w-10">
               <img
                 class="h-full w-full rounded-full object-cover object-center"
-                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                src="{{asset('storage/img/' . $store->image)}}"
                 alt=""
               />
-              <span class="absolute right-0 bottom-0 h-2 w-2 rounded-full bg-green-400 ring ring-white"></span>
+           
             </div>
             <div class="text-sm">
               <div class="font-medium text-gray-700">{{ $store->user->name }}</div>
@@ -36,15 +36,21 @@
           <td class="px-6 py-4">{{ $store->city }}</td>
           <td class="px-6 py-4">{{ $store->phone }}</td>
         
-          <td class="px-6 py-4">{{ $store->phone }}</td>
+          <td class="px-6 py-4">{{ $store->address }}</td>
           <td class="px-6 py-4">
             <span class="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-semibold text-green-600 cursor-pointer"
             onclick="updateStatus('{{ $store->id }}', 'accepted')">
           accepte
       </span>
-            <span class="inline-flex items-center gap-1 rounded-full bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 cursor-pointer">
-                delete
-            </span>
+      <form method="POST" action="{{ route('stores.delete', ['id' => $store->id]) }}">
+        @csrf
+        @method('DELETE')
+                    <button type="submit">
+                      <span class="mt-4 inline-flex items-center gap-1 rounded-full bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 cursor-pointer">
+                        Delete  </span>
+                    </button>
+          
+          </form>
       
         
         </td>

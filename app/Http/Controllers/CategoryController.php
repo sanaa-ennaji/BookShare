@@ -32,7 +32,7 @@ class CategoryController extends Controller
     public function deleteCategory($id)
     {
         $this->categoryService->deleteCategory($id);
-        return redirect('/admin/category')->with('success', 'Category deleted successfully');
+        return redirect('/adminCategory')->with('success', 'Category deleted successfully');
     }
  
     public function showCategories()

@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
+use Stripe\Customer;
+use App\Models\Order;
 use App\Models\Store;
+use App\Models\Costumer;
 use Illuminate\Http\Request;
 use App\ServiceInterface\AdminServiceInterface;
 
@@ -44,7 +48,6 @@ class AdminController extends Controller
     
         $store = Store::findOrFail($request->storeId);
 
-        // Update the store status
         $store->status = $request->status;
         $store->save();
 
@@ -52,9 +55,16 @@ class AdminController extends Controller
         return response()->json(['message' => 'Store status updated successfully'], 200);
     }
     
-    public function ArchiveUser () {
+    public function statistics()
+    {
+        $customerCount = Costumer::count();
+        $orderCount = Order::count();
+        $bookCount = Book::count();
+        $storeCount = Store::count();
 
+        return view('admin.statistique', compact('customerCount', 'orderCount', 'bookCount', 'storeCount'));
     }
+    
   
     public function accepteStore (){
  
