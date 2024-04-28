@@ -496,17 +496,16 @@
         </div>
  
         <div class="flex justify-center mt-4">
-            <!-- Previous Page Link -->
+        
             @if ($books->onFirstPage())
                 <span class="px-2 py-1 rounded-md bg-gray-200 text-gray-600 cursor-not-allowed">&laquo; Previous</span>
             @else
                 <a href="{{ $books->previousPageUrl() }}" class="px-2 py-1 rounded-md bg-gray-200 text-gray-600 hover:bg-gray-300">&laquo; Previous</a>
             @endif
         
-            <!-- Current Page Number -->
+          
             <span class="px-2 py-1 rounded-md bg-blue-500 text-white">{{ $books->currentPage() }}</span>
         
-            <!-- Next Page Link -->
             @if ($books->hasMorePages())
                 <a href="{{ $books->nextPageUrl() }}" class="px-2 py-1 rounded-md bg-gray-200 text-gray-600 hover:bg-gray-300">Next &raquo;</a>
             @else
@@ -517,14 +516,14 @@
 
     </div>
   
-<script>
+{{-- <script>
     kofiWidgetOverlay.draw('mohamedghulam', {
             'type': 'floating-chat',
             'floating-chat.donateButton.text': 'Support me',
             'floating-chat.donateButton.background-color': '#323842',
             'floating-chat.donateButton.text-color': '#fff'
         });
-</script>
+</script> --}}
 
 
 

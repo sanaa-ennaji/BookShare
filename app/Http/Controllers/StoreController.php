@@ -41,10 +41,12 @@ class StoreController extends Controller
 
     public function updateStoreProfile(Request $request ,int $id)
     {
+        dd('ksjddkj');
         $data = $request->validate([
             'description' => ['required'],
         ]);
  
+       
         if ($request->hasFile('cover')) {
             $file = $request->file('cover');
             $imageName = time() . '.' . $file->extension();
@@ -60,9 +62,6 @@ class StoreController extends Controller
         $data['image'] = $imageName;
     }
 
-      
-       
-         
         $this->storeService->updateProfile($data ,$id);
 
         return redirect()->back()->with('success', 'Store profile updated successfully');

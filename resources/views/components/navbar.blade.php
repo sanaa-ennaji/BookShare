@@ -45,6 +45,8 @@
 
 
     <div class="relative flex items-center">
+      @auth
+      @if(auth()->user()->costumer)
       <a id="cart-icon"
       class="ps-2 text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80"
       href="/cart">
@@ -61,7 +63,30 @@
         ></span>
       </span>
     </a>
-          
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script>
+    $(document).ready(function() {
+       
+        function updateCartCount() {
+            $.ajax({
+                url: '{{ route("cart.count") }}',
+                type: 'GET',
+                success: function(response) {
+                    $('.cart-count').text(response.count);
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr.responseText);
+                }
+            });
+        }
+
+      
+        updateCartCount();
+    });
+</script>
+    @endif
+    @endauth
+       
     <a 
       class="ps-2 text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80"
       href="/wishlist">
@@ -138,22 +163,23 @@
     </span>
   </a>
     @endauth
+    @auth
   </div>
   <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown-user">
     <div class="px-4 py-3" role="none">
       <p class="text-sm text-gray-900 dark:text-white" role="none">
-       name
+        {{ Auth::user()->name }}
       </p>
       <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
-        neil.sims@emailcom
+        {{ Auth::user()->email }}
       </p>
     </div>
     <ul class="py-1" role="none">
       <li>
-        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Dashboard</a>
+        <a href="/dashboard" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Dashboard</a>
       </li>
       <li>
-        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">profile</a>
+        <a href="/admin/category" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">profile</a>
       </li>
       <li>
         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
@@ -164,29 +190,10 @@
               <span>Logout</span>
           </button>
       </form></a>
+
       </li>
     </ul>
   </div>
+  @endauth
 </nav>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function() {
-       
-        function updateCartCount() {
-            $.ajax({
-                url: '{{ route("cart.count") }}',
-                type: 'GET',
-                success: function(response) {
-                    $('.cart-count').text(response.count);
-                },
-                error: function(xhr, status, error) {
-                    console.error(xhr.responseText);
-                }
-            });
-        }
-
-      
-        updateCartCount();
-    });
-</script>
