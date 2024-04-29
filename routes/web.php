@@ -88,7 +88,7 @@ Route::get('public/books' ,function (){
    Route::post('/update-status', [AdminController::class, 'updateStatus'])->name('update-status');
  Route::get('/adminStores', [AdminController::class, 'displayStores'])->name('validated.stores');
 Route::post('/createCategory', [CategoryController::class, 'createCategory']);
-Route::get('/adminCategory', [CategoryController::class, 'showCategories']);
+Route::get('/adminCategory', [CategoryController::class, 'showCategories'])->name('admin.category');
 Route::delete('/delete/{id}', [CategoryController::class, 'deleteCategory'])->name('admin.category.delete');
 Route::put('/updateCategory/{id}', [CategoryController::class, 'updateCategory']);
 

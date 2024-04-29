@@ -22,7 +22,7 @@ class UserController extends Controller
             if ($user->admin()->exists()) {
                 return redirect()->route('admin.category');
             } elseif ($user->store()->exists()) {
-                return redirect()->route('store.dashboard');
+                return redirect()->route('stores.books');
             } else {
                 return redirect()->route('cart.show');
             }

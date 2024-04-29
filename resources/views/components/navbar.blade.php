@@ -128,12 +128,14 @@
       </p>
     </div>
     <ul class="py-1" role="none">
-      {{-- <li>
+      @if(auth()->user()->store)
+      <li>
         <a href="/dashboard" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Dashboard</a>
       </li>
-      <li>
-        <a href="/adminCategory" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">profile</a>
-      </li> --}}
+       <li>
+        <a href="/profile-update" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">profile</a>
+      </li>
+      @endif
       <li>
         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
           <form action="/logout" method="POST">
