@@ -123,13 +123,6 @@ Route::get('/cart/count', [CartController::class, 'getCartCount'])->name('cart.c
 
 
 Route::get('/stores/store', [AdminController::class, 'indexStores']);
-// Route::get('/details', function () {
-//     return view('public.BookDetails');
-// }); 
-
-// Route::get('/statistics' ,function (){
-//     return view('stores.statistics');
-//    });
 
 
 Route::get('costumer/orders' , [OrderController::class , 'costumerOrders'])->name('orders.show');

@@ -228,10 +228,10 @@
                     <h3 class="font-bold text-xl text-blue-600">BookShare</h3>
                 </div>
                 <div class="p-5">
-                    <div class="text-sm uppercase text-blue-600 font-bold">Resources</div>
-                    <a class="my-3 block" href="/#">Documentation <span class="text-teal-600 text-xs p-1"></span></a><a
-                        class="my-3 block" href="/#">Tutorials <span class="text-teal-600 text-xs p-1"></span></a><a
-                        class="my-3 block" href="/#">Support <span class="text-teal-600 text-xs p-1">New</span></a>
+                    <div class="text-sm uppercase text-blue-600 font-bold">categories</div>
+                    <a class="my-3 block" href="/#">horrors<span class="text-teal-600 text-xs p-1"></span></a><a
+                        class="my-3 block" href="/#">fantasia<span class="text-teal-600 text-xs p-1"></span></a><a
+                        class="my-3 block" href="/#">science<span class="text-teal-600 text-xs p-1">New</span></a>
                 </div>
                 <div class="p-5">
                     <div class="text-sm uppercase text-blue-600 font-bold">Support</div>

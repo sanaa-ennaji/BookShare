@@ -13,22 +13,7 @@
     @include('components/navbar')
     @include('components/navbar2')
 
-    {{-- <div class="container mx-auto py-8">
-          <h1 class="text-2xl font-semibold mb-4">Your Cart</h1>
-          @if ($cartItems->isEmpty())
-          <p>Your cart is empty.</p>
-          @else
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              @foreach ($cartItems as $cartItem)
-              <div class="bg-white shadow-md rounded-md p-4">
-                  <p class="text-lg font-semibold">{{ $cartItem->book->title }}</p>
-                  <p>Quantity: {{ $cartItem->quantity }}</p>
-                  <p>Price: ${{ $cartItem->book->price }}</p>
-              </div>
-             
-          </div>
-          @endif
-      </div> --}}
+  
 
     <div class="h-screen bg-gray-100 pt-20">
         <h1 class="mb-10 text-center text-2xl font-bold">Cart Items</h1>
@@ -47,14 +32,7 @@
                                     <h2 class="text-lg font-bold text-gray-900">{{ $cartItem->book->title }} </h2>
                                     <p class="mt-1 text-xs text-gray-700">{{ $cartItem->book->price }}$</p>
                                     <div class="flex items-center border-gray-100 mt-5">
-                                        {{-- <span
-                                            class="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50">
-                                            - </span> --}}
-                                        {{-- <input class="h-8 w-8 border bg-white text-center text-xs outline-none"
-                                            type="number" value="{{$cartItem->quantity}}" min="1" /> --}}
-                                        {{-- <span
-                                            class="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50">
-                                            + </span> --}}
+                                       
                                     </div>
                                 </div>
 
@@ -91,16 +69,7 @@
             <form id="create-order-form" action="{{ route('orders.create') }}" method="POST"
                 class="mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/3">
                 @csrf
-                {{-- <div class="mb-2 flex justify-between">
-                    <p class="text-gray-700">Subtotal</p>
-                    <p class="text-gray-700">$129.99</p>
-                </div>
-                <div class="flex justify-between">
-                    <p class="text-gray-700">Shipping</p>
-                    <p class="text-gray-700">$4.99</p>
-                </div> --}}
-
-                {{-- <hr class="my-4" /> --}}
+             
 
                 <div class="flex justify-between">
 

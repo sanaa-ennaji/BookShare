@@ -20,19 +20,11 @@
 
     
 <form id="searchForm" class="mx-auto sm:w-[40vw]  rounded-2xl" action="{{ route('search') }}" method="GET">
-      <div class="flex">
-          <select class="flex-shrink-0 z-10 inline-flex items-center py-2  text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-full hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600">
-            <option value="03">03 - March</option>
-            <option value="04">04 - April</option>
-            <option value="05">05 - May</option>
-            <option value="06">06 - June</option>
-            <option value="07">07 - July</option>
-          
-        </select>
+    
     
        
         <div class="relative w-full"> 
-            <input type="text" name="search" id="searchInput" placeholder="Search by title, author, ISBN, or price" class="block p-2.5 sm:w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-full border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"   />
+            <input type="text" name="search" id="searchInput" placeholder="Search by title, author, ISBN, or price" class="block p-2.5 sm:w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-full border-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"   />
             <button type="submit" class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-blue-700 rounded-r-full border border-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
@@ -44,7 +36,7 @@
 </form>
 
 
-    <div class="relative flex items-center">
+    <div class="relative flex items-center mr-20">
       @auth
       @if(auth()->user()->costumer)
       <a id="cart-icon"
@@ -87,17 +79,7 @@
     @endif
     @endauth
     
-       
-    {{-- <a 
-      class="ps-2 text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80"
-      href="/wishlist">
-      <span class="[&>svg]:w-5">
-        <svg  class="text-blue-500" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-          </svg>
-          
-      </span>
-    </a> --}}
+  
     
     @auth
     <button aria-expanded="false" data-dropdown-toggle="dropdown-user"
