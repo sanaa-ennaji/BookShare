@@ -59,7 +59,7 @@
                             <input
                                 class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                                 id="grid-first-name" type="text" name="name" placeholder="book shop">
-                            {{-- <p class="text-blue-500 text-xs italic">Please fill out this field.</p> --}}
+                        
                         </div>
                         <div class="w-full md:w-1/2 px-3">
                             <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -81,20 +81,17 @@
                             <input
                                 class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                                 id="grid-first-name" type="text" name="address" placeholder="Store address">
-                            {{-- <p class="text-blue-500 text-xs italic">Please fill out this field.</p> --}}
+                          
                         </div>
                         <div class="w-full md:w-1/2 px-3">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                                for="grid-last-name">
-                                city
-                            </label>
-                            <select id="city" name="city"
-                            class="citySelect appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                            &>
-                            <option selected value="">city</option>
-                            <option value="paris">paris</option>
-                            
-                        </select>
+                          <label for="city"
+                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">city</label>
+                      <select id="city" name="lieu"
+                          class="citySelect bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                          <option selected value="">city</option>
+                     
+                          
+                      </select>
                         </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
@@ -148,3 +145,4 @@
         
             </div>
         </div>
+        <script src="../js/cities.js"></script>

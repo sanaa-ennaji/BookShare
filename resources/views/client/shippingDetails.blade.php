@@ -35,7 +35,7 @@
                     </div>
 
                     <div class="mt-4">
-                        <label for="address" class="block text-gray-700 dark:text-white mb-1">Address</label>
+                        <label for="address" class="block text-gray-700 dark:text-white mb-1">address</label>
                         <input type="text" id="address" name="address"
                             class="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none">
                     </div>
@@ -46,9 +46,14 @@
                     </div>
 
                     <div class="mt-4">
-                        <label for="city" class="block text-gray-700 dark:text-white mb-1">City</label>
-                        <input type="text" id="city" name="city"
-                            class="w-full rounded-lg border py-2 px-3 dark:bg-gray-700 dark:text-white dark:border-none">
+                        <label for="city"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">city</label>
+                    <select id="city" name="lieu"
+                        class="citySelect bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                        <option selected value="">city</option>
+                       
+                        
+                    </select>
                     </div>
 
                     <div class="grid grid-cols-2 gap-4 mt-4">
@@ -74,7 +79,7 @@
             </form>
         </div>
     </div>
-
+    <script src="../js/cities.js"></script>
 </body>
 
 </html>
