@@ -117,10 +117,10 @@ footer {
       SubTotal: $100.00 USD
   </div>  --}}
   <div class="total">
-    shipping: $29.00 USD
+    
 </div> 
     <div class="total">
-        {{ $order->total_price }}
+       total price : {{ $order->total_price }}
     </div>
     {{-- <div id="notices">
       <div>NOTICE:</div>

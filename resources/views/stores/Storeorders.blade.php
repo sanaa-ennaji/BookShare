@@ -11,9 +11,9 @@
       <thead class="bg-gray-50">
         <tr>
           <th scope="col" class="px-6 py-4 font-medium text-gray-900">order</th>
-          <th scope="col" class="px-6 py-4 font-medium text-gray-900">costumer</th>
-          <th scope="col" class="px-6 py-4 font-medium text-gray-900">total price</th>
+          {{-- <th scope="col" class="px-6 py-4 font-medium text-gray-900">costumer</th> --}}
           <th scope="col" class="px-6 py-4 font-medium text-gray-900">status</th>
+          <th scope="col" class="px-6 py-4 font-medium text-gray-900">total price</th>
           <th scope="col" class="px-6 py-4 font-medium text-gray-900">status update</th>
         </tr>
       </thead>
@@ -30,7 +30,7 @@
               {{-- <div class="text-gray-400">{{ $order->orderItems->book->title }}</div> --}}
             </div>
           </th>
-          <td class="px-6 py-4"></td>
+        
    
    
     

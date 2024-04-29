@@ -114,7 +114,7 @@
   </button>
    
     @else
-    <a class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="/register">Sign up</a>
+    <a class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="/login">Sign up</a>
     @endauth
     @auth
   </div>
@@ -135,6 +135,13 @@
        <li>
         <a href="/profile-update" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">profile</a>
       </li>
+      @else
+
+<li>
+        <a href="/costumer/orders" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">orders</a>
+      </li>
+
+
       @endif
       <li>
         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
