@@ -2,6 +2,8 @@
 <html lang="en">
     @include('components/head')
 <body class="bg-gray-200">
+  @if(Auth::user()->store->is_validated == 'accepted' )
+  
     @include('components/sideBar')
 
  
@@ -161,16 +163,7 @@
           <td class="px-6 py-4">{{$book->price}}</td>
           <td class="px-6 py-4">{{$book->category->title}}</td>
         
-          {{-- <td class="px-6 py-4">
-            <span class="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-semibold text-green-600 cursor-pointer"
-            onclick="updateStatus('{{$book->id}}', 'accepted')">
-          accepte
-      </span>
-            <span class="inline-flex items-center gap-1 rounded-full bg-red-50 px-2 py-1 text-xs font-semibold text-red-600 cursor-pointer">
-                delete
-            </span>
-        </td> --}}
-
+         
         <td class="px-6 py-4">
           <div class="flex justify-end gap-4">
             <form class="px-2" action="/deletebook/{{$book->id}}" method="POST">
@@ -216,6 +209,14 @@
       </tbody>
     </table>
   </div>
+  @else
+
+  <div class="ml-10">
+    <h1 class="text-[80px] font-extrabold text-gray-700">400</h1>
+    <p class="text-xl font-medium text-gray-600 mb-6">NOT  accepted yet</p>
+  
+</div>
+  @endif
   <script src="../js/cities.js"></script>
   <script>
     function updateStatus(storeId, is_validated) {

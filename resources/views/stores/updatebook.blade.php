@@ -2,7 +2,7 @@
 <html lang="en">
     @include('components/head')
 <body class="bg-gray-200">
-  
+    @if(Auth::user()->store->is_validated == 'accepted' )
   
 <div class="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
     
@@ -104,5 +104,13 @@
 </div>
 </div>
   </div>
+  @else
+
+  <div class="ml-10">
+    <h1 class="text-[80px] font-extrabold text-gray-700">400</h1>
+    <p class="text-xl font-medium text-gray-600 mb-6">NOT  accepted yet</p>
+  
+</div>
+  @endif
 </body>
 </html>

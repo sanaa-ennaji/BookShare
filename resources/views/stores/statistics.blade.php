@@ -2,7 +2,9 @@
 <html lang="en">
     @include('components/head')
 <body class="bg-gray-200">
+  @if(Auth::user()->store->is_validated == 'accepted' )
     @include('components/sideBar')
+
     <div class="mt-20 sm:ml-80 sm:mr-5 ml-6 w-[95%]">
   
 <div class="grid gap-6 mb-8 grid-cols-2 md:grid-cols-2 xl:grid-cols-2">
@@ -51,7 +53,14 @@
       </div>
     </div>
   </div>
+  @else
 
+  <div class="ml-10">
+    <h1 class="text-[80px] font-extrabold text-gray-700">400</h1>
+    <p class="text-xl font-medium text-gray-600 mb-6">NOT  accepted yet</p>
+  
+</div>
+  @endif
 <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>

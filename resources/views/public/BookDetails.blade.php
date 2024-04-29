@@ -55,9 +55,11 @@
           <button type="submit" class="bg-blue-600 dark:text-gray-900 hover:bg-blue-800 border-0  rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-base flex items-center justify-center leading-none text-white w-full py-4 focus:outline-none mb-8">
             add to cart
           </button>
-          <button type="submit" class="bg-blue-600 dark:text-gray-900 hover:bg-blue-800 border-0  rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-base flex items-center justify-center leading-none text-white w-full py-4 focus:outline-none mb-8">
+          @else
+          <a href="/login" class="bg-blue-600 dark:text-gray-900 hover:bg-blue-800 border-0  rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-base flex items-center justify-center leading-none text-white w-full py-4 focus:outline-none mb-8">
             add to cart
-          </button>
+          </a>
+          @endauth
          </form>
            
               </div>
