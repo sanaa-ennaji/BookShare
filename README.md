@@ -54,12 +54,11 @@ L'objectif de ce projet est de créer une plateforme spécialisée dans la **ven
 - Possibilité d'**interdire** des librairies ou des clients en cas de non-respect des règles de la plateforme.
 
 ## Technologies Utilisées
-- **HTML**
-- **Tailwind CSS**
-- **JavaScript**
-- **Laravel**
-- **MySQL**
-
+- [PHP 8.0+](https://www.php.net/)
+- [Composer](https://getcomposer.org/)
+- [MySQL](https://www.mysql.com/) or [PostgreSQL](https://www.postgresql.org/)
+- [Node.js and npm](https://nodejs.org/)
+- [Laravel 9+](https://laravel.com/)
 ---
 
 Ce projet vise à offrir une solution complète pour soutenir les librairies locales dans leur transition vers le commerce en ligne, tout en garantissant une expérience fluide et enrichissante pour les clients.
