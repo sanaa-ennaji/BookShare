@@ -1,6 +1,7 @@
 
 # BookShare (redLine): Plateforme de Vente de Livres pour Librairies Locales
 ![alt text](public/img/demo.png) 
+
 ## Introduction
 
 Face à l'évolution constante du commerce électronique, les librairies locales doivent élargir leur présence en ligne pour rester compétitives. Cependant, beaucoup rencontrent des difficultés financières pour développer leur propre site web. **Bookshare** émerge comme une solution innovante, offrant une plateforme sophistiquée qui permet aux librairies locales de prospérer dans l'ère numérique. L'objectif est de combiner la commodité de l'achat en ligne avec le charme des librairies de quartier pour créer une expérience enrichissante pour les clients tout en donnant aux librairies locales les outils nécessaires pour réussir.
