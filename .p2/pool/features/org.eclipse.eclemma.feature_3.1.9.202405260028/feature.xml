@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.eclemma.feature"
+      label="%featureName"
+      version="3.1.9.202405260028"
+      provider-name="%providerName"
+      plugin="org.eclipse.eclemma.ui">
+
+   <description url="http://www.eclemma.org/">
+      Java code coverage analysis for the Eclipse IDE based on the JaCoCo code coverage library ( http://www.jacoco.org/jacoco )
+   </description>
+
+   <copyright url="http://www.eclemma.org/">
+      Copyright (c) 2006, 2020 Mountainminds GmbH &amp; Co. KG and Contributors
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <url>
+      <update label="EclEmma Updates" url="http://update.eclemma.org/"/>
+   </url>
+
+   <requires>
+      <import feature="org.eclipse.jdt" version="3.8.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.rcp" version="3.8.0" match="greaterOrEqual"/>
+      <import feature="org.eclipse.platform" version="3.8.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.eclemma.core"
+         download-size="103"
+         install-size="209"
+         version="3.1.9.202405260028"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.eclemma.doc"
+         download-size="227"
+         install-size="270"
+         version="3.1.9.202405260028"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.eclemma.ui"
+         download-size="310"
+         install-size="557"
+         version="3.1.9.202405260028"
+         unpack="false"/>
+
+</feature>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.sanaa.eBanking.brif9</groupId>
+  <artifactId>eBanking</artifactId>
+  <versioning>
+    <versions>
+      <version>0.0.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20241215231709</lastUpdated>
+  </versioning>
+</metadata>

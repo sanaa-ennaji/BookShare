@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Oct 31 14:06:15 WEST 2024
+log4j-to-slf4j-2.24.1.jar>central=
+log4j-to-slf4j-2.24.1.pom>central=

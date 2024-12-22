@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.jboss.weld.servlet</groupId>
+    <artifactId>weld-servlet-parent</artifactId>
+    <name>Weld Servlet Parent</name>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>org.jboss.weld</groupId>
+        <artifactId>weld-core-parent</artifactId>
+        <relativePath>../../pom.xml</relativePath>
+        <version>4.0.3.Final</version>
+    </parent>
+
+    <modules>
+        <module>core</module>
+        <module>build</module>
+        <module>tests/base</module>
+        <module>tests/tomcat</module>
+        <!-- Jetty tests cannot be executed until there is new Arq. Jetty adapter -->
+        <!-- See https://github.com/arquillian/arquillian-container-jetty/issues/43 -->
+        <!--<module>tests/jetty</module>-->
+    </modules>
+
+    <description>
+        Support for Weld in Servlet Containers
+    </description>
+
+    <properties>
+        <jsf.version>3.0.0</jsf.version>
+        <tomcat.version>10.0.16</tomcat.version>
+        <jetty.version>9.4.40.v20210413</jetty.version>
+        <jetty9.asm.version>7.0</jetty9.asm.version>
+        <websockets.api>2.0.0</websockets.api>
+        <!-- We need undertow which uses Jakarta 9 packages! -->
+        <undertow.version>2.2.13.Final</undertow.version>
+        <!-- Testing deps -->
+        <apache.httpclient.version>3.1</apache.httpclient.version>
+    </properties>
+
+    <!-- Import the BOMs -->
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>jakarta.faces</groupId>
+                <artifactId>jakarta.faces-api</artifactId>
+                <version>${jsf.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-core</artifactId>
+                <version>${tomcat.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-jasper</artifactId>
+                <version>${tomcat.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.tomcat</groupId>
+                <artifactId>tomcat-catalina</artifactId>
+                <version>${tomcat.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-server</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-servlet</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-plus</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-jndi</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-webapp</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-annotations</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-util</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.glassfish.web</groupId>
+                <artifactId>el-impl</artifactId>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jboss.weld.servlet</groupId>
+                <artifactId>weld-servlet-test-base</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>jakarta.websocket</groupId>
+                <artifactId>jakarta.websocket-api</artifactId>
+                <version>${websockets.api}</version>
+                <scope>test</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+</project>

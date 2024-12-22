@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.jdt"
+      label="%featureName"
+      version="3.19.500.v20240601-0610"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <plugin
+         id="org.eclipse.jdt"
+         version="3.19.500.v20240601-0610"/>
+
+   <plugin
+         id="org.eclipse.ant.ui"
+         version="3.9.400.v20240419-1233"/>
+
+   <plugin
+         id="org.eclipse.jdt.apt.core"
+         version="3.8.400.v20240326-0804"/>
+
+   <plugin
+         id="org.eclipse.jdt.apt.ui"
+         version="3.8.400.v20240321-1252"/>
+
+   <plugin
+         id="org.eclipse.jdt.apt.pluggable.core"
+         version="1.4.400.v20240321-1252"/>
+
+   <plugin
+         id="org.eclipse.jdt.core.compiler.batch"
+         version="3.38.0.v20240524-2033"/>
+
+   <plugin
+         id="org.eclipse.jdt.core"
+         version="3.38.0.v20240528-0618"/>
+
+   <plugin
+         id="org.eclipse.jdt.core.formatterapp"
+         version="1.2.250.v20240311-0615"/>
+
+   <plugin
+         id="org.eclipse.jdt.annotation"
+         version="1.2.100.v20240212-1051"/>
+
+   <plugin
+         id="org.eclipse.jdt.annotation"
+         version="2.3.0.v20240111-2306"/>
+
+   <plugin
+         id="org.eclipse.jdt.core.manipulation"
+         version="1.21.100.v20240524-2038"/>
+
+   <plugin
+         id="org.eclipse.jdt.debug.ui"
+         version="3.13.400.v20240516-0950"/>
+
+   <plugin
+         id="org.eclipse.jdt.debug"
+         version="3.21.400.v20240418-1414"/>
+
+   <plugin
+         id="org.eclipse.jdt.junit"
+         version="3.16.400.v20240524-2038"/>
+
+   <plugin
+         id="org.eclipse.jdt.junit.core"
+         version="3.13.200.v20240524-2038"/>
+
+   <plugin
+         id="org.eclipse.jdt.junit.runtime"
+         version="3.7.400.v20231214-1952"/>
+
+   <plugin
+         id="org.eclipse.jdt.junit4.runtime"
+         version="1.3.100.v20231214-1952"/>
+
+   <plugin
+         id="org.eclipse.jdt.junit5.runtime"
+         version="1.1.300.v20231214-1952"/>
+
+   <plugin
+         id="org.eclipse.jdt.launching"
+         version="3.22.0.v20240424-1830"/>
+
+   <plugin
+         id="org.eclipse.jdt.ui"
+         version="3.32.100.v20240524-2038"/>
+
+   <plugin
+         id="org.junit"
+         version="4.13.2.v20230809-1000"/>
+
+   <plugin
+         id="org.hamcrest.core"
+         version="2.2.0.v20230809-1000"/>
+
+   <plugin
+         id="junit-jupiter-api"
+         version="5.10.2"/>
+
+   <plugin
+         id="junit-jupiter-engine"
+         version="5.10.2"/>
+
+   <plugin
+         id="junit-jupiter-migrationsupport"
+         version="5.10.2"/>
+
+   <plugin
+         id="junit-jupiter-params"
+         version="5.10.2"/>
+
+   <plugin
+         id="junit-platform-commons"
+         version="1.10.2"/>
+
+   <plugin
+         id="junit-platform-engine"
+         version="1.10.2"/>
+
+   <plugin
+         id="junit-platform-launcher"
+         version="1.10.2"/>
+
+   <plugin
+         id="junit-platform-runner"
+         version="1.10.2"/>
+
+   <plugin
+         id="junit-platform-suite-api"
+         version="1.10.2"/>
+
+   <plugin
+         id="junit-platform-suite-commons"
+         version="1.10.2"/>
+
+   <plugin
+         id="junit-platform-suite-engine"
+         version="1.10.2"/>
+
+   <plugin
+         id="junit-vintage-engine"
+         version="5.10.2"/>
+
+   <plugin
+         id="org.opentest4j"
+         version="1.3.0"/>
+
+   <plugin
+         id="org.apiguardian.api"
+         version="1.1.2"/>
+
+   <plugin
+         id="org.eclipse.jdt.doc.user"
+         version="3.15.2200.v20240529-0958"/>
+
+   <plugin
+         id="org.eclipse.jdt.launching.macosx"
+         os="macosx"
+         version="3.6.300.v20240321-1645"/>
+
+   <plugin
+         id="org.eclipse.jdt.launching.ui.macosx"
+         os="macosx"
+         version="1.4.300.v20240321-1645"/>
+
+   <plugin
+         id="org.eclipse.ant.launching"
+         version="1.4.400.v20240413-1649"/>
+
+</feature>
