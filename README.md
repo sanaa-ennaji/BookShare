@@ -1,5 +1,5 @@
 
-# RedLine : Plateforme de Vente de Livres pour Librairies Locales
+# Plateforme de Vente de Livres pour Librairies Locales
 
 ## Introduction
 
